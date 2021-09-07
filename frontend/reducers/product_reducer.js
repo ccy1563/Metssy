@@ -7,9 +7,9 @@ import merge from 'lodash/merge';
 const ProductReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
     switch (action.type) {
-        case RECEIVE_EVENTS:
+        case RECEIVE_PRODUCTS:
             return { ...action.products };
-        case RECEIVE_EVENT:
+        case RECEIVE_PRODUCT:
             return { ...oldState, [action.product.id]: action.product }
         default:
             return oldState;
