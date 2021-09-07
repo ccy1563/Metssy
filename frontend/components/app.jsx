@@ -14,10 +14,12 @@ import {
 const App = () => (
     <div>
         {/* <Header /> */}
-        <ModalContainer />
-        <Link to="/">Home</Link>
-        <SearchContainer />
-        <GreetingContainer />
+        <section className="navbar">
+            <ModalContainer />
+            <Link to="/">Home</Link>
+            <SearchContainer />
+            <GreetingContainer />
+        </section>
         {/* <Switch>
             <AuthRoute exact path="/login" component={LogInFormContainer} />
             <AuthRoute exact path="/signup" component={SignUpFormContainer} />
