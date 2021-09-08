@@ -1,0 +1,31 @@
+.sub-categories {
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    /* top: 200px; */
+    top: 30vh;
+    left: 20vh;
+    list-style-type: none;
+}
+
+.category-text {
+    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    
+    text-align: center;
+    margin: 0 45% 0 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.category-image {
+    /* justify-content: space-evenly; */
+    /* height:auto; */
+    border: 1px solid rgba(34, 34, 34, 0.15);
+    border-radius: 50%;
+    max-width:55%;
+    cursor: pointer;
+}
+

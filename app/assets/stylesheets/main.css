@@ -1,0 +1,28 @@
+.welcome-form {    
+    /* width:200px; */
+    height:280px;
+    padding-top: 3%;
+    background-image: linear-gradient(top, #fcebd2, #fcebd2 70%, transparent 70%, transparent 100%);
+    background-image: -webkit-linear-gradient(top, #fcebd2, #fcebd2 70%, transparent 70%, transparent 100%)  
+}
+
+.welcome-text {
+    font-family: "Guardian-EgypTT",Charter,"Charter Bitstream",Cambria,"Noto Serif Light","Droid Serif",Georgia,serif;
+    text-align: center;
+    font-weight: 200;
+    font-size: 52px;
+    -webkit-font-smoothing: antialiased;
+    /* --vh: 7.12px;
+    -webkit-text-size-adjust: 100%; */
+    line-height: 56px;
+}
+
+.page-form {
+    position: relative;
+    min-height: 100vh;
+    /* margin-bottom: 200px; */
+}
+
+/* .no-overlap {
+    margin-bottom: 200px;
+} */

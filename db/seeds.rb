@@ -8,8 +8,27 @@
 
 
 User.destroy_all
+Product.destroy_all
 
 user = User.create!(
     email: "caveman@gmail.com",
     password: "123456password"
+)
+
+product1 = Product.create!(
+    name: "product1",
+    price: 1.00,
+    description: "description1"
+)
+
+product2 = Product.create!(
+    name: "product2",
+    price: 2.00,
+    description: "description2"
+)
+
+product3 = Product.create!(
+    name: "product3",
+    price: 3.00,
+    description: "description3"
 )

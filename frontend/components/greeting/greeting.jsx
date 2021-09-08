@@ -11,15 +11,15 @@ class Greeting extends React.Component {
   render() {
     if (this.props.currentUser) {
       return(
-        <button onClick={this.props.logout}>Log Out</button>
+        <div>
+          <button className="login-signup-button" onClick={this.props.logout}>Log Out</button>
+        </div>
       ) 
     } else {
       return (
-        <div>
-          <button onClick={() => this.props.openModal('login')}>Sign In</button>
-          <br></br>
-          <button onClick={() => this.props.openModal('signup')}>Sign Up</button>
-        </div>
+          <div>
+            <button className="login-signup-button" onClick={() => this.props.openModal('login')}>Sign In</button>
+          </div>
       )
     }
   }

@@ -2,7 +2,6 @@ import {
     RECEIVE_PRODUCTS,
     RECEIVE_PRODUCT,
 } from '../actions/product_actions';
-import merge from 'lodash/merge';
 
 const ProductReducer = (oldState = {}, action) => {
     Object.freeze(oldState);

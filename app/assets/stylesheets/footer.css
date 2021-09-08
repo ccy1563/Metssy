@@ -1,0 +1,31 @@
+.footer-section {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 300px;
+    background: #2f466c;
+    color:white;
+}
+
+.footer-option {
+    margin: 3% 2%;
+}
+
+.footer-option-head {
+    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.footer-option > li {
+    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    margin-top: 15%;
+}

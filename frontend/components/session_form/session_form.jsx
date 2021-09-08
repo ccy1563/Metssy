@@ -46,6 +46,7 @@ class SessionForm extends React.Component {
         <div>
           <form className="modal-form" onSubmit={this.handleSubmit}>
             <div onClick={this.props.closeModal} className="close-x">X</div>
+            <div><button onClick={() => this.props.openModal('signup')}>Sign Up</button></div>
             {this.renderErrors()}
             {/* <div className="email-item"> */}
               <label htmlFor="email-label1">Email Address

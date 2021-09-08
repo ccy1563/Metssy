@@ -1,0 +1,10 @@
+.categories {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 1% 0 1% 0;
+}
