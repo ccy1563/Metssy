@@ -11,7 +11,6 @@ class Search extends React.Component {
                         id="search-input"
                         type="search"
                         placeholder="Search for anything"
-                    // size="50"
                     />
             </div>
         )
