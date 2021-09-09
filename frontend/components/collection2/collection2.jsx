@@ -1,6 +1,6 @@
 import React from 'react';
 
-import image1 from '../../../app/assets/images/subcategories/clothes.jpeg'
+// import image1 from '../../../app/assets/images/subcategories/clothes.jpeg'
 
 // change redirects eventually
 class SquareCategories extends React.Component {
