@@ -14,12 +14,12 @@ class Footer extends React.Component {
                 <div className="footer-option">
                     <p className="footer-option-head">Shop</p>
                     <li>Gift cards</li>
-                    <li>Etsy blog</li>
+                    <li>Yeetsy blog</li>
                 </div>
 
                 <div className="footer-option">
                     <p className="footer-option-head">Sell</p>
-                    <li>Sell on Etsy</li>
+                    <li>Sell on Yeetsy</li>
                     <li>Teams</li>
                     <li>Forums</li>
                     <li>Affilites</li>
@@ -27,7 +27,7 @@ class Footer extends React.Component {
                 
                 <div className="footer-option">
                     <p className="footer-option-head">About</p>
-                    <li>Etsy, Inc.</li>
+                    <li>Yeetsy, Inc.</li>
                     <li>Policies</li>
                     <li>Investors</li>
                     <li>Careers</li>
@@ -44,7 +44,7 @@ class Footer extends React.Component {
                         <div className="download-etsy-app-head">
                             <button className="download-etsy-app-button-icon"><ExplicitIcon /></button>
                             <button className="download-etsy-app-button">
-                                Download the Etsy App
+                                Download the Yeetsy App
                             </button>
                         </div>
                         <ul className="links-to-social-media">

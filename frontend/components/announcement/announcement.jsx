@@ -7,7 +7,7 @@ class Announcement extends React.Component {
             <div className="announcement-top">
                 <div className="announcement-head">
                     <div className="announcement-head-top">
-                        What is Etsy?
+                        What is Yeetsy?
                     </div>
                     <div className="announcement-head-bottom">
                         Read our wonderfully weird story
@@ -20,7 +20,7 @@ class Announcement extends React.Component {
                             A community doing good
                         </p>
                         <p className="announcement-small-option">
-                            Etsy is a global online marketplace, where people come together to make, sell, buy, and collect unique items. We’re also a community pushing for positive change for small businesses, people, and the planet. Here are some of the ways we’re making a positive impact, together.
+                            Yeetsy is a global online marketplace, where people come together to make, sell, buy, and collect unique items. We’re also a community pushing for positive change for small businesses, people, and the planet. Here are some of the ways we’re making a positive impact, together.
                         </p>
                     </li>
                     <li className="announcement-list-items">
@@ -28,7 +28,7 @@ class Announcement extends React.Component {
                             Support independent creators
                         </p>
                         <p className="announcement-small-option">
-                            There’s no Etsy warehouse – just millions of people selling the things they love. We make the whole process easy, helping you connect directly with makers to find something extraordinary.
+                            There’s no Yeetsy warehouse – just millions of people selling the things they love. We make the whole process easy, helping you connect directly with makers to find something extraordinary.
                         </p>
                     </li>
                     <li className="announcement-list-items">
