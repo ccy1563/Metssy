@@ -10,6 +10,10 @@ class SessionForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentWillUnmount() {
+    this.props.removeErrors();
+  }
+
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
@@ -46,7 +50,6 @@ class SessionForm extends React.Component {
         <div>
           <form className="modal-form" onSubmit={this.handleSubmit}>
             <div onClick={this.props.closeModal} className="close-x">X</div>
-            {this.renderErrors()}
             {/* <div className="email-item"> */}
               <label className="form-text" htmlFor="email-label1">Email Address
               </label>
