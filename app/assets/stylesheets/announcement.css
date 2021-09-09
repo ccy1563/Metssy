@@ -1,11 +1,95 @@
-.announcement-head {
+.announcement-top {
+    background-color: #fcebd2;
+    padding:5%;
+}
 
+.announcement-head {
+	width: 400px; 
+	margin-left: auto; 
+	margin-right: auto; 
+    text-align: center;
+    margin-bottom: 5%;
+    /* margin: 5% 10% 5% 10%; */
+}
+
+.announcement-head-top {
+    font-family: "Guardian-EgypTT",Charter,"Charter Bitstream",Cambria,"Noto Serif Light","Droid Serif",Georgia,serif;
+    font-weight: 10;
+    font-size: 44px;
+    line-height: 48px;
+    color: #222222;
+    -webkit-font-smoothing: antialiased;
+}
+
+.announcement-head-bottom {
+    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+    text-decoration: underline;
+    transition: opacity 200ms;
+    margin: 3% 3% 0 0;
+    -webkit-font-smoothing: antialiased;
 }
 
 .announcement-list {
-
+    list-style: none;
+    display: flex;
+    /* max-width: 80%; */
+    /* flex-basis: 100%; */
+    /* align-items: center; */
+    justify-content: space-evenly;
 }
 
-.announcement-floor {
+.announcement-list-items {
+    /* margin: 0 5% 0 5%; */
+    flex-basis: 30%;
+    flex-grow: 0;
+}
+
+.announcement-bottom {
+    width: 400px; 
+    margin-top:3%;
+	margin-left: auto; 
+	margin-right: 35%; 
+    text-align: center;
+    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 30;
+}
+
+.announcement-big-option {
+    font-family: "Guardian-EgypTT",Charter,"Charter Bitstream",Cambria,"Noto Serif Light","Droid Serif",Georgia,serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    color:red;
+}
+
+.announcement-big-option {
+    font-family: "Guardian-EgypTT",Charter,"Charter Bitstream",Cambria,"Noto Serif Light","Droid Serif",Georgia,serif;
+    font-weight: 100;
+    font-size: 30px;
+    line-height: 48px;
+    color: #222222;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+}
+
+.announcement-small-option {
+    /* font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif; */
+    letter-spacing: 0.8px;
+    margin: 3% 3% 0 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+.get-help-button {
+    border-radius: 50px;
+    margin-top: 2vh;
+    padding: 8px;
+    font-size: 20px;
+    background: transparent;
+    border: 2px solid black;
+    -webkit-font-smoothing: antialiased;
+    cursor:pointer;
+}
+
+.get-help-button:hover {
     
 }

@@ -23,6 +23,7 @@
     border: none;
     cursor:pointer;
     overflow: hidden;  
+    outline: none;
 }
 
 .login-signup-button:hover {
