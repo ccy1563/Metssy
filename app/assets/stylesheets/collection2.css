@@ -62,9 +62,15 @@
 .big-category-image {
     border: 1px solid rgba(34, 34, 34, 0.15);
     border-radius: 5%;
-    max-width:100%;
-    margin-left: 48%;
+    max-width:108%;
+    margin-left: 40%;
     cursor: pointer;
+}
+
+.big-category-image:hover {
+    outline: none;
+    border-color: #b8b8b8;
+    box-shadow: 0 0 10px #b8b8b8;
 }
 
 .small-category-image {
@@ -72,6 +78,12 @@
     border-radius: 5%;
     max-width:80%;
     cursor: pointer;
+}
+
+.small-category-image:hover {
+    outline: none;
+    border-color: #b8b8b8;
+    box-shadow: 0 0 10px #b8b8b8;
 }
 
 .outer-grid {
@@ -126,5 +138,24 @@
     font-size: 16px;
     line-height: 28px;
     margin-left: 12%;
+    margin-bottom: 2%;
+}
+
+.grid-category-description {
+    -webkit-font-smoothing: antialiased;
+    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 2%;
+}
+
+.big-grid-category-description {
+    -webkit-font-smoothing: antialiased;
+    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 28px;
+    margin-left: 40%;
     margin-bottom: 2%;
 }

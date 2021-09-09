@@ -1,15 +1,15 @@
 import React from 'react';
-import Header from './header/header';
-import ModalContainer from './modal/modal_container'
-import GreetingContainer from './greeting/greeting_container'
-import SearchContainer from './search/search_container'
-import SignUpFormContainer from './session_form/signup_form_container';
-import LogInFormContainer from './session_form/login_form_container';
-import CategoryContainer from './category/category_container'
-import WelcomeContainer from './welcome/welcome_container'
-import SubCategoriesContainer from './subcategories/subcategories_container';
-import FooterContainer from './footer/footer_container';
-import SquareCategoriesContainer from './square_categories/square_categories';
+import Modal from './modal/modal_container'
+import Greeting from './greeting/greeting_container'
+import Search from './search/search_container'
+import SignUp from './session_form/signup_form_container';
+import Login from './session_form/login_form_container';
+import Category from './category/category_container'
+import Welcome from './welcome/welcome_container'
+import Footer from './footer/footer_container';
+import Collection1 from './collection1/collection1';
+import Collection2 from './collection2/collection2';
+import Announcement from './announcement/announcement_container'
 
 import ProductIndexContainer from './products/product_container'
 import ProductShowContainer from './products/product_show_container'
@@ -25,29 +25,29 @@ import {
 
 const App = () => (
     <div className="page-form">
-        {/* <Header /> */}
         <section className="navbar">
-            <ModalContainer />
+            <Modal />
             <Link className="home" to="/">Yeetsy</Link>
-            <SearchContainer />
-            <GreetingContainer />
+            <Search />
+            <Greeting />
             <CartContainer />
         </section>
         <Switch>
             {/* <Route exact path="/" component={App} /> */}
-            {/* <AuthRoute exact path="/login" component={LogInFormContainer} />
-            <AuthRoute exact path="/signup" component={SignUpFormContainer} /> */}
+            {/* <AuthRoute exact path="/login" component={Login} />
+            <AuthRoute exact path="/signup" component={SignUp} /> */}
 
             <Route exact path="/products" component={ProductIndexContainer} />
 
             <Route exact path="/products/:productId" component={ProductShowContainer} />
 
             <Route path="/">
-                <CategoryContainer />
-                <WelcomeContainer />
-                <SubCategoriesContainer />
-                <SquareCategoriesContainer />
-                <FooterContainer />
+                <Category />
+                <Welcome />
+                <Collection1 />
+                <Collection2 />
+                <Announcement />
+                <Footer />
             </Route>
         </Switch>
     </div>

@@ -37,7 +37,7 @@ class SquareCategories extends React.Component {
                     <div className="big-div">
                         <li className="big-category-link">
                             <img className="big-category-image" src={image1} />
-                            {/* <p className="square-category-description">Honey Dijon's Creator Collab</p> */}
+                            <p className="big-grid-category-description">Honey Dijon's Creator Collab</p>
                         </li>
                     </div>
 
@@ -45,30 +45,30 @@ class SquareCategories extends React.Component {
                         <div className="first-small-div">
                             <li className="small-category-link">
                                 <img className="small-category-image" src={image1} />
-                                {/* <p className="square-category-description">Black-owned Etsy shops</p> */}
+                                <p className="grid-category-description">Black-owned Etsy shops</p>
                             </li>
                             <li className="small-category-link">
                                 <img className="small-category-image" src={image1} />
-                                {/* <p className="square-category-description">The Wedding Shop</p> */}
+                                <p className="grid-category-description">The Wedding Shop</p>
                             </li>
                             <li className="small-category-link">
                                 <img className="small-category-image" src={image1} />
-                                {/* <p className="square-category-description">Masks and more</p> */}
+                                <p className="grid-category-description">Masks and more</p>
                             </li>
                         </div>
 
                         <div className="second-small-div">
                             <li className="small-category-link">
                                 <img className="small-category-image" src={image1} />
-                                {/* <p className="square-category-description">Design ideas and inspiration</p> */}
+                                <p className="grid-category-description">Design ideas</p>
                             </li>
                             <li className="small-category-link">
                                 <img className="small-category-image" src={image1} />
-                                {/* <p className="square-category-description">Gifts by Recipient</p> */}
+                                <p className="grid-category-description">Gifts by Recipient</p>
                             </li>
                             <li className="small-category-link">
                                 <img className="small-category-image" src={image1} />
-                                {/* <p className="square-category-description">Design ideas and inspiration</p> */}
+                                <p className="grid-category-description">Inspiration</p>
                             </li>
                         </div>
                     </div>
