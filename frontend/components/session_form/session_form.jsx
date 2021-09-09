@@ -46,31 +46,31 @@ class SessionForm extends React.Component {
         <div>
           <form className="modal-form" onSubmit={this.handleSubmit}>
             <div onClick={this.props.closeModal} className="close-x">X</div>
-            <div><button onClick={() => this.props.openModal('signup')}>Sign Up</button></div>
             {this.renderErrors()}
             {/* <div className="email-item"> */}
-              <label htmlFor="email-label1">Email Address
+              <label className="form-text" htmlFor="email-label1">Email Address
               </label>
               <input 
+                className="form-input"
                 id="email-label1"
                 type="email"
                 value={this.state.email}
                 onChange={this.update('email')}
               />
             {/* </div> */}
-            <label htmlFor="email-label2">Password
+            <label className="form-text" htmlFor="email-label2">Password
             </label>
-            <input 
+            <input
+              className="form-input" 
               id="email-label2"
               type="password"
               value={this.state.password}
               onChange={this.update('password')}
             />
-            <div className="submit-button">
-              <input className="submit-button" type="submit" value="Continue" />
-            </div>
-            <div className="submit-button">
-              <button className="submit-button" onClick={(e) => this.handleDemoUser(e)}>Demo User</button>
+            <div className="submit-button-list">
+              <li><input className="submit-button" type="submit" value="Continue"></input></li>
+              <li><button className="submit-button" onClick={(e) => this.handleDemoUser(e)}>Demo User</button></li>
+              <li><button className="submit-button" onClick={() => this.props.openModal('signup')}>Sign Up</button></li>
             </div>
           </form>
         </div>

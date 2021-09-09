@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 class Greeting extends React.Component {
   
 
-  componentDidMount() {
-    console.log(this.props.currentUser);
-  }
+  // componentDidMount() {
+  //   console.log(this.props.currentUser);
+  // }
 
   render() {
     if (this.props.currentUser) {

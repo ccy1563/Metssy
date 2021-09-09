@@ -1,3 +1,3 @@
 json.set! @product.id do 
-    json.extract! @product, :name, :price, :description
+    json.extract! @product, :id, :name, :price, :description
 end

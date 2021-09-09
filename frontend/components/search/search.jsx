@@ -1,4 +1,5 @@
 import React from 'react';
+import SearchIcon from '@material-ui/icons/Search';
 
 class Search extends React.Component {
 
@@ -12,6 +13,9 @@ class Search extends React.Component {
                         type="search"
                         placeholder="Search for anything"
                     />
+                <button className="search-icon-button">
+                    <SearchIcon />
+                </button>
             </div>
         )
     }

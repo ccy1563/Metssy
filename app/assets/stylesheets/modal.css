@@ -21,18 +21,18 @@
   padding: 50px;
   border-width: 2px;
   border-color: #222222;
-  background: #FFF;
+  background: white;
   border-radius: 24px;
-  position: relative;
-  margin: auto;
-  max-width: 600px;
-  width: 100%;
+  /* position: relative; */
+  /* margin: auto; */
+  /* width: 100%; */
+  width: 380px;
   z-index: 10;
 }
 
 .submit-button {
   text-align: center;
-  color: #FFFFFF;
+  color: white;
   background: #222222;
   border: none;
   cursor: pointer;
@@ -43,8 +43,9 @@
   position: relative;
   vertical-align: middle;
   z-index: 10;
-  width:250;
-  margin: 10px;
+  width:280px;
+  height:50px;
+  margin: 2% 0 2% 0;
 }
 
 .close-x {
@@ -61,4 +62,39 @@
 
 email-item {
 
+}
+
+.submit-button-list {
+  list-style-type: none;
+}
+
+.form-input {
+  appearance: none;
+  background: #FFFFFF;
+  box-shadow: 0 1px 4px 0 rgb(34 34 34 / 10%) inset;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 6px;
+  color: #222222;
+
+  height: 25px;
+  outline: none;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 10px;
+  padding-right: 12px;
+  width: 255px;
+  min-width: 0;
+  -webkit-font-smoothing: antialiased;
+  background: transparent;
+}
+
+.form-text {
+  font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+  line-height: 18px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  -webkit-font-smoothing: antialiased;
 }

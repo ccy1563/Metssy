@@ -29,3 +29,11 @@
     cursor: pointer;
 }
 
+.category-image:hover {
+    transition: all .1s ease-in-out;
+    transform: scale(1.1);
+}
+
+.category-text:hover {
+    text-decoration: underline;
+}

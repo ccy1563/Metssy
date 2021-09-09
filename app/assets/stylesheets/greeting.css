@@ -13,12 +13,19 @@
     line-height: 1.4;
     min-height: 36px;
     min-width: 36px;
-    padding-top: 9px;
+    /* padding-top: 9px; */
     margin: 1px;
+    /* margin-top: 2%; */
+    text-align: center;
 
     background-color: Transparent;
     background-repeat:no-repeat;
     border: none;
     cursor:pointer;
     overflow: hidden;  
+}
+
+.login-signup-button:hover {
+    background-color: rgb(226, 225, 225);
+    border-radius: 50px;
 }

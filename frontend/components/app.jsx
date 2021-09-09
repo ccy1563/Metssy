@@ -10,6 +10,12 @@ import WelcomeContainer from './welcome/welcome_container'
 import SubCategoriesContainer from './subcategories/subcategories_container';
 import FooterContainer from './footer/footer_container';
 import SquareCategoriesContainer from './square_categories/square_categories';
+
+import ProductIndexContainer from './products/product_container'
+import ProductShowContainer from './products/product_show_container'
+
+import CartContainer from './cart/cart_container'
+
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import {
     Route,
@@ -25,17 +31,25 @@ const App = () => (
             <Link className="home" to="/">Yeetsy</Link>
             <SearchContainer />
             <GreetingContainer />
+            <CartContainer />
         </section>
-        <CategoryContainer />
-        <WelcomeContainer />
-        <SubCategoriesContainer />
-        <SquareCategoriesContainer />
-        <FooterContainer />
-        {/* <Switch> */}
+        <Switch>
             {/* <Route exact path="/" component={App} /> */}
             {/* <AuthRoute exact path="/login" component={LogInFormContainer} />
             <AuthRoute exact path="/signup" component={SignUpFormContainer} /> */}
-        {/* </Switch> */}
+
+            <Route exact path="/products" component={ProductIndexContainer} />
+
+            <Route exact path="/products/:productId" component={ProductShowContainer} />
+
+            <Route path="/">
+                <CategoryContainer />
+                <WelcomeContainer />
+                <SubCategoriesContainer />
+                <SquareCategoriesContainer />
+                <FooterContainer />
+            </Route>
+        </Switch>
     </div>
 );
 

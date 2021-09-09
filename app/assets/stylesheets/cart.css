@@ -1,0 +1,19 @@
+.cart-button {    
+    font-size: 13px;
+    line-height: 1.4;
+    min-height: 36px;
+    min-width: 36px;
+    padding-top: 9px;
+    margin: 0 3% 0 3%;
+
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;  
+}
+
+.cart-button:hover {
+    background-color: rgb(226, 225, 225);
+    border-radius: 100%;
+}
