@@ -36,10 +36,10 @@ const App = () => (
             {/* <Route exact path="/" component={App} /> */}
             {/* <AuthRoute exact path="/login" component={Login} />
             <AuthRoute exact path="/signup" component={SignUp} /> */}
-
-            <Route exact path="/products" component={ProductIndexContainer} />
-
+{/* 
             <Route exact path="/products/:productId" component={ProductShowContainer} />
+            <Route exact path="/products" component={ProductIndexContainer} /> */}
+
 
             <Route path="/">
                 <Category />
