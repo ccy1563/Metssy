@@ -10,6 +10,10 @@ class ProductShow extends React.Component {
         const { product } = this.props;
         // const product = this.props.fetchProduct(this.props.match.params.productId);
         // debugger;
+
+        if (!product) {
+            return null;
+        }
         return (
             <div>
                 <p>All Products</p>
