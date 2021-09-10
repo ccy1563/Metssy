@@ -4,6 +4,12 @@ import React from 'react';
 
 // change redirects eventually
 class SquareCategories extends React.Component {
+
+    constructor(props) {
+        super(props)
+    }
+
+    
     render() {
         return (
             <div>

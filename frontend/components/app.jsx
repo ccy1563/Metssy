@@ -46,10 +46,11 @@ const App = () => (
                 <Welcome />
                 <Collection1 />
                 <Collection2 />
-                <Announcement />
-                <Footer />
             </Route>
         </Switch>
+
+        <Announcement />
+        <Footer />
     </div>
 );
 
