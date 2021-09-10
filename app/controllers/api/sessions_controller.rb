@@ -19,7 +19,7 @@ class Api::SessionsController < ApplicationController
             logout
             render "api/users/show"
         else
-            render json: ["Must be signed in"], status: 404
+            render json: {}
         end
     end
 end

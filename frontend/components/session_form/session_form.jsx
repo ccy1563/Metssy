@@ -33,9 +33,11 @@ class SessionForm extends React.Component {
   }
 
   renderErrors() {
+    // removing dup errors, super janky, find root problem
+    const uniq = [... new Set(this.props.errors)]
     return (
       <ul>
-        {this.props.errors.map((error, i) => (
+        {uniq.map((error, i) => (
           <li key={`error-${i}`}>
             {error}
           </li>
