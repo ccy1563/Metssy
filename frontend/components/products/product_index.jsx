@@ -13,13 +13,16 @@ class ProductIndex extends React.Component {
         const allProducts = this.props.products.map(product => {
             console.log(product)
             return (
-                <ProductIndexItem
-                    key={product.id}
-                    product={product}
-                    name={product.name}
-                    price={product.price}
-                    description={product.description}
-                />
+                <div>
+                    <img src={product.photoUrl} alt="" />
+                    <ProductIndexItem
+                        key={product.id}
+                        product={product}
+                        name={product.name}
+                        price={product.price}
+                        description={product.description}
+                    />
+                </div>
             )
         });
 // 

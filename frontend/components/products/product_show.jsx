@@ -8,26 +8,23 @@ class ProductShow extends React.Component {
     }
     
     componentDidMount() {
-        // debugger
         this.props.fetchProduct(this.props.match.params.productId);
-        // console.log(this.props.fetchProduct(1));
-        // debugger
-        // this.forceUpdate();
     }
 
     render() {
         console.log(this.props.match.params.productId);
         const { product } = this.props;
         if (!product) {
-            // debugger;
             return null;
         }
+        // debugger
         return (
             <div>
                 <p>All Products</p>
-                <p>Name:{product?.name}</p>
+                <p>Name:{product.name}</p>
                 <p>Description:{product?.description}</p>
-                <p>Price:{product?.price}</p>
+                <p>Price:{product.price}</p>
+                <img src={product.photoUrl} alt="" />
             </div>
         )
     }
