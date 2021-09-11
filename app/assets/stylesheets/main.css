@@ -1,9 +1,8 @@
 .welcome-form {    
     /* width:200px; */
-    height:280px;
+    height:200px;
     padding-top: 3%;
-    background-image: linear-gradient(top, #fcebd2, #fcebd2 70%, transparent 70%, transparent 100%);
-    background-image: -webkit-linear-gradient(top, #fcebd2, #fcebd2 70%, transparent 70%, transparent 100%)  
+    background-color: #fcebd2;
 }
 
 .welcome-text {

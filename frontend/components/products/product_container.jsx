@@ -1,10 +1,15 @@
+import { SatelliteTwoTone } from '@material-ui/icons';
 import { connect } from 'react-redux';
 import { fetchProducts, fetchProduct } from '../../actions/product_actions';
 import ProductIndex from './product_index';
 
-const mSTP = state => ({
-    products: Object.values(state.entities.products),
-});
+const mSTP = state => {
+    console.log(state)
+
+    return {
+        products: Object.values(state.entities.products),
+    }
+};
 
 const mDTP = dispatch => ({
     fetchProducts: () => dispatch(fetchProducts()),

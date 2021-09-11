@@ -101,14 +101,6 @@ product10 = Product.create!(
 file10 = URI.open('https://active-storage-yeetsy-dev.s3.amazonaws.com/prod_apple.jpg')
 product10.photo.attach(io: file10, filename: 'prod_apple.jpg')
 
-product10 = Product.create!(
-    name: "Apple candle",
-    price: 9.99,
-    description: "Hopefully stays fresh until delivered."
-)
-file10 = URI.open('https://active-storage-yeetsy-dev.s3.amazonaws.com/prod_apple.jpg')
-product10.photo.attach(io: file10, filename: 'prod_apple.jpg')
-
 product11 = Product.create!(
     name: "Natural Anabrolic Growth Hormone Supplement",
     price: 59.99,
@@ -116,44 +108,3 @@ product11 = Product.create!(
 )
 file11 = URI.open('https://active-storage-yeetsy-dev.s3.amazonaws.com/prod_anabrolic.jpeg')
 product11.photo.attach(io: file11, filename: 'prod_anabrolic.jpg')
-
-product12 = Product.create!(
-    name: "Clothes",
-    price: 14.99,
-    description: "Clothes for sale"
-)
-file12 = URI.open('https://active-storage-yeetsy-dev.s3.amazonaws.com/cat_clothes.jpg')
-product12.photo.attach(io: file12, filename: 'cat_clothes.jpg')
-
-product13 = Product.create!(
-    name: "Skincare",
-    price: 19.99,
-    description: "Skincare bundle"
-)
-file13 = URI.open('https://active-storage-yeetsy-dev.s3.amazonaws.com/cat_skincare.png')
-product13.photo.attach(io: file13, filename: 'cat_skincare.jpg')
-
-product14 = Product.create!(
-    name: "Decoration",
-    price: 9.99,
-    description: "Random Decorations"
-)
-file14 = URI.open('https://active-storage-yeetsy-dev.s3.amazonaws.com/cat_decorations.jpeg')
-product14.photo.attach(io: file14, filename: 'cat_decorations.jpg')
-
-product15 = Product.create!(
-    name: "Items for sale",
-    price: 4.99,
-    description: "Random things for sale"
-)
-file15 = URI.open('https://active-storage-yeetsy-dev.s3.amazonaws.com/cat_sale.jpg')
-product15.photo.attach(io: file15, filename: 'cat_sale.jpg')
-
-product16 = Product.create!(
-    name: "Jewelry",
-    price: 199.99,
-    description: "Random Jewelry"
-)
-file16 = URI.open('https://active-storage-yeetsy-dev.s3.amazonaws.com/cat_jewelry.jpg')
-product16.photo.attach(io: file16, filename: 'cat_jewelry.jpg')
-

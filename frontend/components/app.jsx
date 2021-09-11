@@ -38,14 +38,13 @@ const App = () => (
             <AuthRoute exact path="/signup" component={SignUp} /> */}
 
             <Route exact path="/products/:productId" component={ProductShowContainer} />
-            <Route exact path="/products" component={ProductIndexContainer} />
+            {/* <Route exact path="/products" component={ProductIndexContainer} /> */}
 
 
             <Route path="/">
                 <Category />
                 <Welcome />
-                <Collection1 />
-                <Collection2 />
+                <ProductIndexContainer />
             </Route>
         </Switch>
 
