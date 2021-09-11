@@ -32,6 +32,7 @@ const App = () => (
             <Greeting />
             <CartContainer />
         </section>
+        <Category />
         <Switch>
             {/* <Route exact path="/" component={App} /> */}
             {/* <AuthRoute exact path="/login" component={Login} />
@@ -42,7 +43,6 @@ const App = () => (
 
 
             <Route path="/">
-                <Category />
                 <Welcome />
                 <ProductIndexContainer />
             </Route>

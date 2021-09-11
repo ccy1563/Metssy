@@ -13,20 +13,20 @@ class ProductIndex extends React.Component {
         this.props.fetchProducts();
     }
 
-    shuffle(array) {
-        var currentIndex = array.length, randomIndex;
-        while (currentIndex != 0) {
-            randomIndex = Math.floor(Math.random() * currentIndex);
-            currentIndex--;
-            [array[currentIndex], array[randomIndex]] = [
-                array[randomIndex], array[currentIndex]];
-        }
-        return array;
-    }
+    // shuffle(array) {
+    //     var currentIndex = array.length, randomIndex;
+    //     while (currentIndex != 0) {
+    //         randomIndex = Math.floor(Math.random() * currentIndex);
+    //         currentIndex--;
+    //         [array[currentIndex], array[randomIndex]] = [
+    //             array[randomIndex], array[currentIndex]];
+    //     }
+    //     return array;
+    // }
 
     render() {
         // debugger
-        let allProductsFirst = this.props.products.map(product => {
+        let allProductsFirst = this.props.products.slice(0, 6).map(product => {
             // console.log(product)
             return (
                 <div>
@@ -41,7 +41,7 @@ class ProductIndex extends React.Component {
             )
         });
 
-        let allProductsSecond = this.props.products.map(product => {
+        let allProductsSecond = this.props.products.slice(6).map(product => {
             // console.log(product)
             return (
                 <div>
@@ -56,8 +56,8 @@ class ProductIndex extends React.Component {
             )
         });
 
-        allProductsFirst = this.shuffle(allProductsFirst);
-        allProductsSecond = this.shuffle(allProductsSecond);
+        // allProductsFirst = this.shuffle(allProductsFirst);
+        // allProductsSecond = this.shuffle(allProductsSecond);
 
         return (
             <div className="toptop">
@@ -105,47 +105,16 @@ class ProductIndex extends React.Component {
 
                     <p className="small-square-category-text">Shop Editors' Picks</p>
                     <p className="smaller-category-text">Curated collections hand-picked by Etsy editors</p>
-                    <div className="outer-grid">
-                        <div className="big-div">
-                            <li className="big-category-link">
-                                <img className="big-category-image" src={window.clothesURL} />
-                                <p className="big-grid-category-description">Honey Dijon's Creator Collab</p>
-                            </li>
+                    <div className="square-cat-outer">
+                        <div className="square-cat-item-big">
+                            {allProductsSecond[0]}
                         </div>
-
-                        <div>
-                            <div className="first-small-div">
-                                <li className="small-category-link">
-                                    <img className="small-category-image" src={window.clothesURL} />
-                                    <p className="grid-category-description">Black-owned Etsy shops</p>
-                                </li>
-                                <li className="small-category-link">
-                                    <img className="small-category-image" src={window.clothesURL} />
-                                    <p className="grid-category-description">The Wedding Shop</p>
-                                </li>
-                                <li className="small-category-link">
-                                    <img className="small-category-image" src={window.clothesURL} />
-                                    <p className="grid-category-description">Masks and more</p>
-                                </li>
-                            </div>
-
-                            <div className="second-small-div">
-                                <li className="small-category-link">
-                                    <img className="small-category-image" src={window.clothesURL} />
-                                    <p className="grid-category-description">Design ideas</p>
-                                </li>
-                                <li className="small-category-link">
-                                    <img className="small-category-image" src={window.clothesURL} />
-                                    <p className="grid-category-description">Gifts by Recipient</p>
-                                </li>
-                                <li className="small-category-link">
-                                    <img className="small-category-image" src={window.clothesURL} />
-                                    <p className="grid-category-description">Inspiration</p>
-                                </li>
-                            </div>
+                        <div className="square-cat-item-small">
+                            {allProductsSecond[1]}
                         </div>
-                    </div>
+                    </div>  
                 </div>
+                
             </div>
         )
     }

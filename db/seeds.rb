@@ -106,5 +106,5 @@ product11 = Product.create!(
     price: 59.99,
     description: "Hopefully stays fresh until delivered."
 )
-file11 = URI.open('https://active-storage-yeetsy-dev.s3.amazonaws.com/prod_anabrolic.jpeg')
+file11 = URI.open('https://active-storage-yeetsy-dev.s3.amazonaws.com/prod_anabrolic2.png')
 product11.photo.attach(io: file11, filename: 'prod_anabrolic.jpg')

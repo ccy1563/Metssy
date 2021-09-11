@@ -1,0 +1,136 @@
+.show-page-top {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 50px;
+}
+
+.show-page-image-div {
+    
+}
+
+.show-page-image {
+    max-width: 70vh;
+    max-height: 70vh;
+    border-color: #b8b8b8;
+    box-shadow: 0 0 10px #b8b8b8;
+}
+
+.show-page-other-div {
+    margin: 0 0 0 60vh;
+}
+
+.show-page-name {
+    font-family: "Guardian-EgypTT",Charter,"Charter Bitstream",Cambria,"Noto Serif Light","Droid Serif",Georgia,serif;
+    font-weight: 300;
+    font-size: 4vh;
+    letter-spacing: 0.35px;
+    color: #222222;
+    -webkit-font-smoothing: antialiased;
+}
+
+.show-page-price {
+    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 36px;
+    margin: 10px 0 0 0;
+}
+
+.installments-top {
+    display: flex;
+    margin: 10px 0 0 0;
+}
+
+.installments-text {
+    padding-right: 3px;
+    font-family: "Graphik Webfont", Klarna Text, "Klarna Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+.installments-link1 {
+    padding-right: 3px;
+    text-decoration: underline;
+    font-family: "Graphik Webfont", Klarna Text, "Klarna Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+.installments-bold {
+    padding-right: 3px;
+    font-family: "Graphik Webfont", Klarna Text, "Klarna Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+.installments-link2 {
+    padding-right: 3px;
+    text-decoration: underline;
+    font-family: "Graphik Webfont", Klarna Text, "Klarna Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+.show-page-add-cart-button {
+    margin: 10px 0 0 0;
+    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+    border-radius: 40px;
+    max-height: 48px;
+    min-height: 48px;
+    min-width: 450px;
+    background: #222222;
+    border: 2px solid black;
+    outline: none;
+    -webkit-font-smoothing: antialiased;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.show-page-description-list {
+    /* display: flex; */
+    margin: 20px 0 0 0;
+}
+
+.show-page-description-button {
+    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+    border-radius: 40px;
+    max-height: 48px;
+    min-height: 48px;
+    min-width: 450px;
+    background: white;
+    border-style: none;
+    /* border: 2px solid black; */
+    outline: none;
+    -webkit-font-smoothing: antialiased;
+    color: black;
+
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.show-page-description-button:hover {
+    background: #b8b8b8;
+    /* border: 2px solid black; */
+    outline: none;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    transition: all 0.2s ease-in-out;
+}
+
+.show-page-description {
+    overflow: hidden;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin: 20px 0 0 0;
+
+    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    
+}

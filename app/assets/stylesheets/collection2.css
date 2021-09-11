@@ -27,7 +27,7 @@
     font-weight: 700;
     font-size: 28px;
     line-height: 36px;
-    margin: 3% 0 0 4%;
+    margin: 4% 0 2% 4%;
     cursor: pointer;
 }
 
@@ -44,6 +44,9 @@
   font-size: 16px;
   line-height: 20px;
   -webkit-font-smoothing: antialiased;
+  text-decoration: none;
+  color: black;
+  text-align: center;
 }
 
 .square-category-list {
@@ -54,76 +57,6 @@
 
 .sub-square-categories {
 
-}
-
-/* .big-category-link {
-    list-style-type: none;
-}
-
-.small-category-link {
-    list-style-type: none;
-} */
-
-.big-category-image {
-    border: 1px solid rgba(34, 34, 34, 0.15);
-    border-radius: 5%;
-    max-width:108%;
-    margin-left: 40%;
-    cursor: pointer;
-}
-
-.big-category-image:hover {
-    outline: none;
-    border-color: #b8b8b8;
-    box-shadow: 0 0 10px #b8b8b8;
-}
-
-.small-category-image {
-    border: 1px solid rgba(34, 34, 34, 0.15);
-    border-radius: 5%;
-    max-width:80%;
-    cursor: pointer;
-}
-
-.small-category-image:hover {
-    outline: none;
-    border-color: #b8b8b8;
-    box-shadow: 0 0 10px #b8b8b8;
-}
-
-.outer-grid {
-    display: flex;
-    margin-bottom: 5%;
-}
-
-.first-small-div {
-    display: flex;
-    margin-left: 20%;
-    margin-right: 18%;
-    /* margin:0 -15px; */
-}
-
-.second-small-div {
-    display: flex;
-    margin-left: 20%;
-    margin-right:18%;
-    /* margin:0 -15px; */
-}
-
-.big-category-link {
-    list-style-type: none;
-}
-
-.first-small-div {
-    list-style-type: none;
-}
-
-.second-small-div {
-    list-style-type: none;
-}
-
-.all-small-divs {
-    display: flex;
 }
 
 .small-square-category-text {
@@ -146,21 +79,31 @@
     margin-bottom: 2%;
 }
 
-.grid-category-description {
-    -webkit-font-smoothing: antialiased;
-    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 28px;
-    margin-bottom: 2%;
+.square-cat-outer {
+    display: flex;
+    list-style: none;
+
+    margin: 50px;
 }
 
-.big-grid-category-description {
-    -webkit-font-smoothing: antialiased;
-    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 28px;
-    margin-left: 40%;
-    margin-bottom: 2%;
+.square-cat-item-big {
+    /* width: 100vh;
+    height: 100vh;
+    margin: 50px; */
+    display: flex;
+}
+
+.square-cat-item-small {
+    /* background-color: blue;
+    margin: 50px; */
+    
+}
+
+.square-cat-image {
+    width: 300px;
+    height: 300px;
+}
+
+.square-cat-text {
+
 }
