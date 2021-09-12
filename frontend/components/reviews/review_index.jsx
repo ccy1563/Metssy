@@ -10,7 +10,8 @@ class ReviewIndex extends React.Component {
 
     componentDidMount() {
         // debugger
-        this.props.fetchReviews(); // debugger
+        this.props.fetchReviews(this.props.product.id); // debugger
+        // debugger
     }
 
     render() {
@@ -19,8 +20,29 @@ class ReviewIndex extends React.Component {
         // if (!reviews) {
         //     return null;
         // }
-        let allReviews = this.props.reviews.map(review => {
-            // console.log(review)
+        // let allReviews = this.props.reviews.map(review => {
+        //     // console.log(review)
+        //     return (
+        //         <ReviewIndexItem
+        //             review={review}
+        //             key={review.id}
+        //             body={review.body}
+        //             rating={review.rating}
+        //             createdAt={review.created_at}
+        //             productId={review.product_id}
+        //             authorId={review.author_id}
+        //         />
+        //     )
+        // });
+
+        // debugger
+        if (!this.props.reviews) { 
+            // debugger;
+            return null;
+        }
+        // debugger
+        const allReviews = this.props.reviews.map(review => {
+            // console.log(this.props.product);
             return (
                 <ReviewIndexItem
                     review={review}
@@ -33,12 +55,11 @@ class ReviewIndex extends React.Component {
                 />
             )
         });
+
         // debugger
         return (
             <div>
-                <div>
-                    {allReviews}
-                </div>
+                {allReviews}
             </div>
         )
     }

@@ -84,30 +84,30 @@ class ProductIndex extends React.Component {
                 {/* {allReviews} */}
                 {/* these would be categories, i'll bootstrap these images for now */}
                 <div className="sub-categories">
-                    <li className="sub-cat-list">
+                    <div className="sub-cat-list">
                         <img className="category-image" src={window.cat_clothes} />
                         <p className="category-text">Clothes</p>
-                    </li>
-                    <li className="sub-cat-list">
+                    </div>
+                    <div className="sub-cat-list">
                         <img className="category-image" src={window.cat_decorations} />
                         <p className="category-text">Decorations</p>
-                    </li>
-                    <li className="sub-cat-list">
+                    </div>
+                    <div className="sub-cat-list">
                         <img className="category-image" src={window.cat_jewelry} />
                         <p className="category-text">Jewlery</p>
-                    </li>
-                    <li className="sub-cat-list">
+                    </div>
+                    <div className="sub-cat-list">
                         <img className="category-image" src={window.cat_skincare} />
                         <p className="category-text">Skincare</p>
-                    </li>
-                    <li className="sub-cat-list">
+                    </div>
+                    <div className="sub-cat-list">
                         <img className="category-image" src={window.cat_halloween} />
                         <p className="category-text">Halloween</p>
-                    </li>
-                    <li className="sub-cat-list">
+                    </div>
+                    <div className="sub-cat-list">
                         <img className="category-image" src={window.cat_sale} />
                         <p className="category-text">For Sale</p>
-                    </li>
+                    </div>
                 </div>
 
 
@@ -128,11 +128,11 @@ class ProductIndex extends React.Component {
                 <p className="smaller-category-text">Curated collections hand-picked by Etsy editors</p>
                 
                 <div className="square-cat-outer">
-                    <li className="square-cat-item-big">
-                        {bigImage}
-                    </li>
-                    <li className="square-cat-item-small">
-                        <li className="square-cat-item-small-1">
+                    <div className="square-cat-item-big">
+                        {bigImage[0]}
+                    </div>
+                    <div className="square-cat-item-small">
+                        <div className="square-cat-item-small-1">
                             <div className="square-cat-item-small-1-item">
                                 {productSection2[0]}
                             </div>
@@ -142,8 +142,8 @@ class ProductIndex extends React.Component {
                             <div className="square-cat-item-small-1-item">
                                 {productSection2[2]}
                             </div>
-                        </li>
-                        <li className="square-cat-item-small-2">
+                        </div>
+                        <div className="square-cat-item-small-2">
                             <div className="square-cat-item-small-2-item">
                                 {productSection2[3]}
                             </div>
@@ -153,8 +153,8 @@ class ProductIndex extends React.Component {
                             <div className="square-cat-item-small-2-item">
                                 {productSection2[5]}
                             </div>
-                        </li>
-                    </li>
+                        </div>
+                    </div>
 
                 </div>
             </div>

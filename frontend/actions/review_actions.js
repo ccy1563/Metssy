@@ -19,8 +19,8 @@ export const removeReview = reviewId => ({
     reviewId: reviewId,
 });
 
-export const fetchReviews = () => dispatch => {
-    return ReviewApiUtil.fetchReviews().
+export const fetchReviews = productId => dispatch => {
+    return ReviewApiUtil.fetchReviews(productId).
         then(res => dispatch(receiveReviews(res)))
 }
 
@@ -30,8 +30,8 @@ export const fetchReview = reviewId => dispatch => {
         then(res => dispatch(receiveReview(res)))
 }
 
-export const createReview = review => dispatch => (
-    ReviewApiUtil.createReview(review)
+export const createReview = (review, productId) => dispatch => (
+    ReviewApiUtil.createReview(review, productId)
         .then(res => dispatch(receiveReview(res)))
 );
 

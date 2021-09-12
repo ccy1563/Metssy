@@ -9,12 +9,12 @@ class ReviewIndexItem extends React.Component {
         // debugger
         return (
             <div>
-                <li className="review-body">
+                <div className="review-body">
                     <p>{review.body}</p>
-                </li>
-                <li className="review-rating">
+                </div>
+                <div className="review-rating">
                     <p>{review.rating}</p>
-                </li>
+                </div>
             </div>
         )
     }

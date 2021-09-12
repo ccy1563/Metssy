@@ -8,18 +8,18 @@ class ProductIndexItem extends React.Component {
         // debugger
         return (
             <div className={classDiv}>
-                <li className={classTop}>
+                <div className={classTop}>
                     <Link to={`/products/${product.id}`}>
                         <img className={classImage} src={product.photoUrl} alt="" />
                     </Link>
-                </li>
-                <li className={classTop}>
+                </div>
+                <div className={classTop}>
                     <Link to={`/products/${product.id}`}>
                         <button className={classPrice}>
                             ${product.price}
                         </button>
                     </Link>
-                </li>
+                </div>
             </div>
         )
     }

@@ -15,6 +15,7 @@ const reviewReducer = (oldState = {}, action) => {
         case REMOVE_REVIEW:
             delete nextState[action.reviewId]
             return nextState;
+            // return { ...oldState, [action.review.id]: undefined }
         default:
             return oldState;
     }

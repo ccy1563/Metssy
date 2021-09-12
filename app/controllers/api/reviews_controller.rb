@@ -1,6 +1,11 @@
 class Api::ReviewsController < ApplicationController
     def index
-        @reviews = Review.all
+
+        # find product by wildcard
+        @product = Product.find(params[:product_id])
+
+        # find all review for specific product by association
+        @reviews = @product.reviews
         render :index
     end
 
@@ -9,7 +14,7 @@ class Api::ReviewsController < ApplicationController
         render :show
     end
 
-    def create 
+    def create
         @product = Product.find(params[:product_id])
         @review = Review.new(review_params)
         if @review.save
@@ -37,5 +42,10 @@ class Api::ReviewsController < ApplicationController
         else
             render json: @review.errors.full_messages, status: 422 
         end
+    end
+
+        private
+    def review_params
+        params.require(:review).permit(:body, :rating, :product_id, :author_id)
     end
 end

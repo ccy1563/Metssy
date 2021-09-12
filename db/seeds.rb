@@ -201,3 +201,24 @@ review15 = Review.create!(
     product_id: product2.id, 
     author_id: otherUser.id
 )
+
+review16 = Review.create!(
+    body: 'sadfsafsdfafsa',
+    rating: 5, 
+    product_id: product1.id, 
+    author_id: otherUser.id
+)
+
+review17 = Review.create!(
+    body: 'MMMMMMMMFMDSFDF',
+    rating: 5, 
+    product_id: product1.id, 
+    author_id: otherUser.id
+)
+
+review18 = Review.create!(
+    body: 'LEOIKMVDNJKSJVBS',
+    rating: 3, 
+    product_id: product1.id, 
+    author_id: otherUser.id
+)

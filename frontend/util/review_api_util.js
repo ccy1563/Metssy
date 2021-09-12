@@ -1,38 +1,42 @@
  // resources :reviews, only: [:index, :show, :create, :update, :destroy]
 
-export const fetchReviews = () => (
+ // /api/products/:product_id/reviews(.:format) 
+export const fetchReviews = productId => (
     $.ajax({
         method: 'get',
-        url: '/api/reviews',
+        url: `/api/products/${productId}/reviews`,
     })
 );
 
-export const fetchReview = reviewId => (
+//  /api/products/:product_id/reviews/:id
+export const fetchReview = (reviewId, productId) => (
     $.ajax({
         method: 'get',
-        url: `/api/reviews/${reviewId}`,
+        url: `/api/products/${productId}/reviews/${reviewId}`,
     })
 );
 
-export const createReview = review => (
+// /api/products/:product_id/reviews
+export const createReview = (review, productId) => (
     $.ajax({
         method: 'post',
-        url: '/api/reviews',
+        url: `/api/products/${productId}/reviews`,
         data: { review },
     })
 );
 
-export const deleteReview = review => (
+export const deleteReview = (review, productId) => (
     $.ajax({
         method: 'delete',
-        url: `/api/reviews/${review.id}`,
+        url: `/api/products/${productId}/reviews/${review.id}`,
     })
 );
 
-export const updateReview = review => (
+// /api/products/:product_id/reviews/:id
+export const updateReview = (review, productId) => (
     $.ajax({
         method: 'patch',
-        url: `/api/reviews/${review.id}`,
+        url: `/api/products/${productId}/reviews/${review.id}`,
         data: { review },
     })
 );
