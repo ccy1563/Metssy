@@ -14,6 +14,8 @@ import Footer from './footer/footer_container';
 import ProductIndexContainer from './products/product_container'
 import ProductShowContainer from './products/product_show_container'
 
+import ReviewIndexContainer from './reviews/review_container'
+
 import CartContainer from './cart/cart_container'
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
@@ -41,7 +43,7 @@ const App = () => (
             <Route exact path="/products/:productId" component={ProductShowContainer} />
             {/* <Route exact path="/products" component={ProductIndexContainer} /> */}
 
-
+            
             <Route path="/">
                 <Welcome />
                 <ProductIndexContainer />

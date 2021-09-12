@@ -4,6 +4,13 @@ import configureStore from './store/store';
 import Root from './components/root'
 import { signup, login, logout } from './actions/session_actions';
 import { fetchProduct, fetchProducts} from './actions/product_actions'
+import { 
+    fetchReview, 
+    fetchReviews, 
+    createReview,
+    deleteReview,
+    updateReview
+} from './actions/review_actions'
 
 document.addEventListener('DOMContentLoaded', () => {
     let store;
@@ -30,4 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
     window.signup = signup;
     window.fetchProducts = fetchProducts;
     window.fetchProduct = fetchProduct;
+
+    window.fetchReviews = fetchReviews;
+    window.fetchReview = fetchReview;
+    window.createReview = createReview;
+    window.updateReview = updateReview;
+    window.deleteReview = deleteReview;
 });

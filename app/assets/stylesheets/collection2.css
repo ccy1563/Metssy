@@ -14,6 +14,23 @@
     height: 200px;
 }
 
+.square-category-price {
+    height: 30px;
+    border-radius: 40px;
+    position: absolute;
+    top: 80%;
+    left: 23%;
+    border-style: none;
+    background-color: white;
+    border: 1px solid rgba(34, 34, 34, 0.15);
+}
+
+.sub-square-categories-div {
+    position: relative;
+    /* max-width: 40vh;
+    max-height: 40vh; */
+}
+
 .square-category-image:hover {
     outline: none;
     border-color: #b8b8b8;
@@ -79,31 +96,90 @@
     margin-bottom: 2%;
 }
 
+
+
+
+
+
+
+
+
 .square-cat-outer {
     display: flex;
-    list-style: none;
-
-    margin: 50px;
+    /* margin-left: 100p; */
+    padding: 1vh 10vh 10vh 13vh;
 }
 
 .square-cat-item-big {
-    /* width: 100vh;
-    height: 100vh;
-    margin: 50px; */
+    list-style: none;
+}
+
+.square-cat-list-big {
+    list-style: none;
+}
+
+.square-cat-image-big {
+    width: 450px;
+    height: 450px;
+    border: 1px solid rgba(34, 34, 34, 0.15);
+    border-radius: 5%;
+}
+
+.square-cat-price-big {
+    height: 30px;
+    border-radius: 40px;
+    position: relative;
+    top: -40px;
+    left: 5px;
+    border: 1px solid rgba(34, 34, 34, 0.15);
+    background-color: white;
+}
+
+.square-cat-price {
+    height: 30px;
+    border-radius: 40px;
+    position: relative;
+    top: -40px;
+    left: 5px;
+    border-style: none;
+    border: 1px solid rgba(34, 34, 34, 0.15);
+    background-color: white;
+}
+
+
+.square-cat-item-small {
+    list-style: none;
+    /* display: flex; dont want this*/
+}
+
+.square-cat-item-small-1 {
+    display: flex;
+}
+.square-cat-item-small-2 {
     display: flex;
 }
 
-.square-cat-item-small {
-    /* background-color: blue;
-    margin: 50px; */
-    
+.square-cat-list {
+    margin: 0 0 0 50px;
+    list-style: none;
 }
 
 .square-cat-image {
-    width: 300px;
-    height: 300px;
+    width: 209px;
+    height: 209px;
+    border: 1px solid rgba(34, 34, 34, 0.15);
+    border-radius: 5%;
 }
 
-.square-cat-text {
+.square-cat-image-big:hover {
+    outline: none;
+    border-color: #b8b8b8;
+    box-shadow: 0 0 10px #b8b8b8;
+}
 
+
+.square-cat-image:hover {
+    outline: none;
+    border-color: #b8b8b8;
+    box-shadow: 0 0 10px #b8b8b8;
 }

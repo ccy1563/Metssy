@@ -131,6 +131,23 @@
     font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
     font-weight: 400;
     font-size: 16px;
-    line-height: 28px;
-    
+    line-height: 28px;   
+}
+
+.cart-and-van-list-item {
+    display: flex;
+    list-style: none;
+    padding: 3vh 0 0 0;
+}
+
+.cart-and-van-list-item-1 {
+    /* display: flex; */
+}
+
+.van-sen-div {
+    /* display: flex; */
+}
+
+.van-sen-items {
+    /* margin-left: 30px; */
 }

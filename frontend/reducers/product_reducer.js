@@ -3,7 +3,7 @@ import {
     RECEIVE_PRODUCT,
 } from '../actions/product_actions';
 
-const ProductReducer = (oldState = {}, action) => {
+const productReducer = (oldState = {}, action) => {
     Object.freeze(oldState);
     switch (action.type) {
         case RECEIVE_PRODUCTS:
@@ -15,4 +15,4 @@ const ProductReducer = (oldState = {}, action) => {
     }
 }
 
-export default ProductReducer;
+export default productReducer;

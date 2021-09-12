@@ -1,7 +1,8 @@
 import React from 'react';
-import ProductIndexItemFirst from './product_index_item_first';
-import ProductIndexItemSecond from './product_index_item_second';
+import ProductIndexItem from './product_index_item';
 import { Link } from 'react-router-dom';
+
+import ReviewIndexItem from '../reviews/review_index_item';
 
 class ProductIndex extends React.Component {
 
@@ -11,6 +12,7 @@ class ProductIndex extends React.Component {
 
     componentDidMount() {
         this.props.fetchProducts();
+        // this.props.fetchReviews();
     }
 
     // shuffle(array) {
@@ -24,44 +26,62 @@ class ProductIndex extends React.Component {
     //     return array;
     // }
 
+    createProductIndexItem(i, j, div, top, image, price) {
+        const ret = this.props.products.slice(i, j).map(product => {
+            // console.log(product)
+            return (
+                <div>
+                    <ProductIndexItem
+                        key={product.id}
+                        product={product}
+                        name={product.name}
+                        price={product.price}
+                        description={product.description}
+                        classDiv={div}
+                        classTop={top}
+                        classImage={image}
+                        classPrice={price}
+                    />
+                </div>
+            )
+        });
+        return ret;
+    }
+
     render() {
         // debugger
-        let allProductsFirst = this.props.products.slice(0, 6).map(product => {
-            // console.log(product)
-            return (
-                <div>
-                    <ProductIndexItemFirst
-                        key={product.id}
-                        product={product}
-                        name={product.name}
-                        price={product.price}
-                        description={product.description}
-                    />
-                </div>
-            )
-        });
 
-        let allProductsSecond = this.props.products.slice(6).map(product => {
-            // console.log(product)
-            return (
-                <div>
-                    <ProductIndexItemSecond
-                        key={product.id}
-                        product={product}
-                        name={product.name}
-                        price={product.price}
-                        description={product.description}
-                    />
-                </div>
-            )
-        });
+        let productSection1 = this.createProductIndexItem(
+            0,
+            5,
+            "sub-square-categories-div",
+            "sub-square-categories",
+            "square-category-image",
+            "square-category-price"
+        )
 
-        // allProductsFirst = this.shuffle(allProductsFirst);
-        // allProductsSecond = this.shuffle(allProductsSecond);
+        let bigImage = this.createProductIndexItem(
+            5,
+            6,
+            "square-cat-list-div-big",
+            "square-cat-list-big",
+            "square-cat-image-big",
+            "square-cat-price-big"
+        )
+
+        let productSection2 = this.createProductIndexItem(
+            6,
+            14,
+            "square-cat-list-div",
+            "square-cat-list",
+            "square-cat-image",
+            "square-cat-price"
+        )
+
 
         return (
             <div className="toptop">
-                
+                {/* {allReviews} */}
                 {/* these would be categories, i'll bootstrap these images for now */}
                 <div className="sub-categories">
                     <li className="sub-cat-list">
@@ -96,25 +116,47 @@ class ProductIndex extends React.Component {
                 <div className="square-category-top">
                     <p className="square-category-text">Popular gifts right now</p>
                     <div className="square-category-list">
-                        {allProductsFirst[0]}
-                        {allProductsFirst[1]}
-                        {allProductsFirst[2]}
-                        {allProductsFirst[3]}
-                        {allProductsFirst[4]}
+                        {productSection1[0]}
+                        {productSection1[1]}
+                        {productSection1[2]}
+                        {productSection1[3]}
+                        {productSection1[4]}
                     </div>
-
-                    <p className="small-square-category-text">Shop Editors' Picks</p>
-                    <p className="smaller-category-text">Curated collections hand-picked by Etsy editors</p>
-                    <div className="square-cat-outer">
-                        <div className="square-cat-item-big">
-                            {allProductsSecond[0]}
-                        </div>
-                        <div className="square-cat-item-small">
-                            {allProductsSecond[1]}
-                        </div>
-                    </div>  
                 </div>
+
+                <p className="small-square-category-text">Shop Editors' Picks</p>
+                <p className="smaller-category-text">Curated collections hand-picked by Etsy editors</p>
                 
+                <div className="square-cat-outer">
+                    <li className="square-cat-item-big">
+                        {bigImage}
+                    </li>
+                    <li className="square-cat-item-small">
+                        <li className="square-cat-item-small-1">
+                            <div className="square-cat-item-small-1-item">
+                                {productSection2[0]}
+                            </div>
+                            <div className="square-cat-item-small-1-item">
+                                {productSection2[1]}
+                            </div>
+                            <div className="square-cat-item-small-1-item">
+                                {productSection2[2]}
+                            </div>
+                        </li>
+                        <li className="square-cat-item-small-2">
+                            <div className="square-cat-item-small-2-item">
+                                {productSection2[3]}
+                            </div>
+                            <div className="square-cat-item-small-2-item">
+                                {productSection2[4]}
+                            </div>
+                            <div className="square-cat-item-small-2-item">
+                                {productSection2[5]}
+                            </div>
+                        </li>
+                    </li>
+
+                </div>
             </div>
         )
     }
