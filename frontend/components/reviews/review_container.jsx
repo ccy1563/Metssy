@@ -7,20 +7,20 @@ import {
     deleteReview,
     updateReview
 } from '../../actions/review_actions';
-import ReviewEditForm from './review_edit_form';
+import ReviewIndex from './review_index';
 
-const mSTP = (state, ownProps) => {
+const mSTP = state => {
     // debugger
     return {
-        review: state.entities.reviews[ownProps.match.params.reviewId]
+        reviews: Object.values(state.entities.reviews),
     }
 };
 
 const mDTP = dispatch => ({
-    fetchReviews: productId => dispatch(fetchReviews(productId)),
-    createReview: review => dispatch(createReview(review)),
+    fetchReviews: reviewId => dispatch(fetchReviews(reviewId)),
+    createReview: (review, productId) => dispatch(createReview(review,  productId)),
     // deleteReview: reviewId => dispatch(deleteReview(reviewId)),
     // updateReview: review => dispatch(updateReview(review)),
 });
 
-export default connect(mSTP, mDTP)(ReviewEditForm);
+export default connect(mSTP, mDTP)(ReviewIndex);
