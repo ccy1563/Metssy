@@ -44,15 +44,17 @@ class ReviewIndex extends React.Component {
         const allReviews = this.props.reviews.map(review => {
             // console.log(this.props.product);
             return (
-                <ReviewIndexItem
-                    review={review}
-                    key={review.id}
-                    body={review.body}
-                    rating={review.rating}
-                    createdAt={review.created_at}
-                    productId={review.product_id}
-                    authorId={review.author_id}
-                />
+                <div>
+                    <ReviewIndexItem
+                        review={review}
+                        key={review.id}
+                        body={review.body}
+                        rating={review.rating}
+                        createdAt={review.created_at}
+                        productId={review.product_id}
+                        authorId={review.author_id}
+                    />
+                </div>
             )
         });
 

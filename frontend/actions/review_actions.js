@@ -35,8 +35,8 @@ export const createReview = (review, productId) => dispatch => (
         .then(res => dispatch(receiveReview(res)))
 );
 
-export const updateReview = review => dispatch => (
-    ReviewApiUtil.updateReview(review)
+export const updateReview = (review, productId) => dispatch => (
+    ReviewApiUtil.updateReview(review, productId)
         .then(res => dispatch(receiveReview(res)))
 );
 

@@ -15,6 +15,9 @@ class ReviewIndexItem extends React.Component {
                 <div className="review-rating">
                     <p>{review.rating}</p>
                 </div>
+                <button>
+                    <Link to={`/reviews/${review.id}/edit`}>Edit</Link>
+                </button>
             </div>
         )
     }

@@ -7,12 +7,12 @@ import {
     deleteReview,
     updateReview
 } from '../../actions/review_actions';
-import ReviewIndex from './review_index';
+import ReviewEditForm from './review_edit_form';
 
-const mSTP = state => {
+const mSTP = (state, ownProps) => {
     // debugger
     return {
-        reviews: Object.values(state.entities.reviews),
+        review: state.entities.reviews[ownProps.match.params.reviewId]
     }
 };
 
@@ -23,4 +23,4 @@ const mDTP = dispatch => ({
     // updateReview: review => dispatch(updateReview(review)),
 });
 
-export default connect(mSTP, mDTP)(ReviewIndex);
+export default connect(mSTP, mDTP)(ReviewEditForm);

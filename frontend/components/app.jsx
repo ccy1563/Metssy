@@ -16,6 +16,8 @@ import ProductShowContainer from './products/product_show_container'
 
 import ReviewIndexContainer from './reviews/review_container'
 
+import ReviewEditContainer from './reviews/review_edit_container'
+
 import CartContainer from './cart/cart_container'
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
@@ -43,11 +45,13 @@ const App = () => (
             <Route exact path="/products/:productId" component={ProductShowContainer} />
             {/* <Route exact path="/products" component={ProductIndexContainer} /> */}
 
+            <Route exact path="/reviews/:reviewId/edit" component={ReviewEditContainer} />
             
             <Route path="/">
                 <Welcome />
                 <ProductIndexContainer />
             </Route>
+
         </Switch>
 
         <Announcement />
