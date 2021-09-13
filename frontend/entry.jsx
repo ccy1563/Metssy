@@ -12,6 +12,9 @@ import {
     updateReview
 } from './actions/review_actions'
 
+
+import { fetchUser } from './actions/user_actions'
+
 document.addEventListener('DOMContentLoaded', () => {
     let store;
     if (window.currentUser) {
@@ -43,4 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.createReview = createReview;
     window.updateReview = updateReview;
     window.deleteReview = deleteReview;
+
+    window.fetchUser = fetchUser;
 });

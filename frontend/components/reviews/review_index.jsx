@@ -9,9 +9,9 @@ class ReviewIndex extends React.Component {
     }
 
     componentDidMount() {
-        // debugger
+        debugger
         this.props.fetchReviews(this.props.product.id);
-        // debugger
+        debugger
     }
 
     render() {
@@ -33,6 +33,7 @@ class ReviewIndex extends React.Component {
                     productId={review.product_id}
                     authorId={review.author_id}
                     productId={this.props.product.id}
+                    // email={this.props.fetchUser(this.props.user)}
                 />
             )
         });

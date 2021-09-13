@@ -25,6 +25,8 @@ class ReviewForm extends React.Component {
         });
         // debugger
         this.props.createReview(review, productId);
+        document.getElementById("review-submit-button").value = "";
+
     }
 
     update(property) {
@@ -39,19 +41,22 @@ class ReviewForm extends React.Component {
                     <label>Rating</label>
                     <input
                         type="number"
+                        max="5"
+                        min="0"
                         value={this.state.rating}
                         onChange={this.update("rating")}
                     />
-                    <label>Review</label>
+                    {/* <label>Review</label> */}
                     <textarea
-                        cols="30"
-                        rows="10"
+                        id="review-submit-button"
+                        cols="65"
+                        rows="20"
                         value={this.state.body}
                         onChange={this.update("body")}
                     />
-                    <input type="submit" />
+                    <input type="submit" className="review-submit-bttn" />
                 </form>
-                <button onClick={this.navigateToReviewShow}>Cancel</button>
+                {/* <button onClick={this.navigateToReviewShow}>Cancel</button> */}
             </div>
         )
     }

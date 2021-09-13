@@ -1,3 +1,30 @@
+.review-top {
+    margin: 5vh 2vh 0 0;
+    /* background-color: yellow; */
+}
+
 .review-form {
-    /* padding-left: 500px; */
+    /* padding: 5vh; */
+}
+
+.review-submit-bttn {
+        margin: 10px 0 0 6vh;
+    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+    border-radius: 40px;
+    max-height: 48px;
+    min-height: 48px;
+    min-width: 450px;
+    background: #222222;
+    border: 2px solid black;
+    outline: none;
+    -webkit-font-smoothing: antialiased;
+    color: white;
+    
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.submitted-reviews-top {
+    margin: 5vh;
 }

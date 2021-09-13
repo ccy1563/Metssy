@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(version: 2021_09_11_214855) do
     t.string "body", null: false
     t.integer "rating", null: false
     t.integer "product_id", null: false
-    t.integer "author_id", null: false
+    t.integer "c", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

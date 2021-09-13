@@ -7,10 +7,11 @@ import { openModal } from '../../actions/modal_actions';
 
 const mSTP = state => {
 
-    debugger;
+    // debugger;
 
     return {
         user: state.session.id,
+        // currentUser: state.entities.users[state.session.id],
     }
 }
 

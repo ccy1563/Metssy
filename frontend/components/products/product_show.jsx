@@ -28,13 +28,14 @@ class ProductShow extends React.Component {
             <div className="show-page-top">
                 <div className="show-page-image-div">
                     <img className="show-page-image" src={product.photoUrl} alt="" />
-                    <ReviewFormContainer 
-                        product={product}
-                    />
-                    <ReviewContainer 
-                        product={product}
-                        
-                    />
+                    <div className="review-top">
+                        <ReviewFormContainer
+                            product={product}
+                        />
+                        <ReviewContainer
+                            product={product}
+                        />
+                    </div>
                 </div>
                 <div className="show-page-other-div">
                     <p className="show-page-name">{product.name}</p>

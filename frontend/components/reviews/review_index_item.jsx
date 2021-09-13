@@ -1,27 +1,36 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
+
+import StarIcon from '@material-ui/icons/Star';
+import StarBorderIcon from '@material-ui/icons/StarBorder';
 
 class ReviewIndexItem extends React.Component {
 
     render() {
         
         const { review } = this.props;
-        // debugger
+        let stars = [];
+        for (let i = 0; i < 5; i++) {
+            if (i < review.rating) {
+                stars.push(<StarIcon />);
+            } else {
+                stars.push(<StarBorderIcon />);
+            }
+        }
+
         return (
-            <div>
+            <div className="submitted-reviews-top">
+                <div className="review-email">
+                    {/* <p>{this.props.fetchUser(this.props.authorId).email}</p> */}
+                    <p>{this.props.review.email}</p>
+                </div>
+                <div className="review-rating">
+                    <p>{stars}</p>
+                </div>
                 <div className="review-body">
                     <p>{review.body}</p>
                 </div>
-                <div className="review-rating">
-                    <p>{review.rating}</p>
-                </div>
-                <button>
-                    {/* <Redirect to={{
-                        pathname: '/reviews/${review.id}/edit',
-                        product: this.props.product
-                    }} /> */}
-                    <Link to={`/products/${this.props.productId}/reviews/${review.id}/edit`}>Edit</Link>
-                </button>
+                <Link to={`/reviews/${review.id}/edit`}><button>Edit</button></Link>
             </div>
         )
     }
