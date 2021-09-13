@@ -17,8 +17,8 @@ const mSTP = state => {
 };
 
 const mDTP = dispatch => ({
-    fetchReviews: reviewId => dispatch(fetchReviews(reviewId)),
-    createReview: (review, productId) => dispatch(createReview(review,  productId)),
+    fetchReviews: productId => dispatch(fetchReviews(productId)),
+    createReview: (review, productId) => dispatch(createReview(review, productId)),
     // deleteReview: reviewId => dispatch(deleteReview(reviewId)),
     // updateReview: review => dispatch(updateReview(review)),
 });

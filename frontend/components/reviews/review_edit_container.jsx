@@ -12,7 +12,7 @@ import {
 import ReviewEditForm from './review_index';
 
 const mSTP = (state, ownProps) => {
-    debugger
+    // debugger
     return {
         review: state.entities.reviews[ownProps.match.params.reviewId],
     }

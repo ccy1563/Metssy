@@ -10,31 +10,11 @@ class ReviewIndex extends React.Component {
 
     componentDidMount() {
         // debugger
-        this.props.fetchReviews(this.props.product.id); // debugger
+        this.props.fetchReviews(this.props.product.id);
         // debugger
     }
 
     render() {
-        // debugger
-        // const { reviews } = this.props;
-        // if (!reviews) {
-        //     return null;
-        // }
-        // let allReviews = this.props.reviews.map(review => {
-        //     // console.log(review)
-        //     return (
-        //         <ReviewIndexItem
-        //             review={review}
-        //             key={review.id}
-        //             body={review.body}
-        //             rating={review.rating}
-        //             createdAt={review.created_at}
-        //             productId={review.product_id}
-        //             authorId={review.author_id}
-        //         />
-        //     )
-        // });
-
         // debugger
         if (!this.props.reviews) { 
             // debugger;
@@ -44,17 +24,15 @@ class ReviewIndex extends React.Component {
         const allReviews = this.props.reviews.map(review => {
             // console.log(this.props.product);
             return (
-                <div>
-                    <ReviewIndexItem
-                        review={review}
-                        key={review.id}
-                        body={review.body}
-                        rating={review.rating}
-                        createdAt={review.created_at}
-                        productId={review.product_id}
-                        authorId={review.author_id}
-                    />
-                </div>
+                <ReviewIndexItem
+                    key={review.id}
+                    review={review}
+                    body={review.body}
+                    rating={review.rating}
+                    createdAt={review.created_at}
+                    productId={review.product_id}
+                    authorId={review.author_id}
+                />
             )
         });
 

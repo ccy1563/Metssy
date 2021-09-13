@@ -3,7 +3,8 @@ import React from 'react';
 class ReviewEditForm extends React.Component {
 
     componentDidMount() {
-        this.props.fetchReviews()
+        debugger
+        this.props.fetchReviews();
     }
 
     constructor(props) {

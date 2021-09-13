@@ -16,6 +16,10 @@ class ReviewIndexItem extends React.Component {
                     <p>{review.rating}</p>
                 </div>
                 <button>
+                    {/* <Redirect to={{
+                        pathname: '/reviews/${review.id}/edit',
+                        product: this.props.product
+                    }} /> */}
                     <Link to={`/reviews/${review.id}/edit`}>Edit</Link>
                 </button>
             </div>
