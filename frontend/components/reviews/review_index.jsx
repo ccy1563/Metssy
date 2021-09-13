@@ -32,6 +32,7 @@ class ReviewIndex extends React.Component {
                     createdAt={review.created_at}
                     productId={review.product_id}
                     authorId={review.author_id}
+                    productId={this.props.product.id}
                 />
             )
         });

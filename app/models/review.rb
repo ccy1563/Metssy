@@ -1,6 +1,6 @@
 class Review < ApplicationRecord
     validates :body, :rating, :product_id, :author_id, presence: true
-    # validates :number, :inclusion => 1..10
+    # validates :number, :inclusion => 1..5
 
     belongs_to :product,
     primary_key: :id,

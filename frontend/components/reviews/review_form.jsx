@@ -14,11 +14,14 @@ class ReviewForm extends React.Component {
     handleSubmit(e) {
         // debugger;
         e.preventDefault();
+        if (!this.props.user) {
+            this.props.openModal('login');
+        }
         const productId = this.props.match.params.productId;
         // debugger
         const review = Object.assign({}, this.state, {
             product_id: productId,
-            author_id: 1,
+            author_id: this.props.user,
         });
         // debugger
         this.props.createReview(review, productId);

@@ -33,6 +33,7 @@ class ProductShow extends React.Component {
                     />
                     <ReviewContainer 
                         product={product}
+                        
                     />
                 </div>
                 <div className="show-page-other-div">

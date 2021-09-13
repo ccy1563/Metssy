@@ -20,7 +20,7 @@ class ReviewIndexItem extends React.Component {
                         pathname: '/reviews/${review.id}/edit',
                         product: this.props.product
                     }} /> */}
-                    <Link to={`/reviews/${review.id}/edit`}>Edit</Link>
+                    <Link to={`/products/${this.props.productId}/reviews/${review.id}/edit`}>Edit</Link>
                 </button>
             </div>
         )
