@@ -1,12 +1,14 @@
 import React from 'react';
 import { Link, Redirect, withRouter } from 'react-router-dom';
+import Rating from '@material-ui/lab/Rating';
+import Box from '@material-ui/core/Box';
 
 class ReviewEditForm extends React.Component {
 
     constructor(props) {
         super(props)
         this.state = this.props.review;
-        this.navigateToBenchShow = this.navigateToBenchShow.bind(this);
+        this.navigateToReviewShow = this.navigateToReviewShow.bind(this);
     }
 
     handleSubmit(e) {
@@ -20,14 +22,14 @@ class ReviewEditForm extends React.Component {
         });
         this.props.updateReview(review, productId);
         document.getElementById("review-submit-button").value = "";
-        this.navigateToBenchShow();
+        this.navigateToReviewShow();
     }
 
     update(property) {
         return e => this.setState({ [property]: e.currentTarget.value });
     }
 
-    navigateToBenchShow() {
+    navigateToReviewShow() {
         const url = `/products/${this.props.review.product_id}`
         this.props.history.push(url);
     }
@@ -38,15 +40,15 @@ class ReviewEditForm extends React.Component {
         return (
             <div >
                 <form onSubmit={(e) => this.handleSubmit(e)}>
-                    <label>Rating</label>
-                    <input
-                        type="number"
-                        max="5"
-                        min="0"
-                        value={this.state.rating}
-                        onChange={this.update("rating")}
-                    />
-                    {/* <label>Review</label> */}
+                    <Box component="fieldset" mb={3} borderColor="transparent">
+                        <Rating
+                            style={{ color: "black" }}
+                            name="Rating Label"
+                            value={this.state.rating}
+                            precision={0.5}
+                            onChange={this.update("rating")}
+                        />
+                    </Box>
                     <textarea
                         id="review-submit-button"
                         cols="65"

@@ -1,12 +1,16 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
+import Rating from '@material-ui/lab/Rating';
+import Box from '@material-ui/core/Box';
+
+
 class ReviewForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             body: '',
-            rating: 5,
+            rating: 1,
         };
         // this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -16,16 +20,21 @@ class ReviewForm extends React.Component {
         e.preventDefault();
         if (!this.props.user) {
             this.props.openModal('login');
+        } else {
+            const productId = this.props.match.params.productId;
+            // debugger
+            const review = Object.assign({}, this.state, {
+                product_id: productId,
+                author_id: this.props.user,
+            });
+            // debugger
+            this.props.createReview(review, productId);
+            document.getElementById("review-submit-button").value = "";
+        // this.state = {
+        //     body: '',
+        //     rating: 1,
+        // }
         }
-        const productId = this.props.match.params.productId;
-        // debugger
-        const review = Object.assign({}, this.state, {
-            product_id: productId,
-            author_id: this.props.user,
-        });
-        // debugger
-        this.props.createReview(review, productId);
-        document.getElementById("review-submit-button").value = "";
 
     }
 
@@ -38,14 +47,26 @@ class ReviewForm extends React.Component {
         return (
             <div className="review-form">
                 <form onSubmit={(e) => this.handleSubmit(e)}>
-                    <label>Rating</label>
+
+                    <Box component="fieldset" mb={3} borderColor="transparent">
+                        <Rating
+                            style={{ color: "black" }}
+                            name="Rating Label"
+                            value={this.state.rating}
+                            precision={0.5}
+                            onChange={this.update("rating")}
+                        />
+                    </Box>
+
+
+                    {/* <label>Rating</label>
                     <input
                         type="number"
                         max="5"
                         min="0"
                         value={this.state.rating}
                         onChange={this.update("rating")}
-                    />
+                    /> */}
                     {/* <label>Review</label> */}
                     <textarea
                         id="review-submit-button"

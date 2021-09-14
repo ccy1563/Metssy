@@ -1,14 +1,15 @@
 class Api::CartItemsController < ApplicationController
-    before_action :require_logged_in, only: [:index, :show, :create, :update, :destroy]
+    before_action :ensure_logged_in, only: [:index, :show, :create, :update, :destroy]
 
     def index
         @cart_items = current_user.cart_items
         render :index
     end
-
+    
     def show
-        @cart_item = CartItem.find_by(id: parmas[:id])
+        @cart_item = CartItem.find_by(id: params[:id])
         render :show
+        # render 'api/products/show'
     end
 
     def create
@@ -41,7 +42,7 @@ class Api::CartItemsController < ApplicationController
     private 
 
     def cart_item_params
-        params.requrie(:cartItem).permit(:user_id, :product_id, :quantity)
+        params.require(:cartItem).permit(:user_id, :product_id, :quantity)
     end
 
 end

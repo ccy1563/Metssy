@@ -12,6 +12,13 @@ import {
     updateReview
 } from './actions/review_actions'
 
+import {
+    fetchCartItem,
+    fetchCartItems,
+    createCartItem,
+    updateCartItem,
+    deleteCartItem
+} from './actions/cart_item_actions'
 
 import { fetchUser } from './actions/user_actions'
 
@@ -48,4 +55,11 @@ document.addEventListener('DOMContentLoaded', () => {
     window.deleteReview = deleteReview;
 
     window.fetchUser = fetchUser;
+
+
+    window.fetchCartItem = fetchCartItem;
+    window.fetchCartItems = fetchCartItems;
+    window.createCartItem = createCartItem;
+    window.updateCartItem = updateCartItem;
+    window.deleteCartItem = deleteCartItem;
 });

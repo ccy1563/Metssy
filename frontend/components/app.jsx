@@ -19,6 +19,7 @@ import ReviewIndexContainer from './reviews/review_container'
 import ReviewEditContainer from './reviews/review_edit_container'
 
 import CartContainer from './cart/cart_container'
+import CartItemIndexContainer from './cart_items/cart_item_index_container'
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import {
@@ -46,6 +47,8 @@ const App = () => (
             {/* <Route exact path="/products" component={ProductIndexContainer} /> */}
 
             <Route exact path="/reviews/:reviewId" component={ReviewEditContainer} />
+
+            <Route exact path="/cart_items" component={CartItemIndexContainer} />
             
             <Route exact path="/">
                 <Welcome />

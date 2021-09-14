@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import ReviewContainer from '../reviews/review_container'
 import ReviewFormContainer from '../reviews/review_form_container'
 import ShoppingCartTwoToneIcon from '@material-ui/icons/ShoppingCartTwoTone';
@@ -8,8 +8,55 @@ import { DriveEtaRounded } from '@material-ui/icons';
 
 class ProductShow extends React.Component {
     
+
+    // cart item needs 
+    // t.integer "user_id", null: false
+    // t.integer "product_id", null: false
+    // t.integer "quantity", null: false
+
     constructor(props) {
         super(props);
+        this.state = {
+            user_id: null,
+            product_id: null,
+            quantity: 1,
+        }
+
+        this.navigateToCartItemIndex = this.navigateToCartItemIndex.bind(this);
+    }
+
+    handleAddToCart(e) {
+        e.preventDefault();
+        if (!this.props.user) {
+            this.props.openModal('login');
+        } else {
+            // const productId = this.props.match.params.productId;
+            // debugger
+            // if (this.state.product_id === productId) {
+            //     let newQuantity = this.state.quantity + 1;
+            //     debugger
+            //     this.setState({ quantity: newQuantity });
+            // } else {    
+            //     const cartItem = Object.assign({}, this.state, {
+            //         product_id: productId,
+            //         user_id: this.props.user,
+            //     });
+            //     this.props.createCartItem(cartItem);
+            //     this.setState(cartItem);
+            // }
+            const productId = this.props.match.params.productId;
+            const cartItem = Object.assign({}, this.state, {
+                product_id: productId,
+                user_id: this.props.user,
+            });
+            this.props.createCartItem(cartItem);
+            this.navigateToCartItemIndex();
+        }
+    }
+
+    navigateToCartItemIndex() {
+        const url = `/cart_items`
+        this.props.history.push(url);
     }
     
     componentDidMount() {
@@ -19,6 +66,9 @@ class ProductShow extends React.Component {
 
     render() {
         // console.log(this.props.match.params.productId);
+
+        // debugger;
+
         const { product } = this.props;
         if (!product) {
             return null;
@@ -46,7 +96,12 @@ class ProductShow extends React.Component {
                         <div className="installments-bold">Klarna.</div>
                         <div className="installments-link2">See if you're prequalified</div>
                     </div>
-                    <button className="show-page-add-cart-button">Add to cart</button>
+
+                    <button 
+                        className="show-page-add-cart-button"
+                        onClick={(e) => this.handleAddToCart(e)}>
+                            Add to cart
+                    </button>
 
                     <div>
                         <div className="cart-and-van-list-item">
@@ -80,4 +135,4 @@ class ProductShow extends React.Component {
     }
 }
 
-export default ProductShow;
+export default withRouter(ProductShow);

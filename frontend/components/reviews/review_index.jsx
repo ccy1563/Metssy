@@ -28,7 +28,7 @@ class ReviewIndex extends React.Component {
         if (this.props.currentUser) {
             currentUserId = this.props.currentUser.id;
         }
-        const allReviews = this.props.reviews.map(review => {
+        const allReviews = this.props.reviews.reverse().map(review => {
             // console.log(this.props.product);
             return (
                 <ReviewIndexItem

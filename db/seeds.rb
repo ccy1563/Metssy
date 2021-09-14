@@ -222,3 +222,21 @@ review18 = Review.create!(
     product_id: product1.id, 
     author_id: otherUser.id
 )
+
+cart_item1 = CartItem.create!(
+    user_id: user.id,
+    product_id: product1.id,
+    quantity: 1
+)
+
+cart_item2 = CartItem.create!(
+    user_id: user.id,
+    product_id: product2.id,
+    quantity: 1
+)
+
+cart_item3 = CartItem.create!(
+    user_id: user.id,
+    product_id: product3.id,
+    quantity: 1
+)

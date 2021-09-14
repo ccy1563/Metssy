@@ -1,6 +1,10 @@
 class CartItem < ApplicationRecord
-    validates :user_id, :product_id, :quantity, :presence: true
+    validates :user_id, :product_id, :quantity, presence: true
     
+    has_many :reviews,
+    through: :user,
+    source: :reviews
+
     belongs_to :user,
     primary_key: :id,
     foreign_key: :user_id,

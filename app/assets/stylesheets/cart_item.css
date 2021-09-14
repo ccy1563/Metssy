@@ -1,0 +1,14 @@
+.cart-top {
+    display: flex;
+}
+
+.cart-items {
+    /* width: 100px;
+    height: 100px; */
+}
+
+.cart-item-img {
+    width: 100px;
+    height: 100px;
+}
+

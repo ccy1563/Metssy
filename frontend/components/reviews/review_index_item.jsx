@@ -4,6 +4,9 @@ import { Link, Redirect } from 'react-router-dom';
 import StarIcon from '@material-ui/icons/Star';
 import StarBorderIcon from '@material-ui/icons/StarBorder';
 
+import Rating from '@material-ui/lab/Rating';
+
+
 class ReviewIndexItem extends React.Component {
 
     constructor(props) {
