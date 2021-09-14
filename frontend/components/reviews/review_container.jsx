@@ -28,7 +28,7 @@ const mDTP = dispatch => ({
 
     fetchUser: userId => dispatch(fetchUser(userId)),
     openModal: modal => dispatch(openModal(modal)),
-    // deleteReview: reviewId => dispatch(deleteReview(reviewId)),
+    deleteReview: (review, productId) => dispatch(deleteReview(review, productId)),
     // updateReview: review => dispatch(updateReview(review)),
 });
 

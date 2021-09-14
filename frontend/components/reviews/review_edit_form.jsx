@@ -34,7 +34,7 @@ class ReviewEditForm extends React.Component {
 
     render() {
 
-        debugger
+        // debugger
         return (
             <div >
                 <form onSubmit={(e) => this.handleSubmit(e)}>

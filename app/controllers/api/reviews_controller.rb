@@ -28,7 +28,7 @@ class Api::ReviewsController < ApplicationController
         @product = Product.find(params[:product_id])
         @review = Review.find_by(id: params[:id])
         if @review && @review.destroy
-            render :index
+            render :show
         else
             render json: @review.errors.full_messages, status: 422 
         end

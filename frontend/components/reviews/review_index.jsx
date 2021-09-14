@@ -14,10 +14,11 @@ class ReviewIndex extends React.Component {
         // debugger
     }
 
+
     render() {
         // debugger
         if (!this.props.reviews) { 
-            // debugger;
+            // debugger;    
             return null;
         }
         // debugger
@@ -40,6 +41,10 @@ class ReviewIndex extends React.Component {
                     authorId={review.author_id}
                     productId={this.props.product.id}
                     currentUserId={currentUserId}
+                    deleteReview={this.props.deleteReview}
+                    fetchReviews={this.props.fetchReviews}
+                    reviews={this.props.reviews}
+                    state={this.state}
                     // email={this.props.fetchUser(this.props.user)}
                 />
             )

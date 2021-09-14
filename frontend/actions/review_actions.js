@@ -40,7 +40,7 @@ export const updateReview = (review, productId) => dispatch => (
         .then(res => dispatch(receiveReview(res)))
 );
 
-export const deleteReview = reviewId => dispatch => (
-    ReviewApiUtil.deleteReview(reviewId)
-        .then(() => dispatch(removeReview(reviewId)))
+export const deleteReview = (review, productId) => dispatch => (
+    ReviewApiUtil.deleteReview(review, productId)
+        .then(() => dispatch(removeReview(review.id)))
 );

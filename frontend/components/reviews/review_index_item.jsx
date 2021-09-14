@@ -6,9 +6,29 @@ import StarBorderIcon from '@material-ui/icons/StarBorder';
 
 class ReviewIndexItem extends React.Component {
 
-    render() {
-        
-        const { review } = this.props;
+    constructor(props) {
+        super(props);
+    }
+
+    
+    handleDelete(e) {
+        e.preventDefault();
+        this.props.deleteReview(this.props.review, this.props.productId);
+        // const review = Object.assign({}, this.state, {
+        //     product_id: productId,
+        //     author_id: this.props.user,
+        // });
+        // this.setState({
+        //     reviews: this.props.reviews.filter(r => r.id !== this.props.review.id),
+        // });
+        // this.props.fetchReviews(this.props.productId);
+        // location.reload();
+        // debugger
+    }
+    
+    
+    render() {        
+        const { review, productId } = this.props;
         // debugger    
         let stars = [];
         for (let i = 0; i < 5; i++) {
@@ -33,6 +53,8 @@ class ReviewIndexItem extends React.Component {
                     <p>{review.body}</p>
                 </div>
                 {this.props.authorId === this.props.currentUserId ? <Link to={`/reviews/${review.id}`}><button>Edit</button></Link> : null}
+
+                {this.props.authorId === this.props.currentUserId ? <button onClick={(e) => this.handleDelete(e)}>Delete</button> : null}
                 {/* <button className="review-edit-modal-button" onClick={() => this.props.openModal('editReview')}>Edit</button> */}
             </div>
         )

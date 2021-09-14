@@ -28,7 +28,9 @@ class ReviewEditContainer extends React.Component {
         return (
             <ReviewEditForm
                 review={review}
-                updateReview={updateReview} />
+                updateReview={updateReview}
+                // deleteReview={deleteReview}
+            />
         );
     }
 }
@@ -44,7 +46,8 @@ const mSTP = (state, ownProps) => {
 
 const mDTP = dispatch => ({
     fetchReview: reviewId => dispatch(fetchReview(reviewId)),
-    updateReview: (review, productId) => dispatch(updateReview(review, productId))
+    updateReview: (review, productId) => dispatch(updateReview(review, productId)),
+    // deleteReview: reviewId => dispatch(deleteReview(reviewId)),
 });
 
 export default withRouter(connect(mSTP, mDTP)(ReviewEditContainer));
