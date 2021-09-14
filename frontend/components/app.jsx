@@ -45,8 +45,8 @@ const App = () => (
             <Route exact path="/products/:productId" component={ProductShowContainer} />
             {/* <Route exact path="/products" component={ProductIndexContainer} /> */}
 
-            <Route exact path="reviews/:reviewId/edit" component={ReviewEditContainer} />
-            s
+            <Route exact path="/reviews/:reviewId" component={ReviewEditContainer} />
+            
             <Route exact path="/">
                 <Welcome />
                 <ProductIndexContainer />

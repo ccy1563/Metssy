@@ -11,6 +11,8 @@ import ReviewIndex from './review_index';
 
 import { fetchUser } from '../../actions/user_actions'
 
+import { openModal } from '../../actions/modal_actions';
+
 const mSTP = state => {
     // debugger
     return {
@@ -24,7 +26,8 @@ const mDTP = dispatch => ({
     fetchReviews: productId => dispatch(fetchReviews(productId)),
     createReview: (review, productId) => dispatch(createReview(review, productId)),
 
-    fetchUser: userId => dispatch(fetchUser(userId))
+    fetchUser: userId => dispatch(fetchUser(userId)),
+    openModal: modal => dispatch(openModal(modal)),
     // deleteReview: reviewId => dispatch(deleteReview(reviewId)),
     // updateReview: review => dispatch(updateReview(review)),
 });

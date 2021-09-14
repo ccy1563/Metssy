@@ -72,7 +72,7 @@ class ProductShow extends React.Component {
 
                     <div className="show-page-description-list">
                         <button className="show-page-description-button">Description</button>
-                        <p className="show-page-description">{product?.description}</p>
+                        <p className="show-page-description">{product.description}</p>
                     </div>
                 </div>
             </div>

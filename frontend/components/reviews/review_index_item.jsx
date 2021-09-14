@@ -9,15 +9,17 @@ class ReviewIndexItem extends React.Component {
     render() {
         
         const { review } = this.props;
+        // debugger    
         let stars = [];
         for (let i = 0; i < 5; i++) {
             if (i < review.rating) {
-                stars.push(<StarIcon />);
+                stars.push(<StarIcon key={i}/>);
             } else {
-                stars.push(<StarBorderIcon />);
+                stars.push(<StarBorderIcon key={i}/>);
             }
         }
 
+        // if (this.props.authorId === this.props.currentUserId)
         return (
             <div className="submitted-reviews-top">
                 <div className="review-email">
@@ -30,7 +32,8 @@ class ReviewIndexItem extends React.Component {
                 <div className="review-body">
                     <p>{review.body}</p>
                 </div>
-                <Link to={`/reviews/${review.id}/edit`}><button>Edit</button></Link>
+                {this.props.authorId === this.props.currentUserId ? <Link to={`/reviews/${review.id}`}><button>Edit</button></Link> : null}
+                {/* <button className="review-edit-modal-button" onClick={() => this.props.openModal('editReview')}>Edit</button> */}
             </div>
         )
     }
