@@ -13,7 +13,7 @@ class ReviewEditForm extends React.Component {
         e.preventDefault();
 
         // debugger
-        const productId = this.props.review.author_id;
+        const productId = this.props.review.product_id;
         const review = Object.assign({}, this.state, {
             product_id: productId,
             author_id: this.props.user,
@@ -28,13 +28,13 @@ class ReviewEditForm extends React.Component {
     }
 
     navigateToBenchShow() {
-        const url = `/products/${this.props.review.author_id}`
+        const url = `/products/${this.props.review.product_id}`
         this.props.history.push(url);
     }
 
     render() {
 
-        // debugger
+        debugger
         return (
             <div >
                 <form onSubmit={(e) => this.handleSubmit(e)}>
