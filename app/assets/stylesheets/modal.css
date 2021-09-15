@@ -18,8 +18,8 @@
 .modal-form {
   display: flex;
   flex-direction: column;
-  padding: 50px;
-  border-width: 2px;
+  padding: 30px;
+  border-width: 2.5px;
   border-color: #222222;
   background: white;
   border-radius: 24px;
@@ -43,9 +43,14 @@
   position: relative;
   vertical-align: middle;
   z-index: 10;
-  width:280px;
+  width:318px;
   height:50px;
   margin: 2% 0 2% 0;
+}
+
+.submit-button:hover {
+    transition: all .1s ease-in-out;
+    transform: scale(1.02);
 }
 
 .close-x {
@@ -58,6 +63,7 @@
   right: -50px;
   height: 24px;
   width: 24px; 
+  cursor:pointer;
 }
 
 email-item {
@@ -76,17 +82,24 @@ email-item {
   border-width: 1px;
   border-radius: 6px;
   color: #222222;
-
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  box-shadow: white;
   height: 25px;
   outline: none;
   padding-top: 9px;
   padding-bottom: 9px;
   padding-left: 10px;
-  padding-right: 12px;
+  padding-right: 55px;
   width: 255px;
   min-width: 0;
   -webkit-font-smoothing: antialiased;
   background: transparent;
+  border-color: rgb(201, 201, 201);
+}
+
+.form-input:hover {
+  transition: all 0.7s ease-in-out;
+  border-color: black;
 }
 
 .form-text {
@@ -96,4 +109,72 @@ email-item {
   font-weight: 500;
   letter-spacing: 0.1px;
   -webkit-font-smoothing: antialiased;
+}
+
+.other-modal-buttons {
+    border-radius: 50px;
+    margin-top: 2vh;
+    
+    padding: 14px;
+    font-size: 13px;
+    background: transparent;
+    border: 2px solid black;
+    -webkit-font-smoothing: antialiased;
+    cursor:pointer;
+    width: 320px;
+}
+
+.other-modal-buttons:hover {
+    transition: all .1s ease-in-out;
+    transform: scale(1.02);
+}
+
+
+.sign-in-to-continue {
+    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #222222;
+    -webkit-font-smoothing: antialiased;
+    padding-bottom: 10px;
+}
+
+.sign-in-or-register {
+  font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+  font-weight: 200;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding-bottom: 20px;
+}
+
+.sign-in-trouble {
+    padding-top: 10px;
+    color: #595959;
+    font-size: 13px;
+    text-align: center;
+    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: underline;
+}
+
+.modal-form-or {
+    padding-top: 10px;
+    text-align: center;
+    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+    color: #595959;
+    -webkit-font-smoothing: antialiased;
+}
+
+.sign-up-policy {
+    padding-top: 10px;
+    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+    color: -internal-light-dark(black, white);
+    -webkit-font-smoothing: antialiased;
+    color: #595959;
+    font-size: 13px;
+    padding-top: 20px;
+}
+
+.form-text-box {
+  padding-bottom: 20px;
 }

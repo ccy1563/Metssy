@@ -24,7 +24,9 @@ class CartItemIndex extends React.Component {
     render() {
         
         // debugger
-        if (!this.props.cartItems) return null
+        if (!this.props.cartItems) {
+            return null;
+        }
         const allCartItems = this.props.cartItems.map(cartItem => {
             // console.log(this.props.product);
             // debugger
@@ -34,6 +36,7 @@ class CartItemIndex extends React.Component {
                     cartItem={cartItem}
                     updateCartItem={this.props.updateCartItem}
                     fetchCartItems={this.props.fetchCartItems}
+                    deleteCartItem={this.props.deleteCartItem}
                 />
             )
         });

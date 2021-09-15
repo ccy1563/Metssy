@@ -51,32 +51,51 @@ class SessionForm extends React.Component {
       <div>
         <div>
           <form className="modal-form" onSubmit={this.handleSubmit}>
+            <div>
+              <div className='sign-in-to-continue'>
+                Sign in to continue
+              </div>
+              <div className='sign-in-or-register'>
+                Sign in or register with your email address
+              </div>
+            </div>
             <div onClick={this.props.closeModal} className="close-x">X</div>
             {this.renderErrors()}
             {/* <div className="email-item"> */}
+            <div className="form-text-box">
               <label className="form-text" htmlFor="email-label1">Email Address
               </label>
-              <input 
+              <input
                 className="form-input"
                 id="email-label1"
                 type="email"
                 value={this.state.email}
                 onChange={this.update('email')}
               />
+            </div>
             {/* </div> */}
-            <label className="form-text" htmlFor="email-label2">Password
-            </label>
-            <input
-              className="form-input" 
-              id="email-label2"
-              type="password"
-              value={this.state.password}
-              onChange={this.update('password')}
-            />
+            <div className="form-text-box">
+              <label className="form-text" htmlFor="email-label2">Password
+              </label>
+              <input
+                className="form-input"
+                id="email-label2"
+                type="password"
+                value={this.state.password}
+                onChange={this.update('password')}
+              />
+            </div>
             <div className="submit-button-list">
               <li><input className="submit-button" type="submit" value="Continue"></input></li>
-              <li><button className="submit-button" onClick={(e) => this.handleDemoUser(e)}>Demo User</button></li>
-              <li><button className="submit-button" onClick={() => this.props.openModal('signup')}>Sign Up</button></li>
+            </div>
+            <div className='sign-in-trouble'>Trouble signing in?</div>
+            <div className='modal-form-or'>OR</div>
+            <div>
+              <div><button className="other-modal-buttons" onClick={(e) => this.handleDemoUser(e)}>Demo User</button></div>
+              <div><button className="other-modal-buttons" onClick={() => this.props.openModal('signup')}>Sign Up</button></div>
+            </div>
+            <div className='sign-up-policy'>
+              By clicking Continue or Continue with Google, Facebook, or Apple, you agree to Yeetsy's Terms of Use and Privacy Policy. Yeetsy may send you communications; you may change your preferences in your account settings. We'll never post without your permission.
             </div>
           </form>
         </div>

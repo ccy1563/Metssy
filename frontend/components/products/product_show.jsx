@@ -5,6 +5,8 @@ import ReviewFormContainer from '../reviews/review_form_container'
 import ShoppingCartTwoToneIcon from '@material-ui/icons/ShoppingCartTwoTone';
 import LocalShippingOutlinedIcon from '@material-ui/icons/LocalShippingOutlined';
 import { DriveEtaRounded } from '@material-ui/icons';
+import PanToolIcon from '@material-ui/icons/PanTool';
+import RedeemIcon from '@material-ui/icons/Redeem';
 
 class ProductShow extends React.Component {
     
@@ -17,11 +19,10 @@ class ProductShow extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            user_id: null,
-            product_id: null,
+            // user_id: null,
+            // product_id: null,
             quantity: 1,
         }
-
         this.navigateToCartItemIndex = this.navigateToCartItemIndex.bind(this);
     }
 
@@ -35,16 +36,7 @@ class ProductShow extends React.Component {
                 product_id: productId,
                 user_id: this.props.user,
             });
-
-            // if (cartItem.product_id) { // if item is alreayd in cart, ONLY go to
-            //     this.navigateToCartItemIndex();
-            // } else { // item not in cart
-            //     this.props.createCartItem(cartItem);
-            //     this.navigateToCartItemIndex();
-            // }
-
-            this.props.createCartItem(cartItem);
-            this.navigateToCartItemIndex();
+            this.props.createCartItem(cartItem).then(this.navigateToCartItemIndex())
         }
     }
 
@@ -54,8 +46,40 @@ class ProductShow extends React.Component {
     }
     
     componentDidMount() {
-        this.props.fetchProduct(this.props.match.params.productId);
-        this.props.fetchReviews(this.props.match.params.productId);
+        this.props.fetchProduct(this.props.match.params.productId)
+            .then(this.props.fetchReviews(this.props.match.params.productId));
+    }
+    
+    getShippingDate() {
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = today.getMonth();
+        var yyyy = today.getFullYear();
+        var month = new Array();
+        month[0] = "Jan";
+        month[1] = "Feb";
+        month[2] = "Mar";
+        month[3] = "Apr";
+        month[4] = "May";
+        month[5] = "Jun";
+        month[6] = "Jul";
+        month[7] = "Aug";
+        month[8] = "Sep";
+        month[9] = "Oct";
+        month[10] = "Nov";
+        month[11] = "Dec";
+
+        return month[mm] + ' ' + (parseInt(dd) + 4) + '-' + yyyy;
+    }
+
+    showDescription() {
+        // debugger
+        var element = document.getElementById("show-description");
+        if (element.style.display === "none") {
+            element.style.display = "block";
+        } else {
+            element.style.display = "none";
+        }
     }
 
     render() {
@@ -120,13 +144,47 @@ class ProductShow extends React.Component {
                     </div>
 
                     <div className="show-page-description-list">
-                        <button className="show-page-description-button">Description</button>
-                        <p className="show-page-description">{product.description}</p>
+                        <button 
+                            onClick={() => this.showDescription()}                  className="show-page-description-button">
+                                Description
+                        </button>
+                        <p id="show-description" className="show-page-description">{product.description}</p>
                     </div>
+
+                    <div className="show-page-description-list">
+                        <button 
+                            onClick={() => this.showPolicyDescription()}
+                            className="show-page-description-button">Shipping and return policies
+                        </button>
+
+                        <div id="show-policies" className="policy-descriptions">
+                            <div>Estimated arrival</div>
+                            <div>{this.getShippingDate()}</div>
+                            <div>
+                                <div><PanToolIcon /></div>
+                                <div><LocalShippingOutlinedIcon /></div>
+                                <div><RedeemIcon /></div>
+                            </div>
+                        </div>
+                    </div>
+        
+
+
+
                 </div>
             </div>
         )
     }
+    showPolicyDescription() {
+        var element = document.getElementById("show-policies");
+        if (element.style.display === "none") {
+            element.style.display = "block";
+            element.style.easing
+        } else {
+            element.style.display = "none";
+        }
+    }
 }
+
 
 export default withRouter(ProductShow);

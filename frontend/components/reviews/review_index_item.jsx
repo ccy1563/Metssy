@@ -55,9 +55,16 @@ class ReviewIndexItem extends React.Component {
                 <div className="review-body">
                     <p>{review.body}</p>
                 </div>
-                {this.props.authorId === this.props.currentUserId ? <Link to={`/reviews/${review.id}`}><button>Edit</button></Link> : null}
+                
+                <div className="show-page-buttons">
+                    <div>
+                        {this.props.authorId === this.props.currentUserId ? <Link to={`/reviews/${review.id}`}><button className="show-page-edit-button">Edit</button></Link> : null}
+                    </div>
 
-                {this.props.authorId === this.props.currentUserId ? <button onClick={(e) => this.handleDelete(e)}>Delete</button> : null}
+                    <div>
+                        {this.props.authorId === this.props.currentUserId ? <button className="show-page-delete-button" onClick={(e) => this.handleDelete(e)}>Delete</button> : null}
+                    </div>
+                </div>
                 {/* <button className="review-edit-modal-button" onClick={() => this.props.openModal('editReview')}>Edit</button> */}
             </div>
         )

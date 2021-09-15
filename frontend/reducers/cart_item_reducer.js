@@ -11,7 +11,8 @@ const cartItemReducer = (oldState = {}, action) => {
         case RECEIVE_CART_ITEMS:
             return { ...action.items };
         case RECEIVE_CART_ITEM:
-            return { ...oldState, [action.item.id]: action.item }
+            nextState[action.item.id] = action.item;
+            return nextState;
         case REMOVE_CART_ITEM:
             delete nextState[action.item.id]
             return nextState;

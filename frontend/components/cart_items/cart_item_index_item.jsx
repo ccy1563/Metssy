@@ -23,45 +23,15 @@ class CartItemIndexItem extends React.Component {
         this.props.fetchCartItems();
     }
 
-    handleQuantity(e) {
-        e.preventDefault();
-
-        // debugger
-        // const cartItemId = this.props.cartItem.id;
-        const cartItem = Object.assign({}, this.state, {
-            photoUrl: this.state.photoUrl,
-        });
-        this.props.updateCartItem(cartItem);
-        // this.setState({ quantity: e.currentTarget.value });
-        // document.getElementById("review-submit-button").value = "";
-        // this.navigateToReviewShow();
-    }
-
-    update(property) {
-        return e => this.setState({ [property]: e.currentTarget.value });
-    }
-
     onChange(e) {
         // debugger
         e.preventDefault();
-        // debugger
-        // this.handleQuantity(e);
-        // this.setState({ quantity: e.currentTarget.value })
-        // const cartItem = {
-        //     id: this.props.cartItem.id,
-        //     user_id: this.props.cartItem.user_id,
-        //     product_id: this.props.cartItem.product_id,
-        //     quantity: e.currentTarget.value,
-            
-        // };
-        const newCartItem = {
-            id: this.state.id,
-            name: this.state.name,
-            photoUrl: this.state.photoUrl,
-            price: this.state.price,
+
+
+        const newCartItem = Object.assign({}, this.state, {
             product_id: this.state.productId,
             quantity: e.currentTarget.value,
-        }
+        });
         // debugger
         this.setState({ ...newCartItem})
         // debugger
@@ -69,42 +39,57 @@ class CartItemIndexItem extends React.Component {
         // debugger
     }
 
+    handleDelete(e) {
+        e.preventDefault();
+        // debugger
+        this.props.deleteCartItem(this.props.cartItem)
+    }
+
     render() {
         // debugger 
 
         // debugger
-        // if (!this.state.photoUrl || !this.state.photoUrl===undefined) {
-        //     // debugger
-        //     console.log("jdlfajsaklfhsajlkfsjlkhaf")
-        //     return null;
-        // }
+        if (
+            !this.state.photoUrl ||
+            !this.state.price ||
+            !this.state.name) {
+            // debugger
+            location.reload();
+            // return null;
+        } else {
+            const {
+                product_id,
+                quantity,
+            } = this.props.cartItem;
 
-        const {
-            price,
-            product_id,
-            quantity 
-        } = this.props.cartItem;
+            const { photoUrl, price, name } = this.state;
 
-        const { photoUrl } = this.state;
-        
-        // debugger
+            // debugger
 
-        return (
-            <div>
+            return (
                 <div>
-                    <Link
-                        className="cart-items"
-                        to={`/products/${product_id}`}>
-                        <img
-                            className="cart-item-img"
-                            src={photoUrl} alt=""
-                        />
-                    </Link>
-                </div>
+                    <div>
+                        <Link
+                            className="cart-items"
+                            to={`/products/${product_id}`}>
+                            <img
+                                className="cart-item-img"
+                                src={photoUrl} alt=""
+                            />
+                        </Link>
+                    </div>
 
-                <div>
-                    <label htmlFor="qty">Qty:
-                        <select id="qty" onChange={this.onChange} value={this.state.quantity}>
+                    <div>
+                        <div>{name}</div>
+                        <div>
+                            <button onClick={(e) => this.handleDelete(e)}>
+                                Remove
+                            </button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <select onChange={this.onChange} value={this.state.quantity}>
                             <option value={1}>1</option>
                             <option value={2}>2</option>
                             <option value={3}>3</option>
@@ -113,14 +98,15 @@ class CartItemIndexItem extends React.Component {
                             <option value={6}>6</option>
                             <option value={7}>7</option>
                         </select>
-                    </label>
-                </div>
+                    </div>
 
-                <div>
-
+                    <div>
+                        <div>{price*this.state.quantity}</div>
+                    </div>
                 </div>
-            </div>
-        )
+            )
+        }
+
     }
 }
 

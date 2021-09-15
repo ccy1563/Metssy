@@ -13,10 +13,11 @@
     max-height: 80vh;
     border-color: #b8b8b8;
     box-shadow: 0 0 10px #b8b8b8;
+    border-radius: 5px;
 }
 
 .show-page-other-div {
-    margin: 0 0 0 30vh;
+    margin: 0 0 0 35vh;
 }
 
 .show-page-name {
@@ -85,6 +86,11 @@
     line-height: 1.5;
 }
 
+.show-page-add-cart-button:hover {
+    transition: all .1s ease-in-out;
+    transform: scale(1.02);
+}
+
 .show-page-description-list {
     /* display: flex; */
     margin: 20px 0 0 0;
@@ -118,20 +124,22 @@
 }
 
 .show-page-description {
-    overflow: hidden;
+    /* overflow: hidden; */
     font-size: 16px;
     font-weight: bold;
     line-height: 1.5;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
+    /* text-overflow: ellipsis; */
+    /* display: -webkit-box; */
+    /* -webkit-line-clamp: 2; */
+    /* -webkit-box-orient: vertical; */
     margin: 20px 0 0 0;
 
     font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 28px;   
+    -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
 }
 
 .cart-and-van-list-item {
@@ -150,4 +158,11 @@
 
 .van-sen-items {
     /* margin-left: 30px; */
+}
+
+.create-review-textarea {
+    resize: none;
+    background-image: linear-gradient(-15deg,rgba(163, 163, 163, 0.25),#fff);
+    border-radius: 5px;
+    outline: none;
 }

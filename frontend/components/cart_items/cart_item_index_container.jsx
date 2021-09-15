@@ -20,7 +20,6 @@ const mSTP = state => {
         user: state.session.id,
         currentUser: state.entities.users[state.session.id],
         cartItems: Object.values(state.entities.cartItems),
-        // product: 
     }
 };
 

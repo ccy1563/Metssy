@@ -50,6 +50,7 @@ class ReviewEditForm extends React.Component {
                         />
                     </Box>
                     <textarea
+                        className="create-review-textarea"
                         id="review-submit-button"
                         cols="65"
                         rows="20"
