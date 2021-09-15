@@ -35,12 +35,16 @@ class ProductShow extends React.Component {
                 product_id: productId,
                 user_id: this.props.user,
             });
-            if (cartItem.product_id) { // if item is alreayd in cart, ONLY go to
-                this.navigateToCartItemIndex();
-            } else { // item not in cart
-                this.props.createCartItem(cartItem);
-                this.navigateToCartItemIndex();
-            }
+
+            // if (cartItem.product_id) { // if item is alreayd in cart, ONLY go to
+            //     this.navigateToCartItemIndex();
+            // } else { // item not in cart
+            //     this.props.createCartItem(cartItem);
+            //     this.navigateToCartItemIndex();
+            // }
+
+            this.props.createCartItem(cartItem);
+            this.navigateToCartItemIndex();
         }
     }
 
