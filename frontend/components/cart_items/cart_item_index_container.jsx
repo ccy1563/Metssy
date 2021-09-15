@@ -8,6 +8,10 @@ import {
     deleteCartItem
 } from '../../actions/cart_item_actions';
 
+import {
+    fetchProduct,
+} from '../../actions/product_actions'
+
 import CartItemIndex from './cart_item_index'
 
 const mSTP = state => {
@@ -16,6 +20,7 @@ const mSTP = state => {
         user: state.session.id,
         currentUser: state.entities.users[state.session.id],
         cartItems: Object.values(state.entities.cartItems),
+        // product: 
     }
 };
 
@@ -25,6 +30,7 @@ const mDTP = dispatch => ({
     updateCartItem: cartItem => dispatch(updateCartItem(cartItem)),
     deleteCartItem: cartItem => dispatch(deleteCartItem(cartItem)),
 
+    // fetchProduct: productId => dispatch(fetchProduct(productId)),
     // createCartItem: cartItem => dispatch(createCartItem(cartItem)),
 });
 

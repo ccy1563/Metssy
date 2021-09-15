@@ -11,6 +11,7 @@ class CartItemIndex extends React.Component {
 
     componentDidMount() {
         this.props.fetchCartItems();
+        // this.props.fetchProduct(this.props.cartItem.product_id)
     }
 
     handleCheckout(e) {
@@ -31,6 +32,8 @@ class CartItemIndex extends React.Component {
                 <CartItemIndexItem
                     key={cartItem.id}
                     cartItem={cartItem}
+                    updateCartItem={this.props.updateCartItem}
+                    fetchCartItems={this.props.fetchCartItems}
                 />
             )
         });

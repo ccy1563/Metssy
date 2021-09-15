@@ -30,27 +30,17 @@ class ProductShow extends React.Component {
         if (!this.props.user) {
             this.props.openModal('login');
         } else {
-            // const productId = this.props.match.params.productId;
-            // debugger
-            // if (this.state.product_id === productId) {
-            //     let newQuantity = this.state.quantity + 1;
-            //     debugger
-            //     this.setState({ quantity: newQuantity });
-            // } else {    
-            //     const cartItem = Object.assign({}, this.state, {
-            //         product_id: productId,
-            //         user_id: this.props.user,
-            //     });
-            //     this.props.createCartItem(cartItem);
-            //     this.setState(cartItem);
-            // }
             const productId = this.props.match.params.productId;
             const cartItem = Object.assign({}, this.state, {
                 product_id: productId,
                 user_id: this.props.user,
             });
-            this.props.createCartItem(cartItem);
-            this.navigateToCartItemIndex();
+            if (cartItem.product_id) { // if item is alreayd in cart, ONLY go to
+                this.navigateToCartItemIndex();
+            } else { // item not in cart
+                this.props.createCartItem(cartItem);
+                this.navigateToCartItemIndex();
+            }
         }
     }
 

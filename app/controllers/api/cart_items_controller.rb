@@ -22,8 +22,8 @@ class Api::CartItemsController < ApplicationController
     end
 
     def update
-        @cart_item = CartItem.find(params[:product_id])
-        if @CartItem.update(review_params)
+        @cart_item = CartItem.find(params[:id])
+        if @cart_item && @cart_item.update(cart_item_params)
             render :show
         else
             render json: @review.errors.full_messages, status: 422 
@@ -44,5 +44,4 @@ class Api::CartItemsController < ApplicationController
     def cart_item_params
         params.require(:cartItem).permit(:user_id, :product_id, :quantity)
     end
-
 end

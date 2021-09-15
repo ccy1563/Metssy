@@ -35,7 +35,7 @@ export const createCartItem = cartItem => dispatch => (
 
 export const updateCartItem = cartItem => dispatch => (
     CartItemAPIUtil.updateCartItem(cartItem)
-        .then(res => dispatch(updateCartItem(res)))
+        .then(res => dispatch(receiveCartItem(res)))
 )
 
 export const deleteCartItem = cartItem => dispatch => (
