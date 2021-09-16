@@ -24,6 +24,7 @@ class ProductShow extends React.Component {
             quantity: 1,
         }
         this.navigateToCartItemIndex = this.navigateToCartItemIndex.bind(this);
+        this.handleAddToCart = this.handleAddToCart.bind(this);
     }
 
     handleAddToCart(e) {
@@ -36,11 +37,12 @@ class ProductShow extends React.Component {
                 product_id: productId,
                 user_id: this.props.user,
             });
-            this.props.createCartItem(cartItem).then(this.navigateToCartItemIndex())
+            this.props.createCartItem(cartItem).then(this.navigateToCartItemIndex)
         }
     }
 
     navigateToCartItemIndex() {
+        // debugger
         const url = `/cart_items`
         this.props.history.push(url);
     }
@@ -117,7 +119,7 @@ class ProductShow extends React.Component {
 
                     <button 
                         className="show-page-add-cart-button"
-                        onClick={(e) => this.handleAddToCart(e)}>
+                        onClick={this.handleAddToCart}>
                             Add to cart
                     </button>
 

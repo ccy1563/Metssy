@@ -30,7 +30,10 @@ export const fetchCartItem = cartItemId => dispatch => (
 
 export const createCartItem = cartItem => dispatch => (
     CartItemAPIUtil.createCartItem(cartItem)
-        .then(res => dispatch(receiveCartItem(res)))
+        .then(res => {
+            // debugger;
+            dispatch(receiveCartItem(res));
+        })
 )
 
 export const updateCartItem = cartItem => dispatch => (
