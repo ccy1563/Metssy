@@ -15,7 +15,7 @@ class CartItemIndexItem extends React.Component {
 
     constructor(props) {
         super(props);
-        // this.state = this.props.cartItem;
+        this.state = this.props.cartItem;
         this.onChange = this.onChange.bind(this)
     }
 
@@ -33,7 +33,7 @@ class CartItemIndexItem extends React.Component {
             quantity: e.currentTarget.value,
         });
         // debugger
-        this.setState({ ...newCartItem})
+        this.setState({ ...newCartItem })
         // debugger
         this.props.updateCartItem(newCartItem);
         // debugger
@@ -49,36 +49,27 @@ class CartItemIndexItem extends React.Component {
         // debugger 
 
         // debugger
-
-        // debugger
-        const {
-            product_id,
-            quantity
-        } = this.props.cartItem;
-
-        
-        // debugger;
         if (
-            !product_id-1 ||
-            !quantity ||
-            !this.props.products[product_id-1].photoUrl ||
-            !this.props.products[product_id-1].price ||
-            !this.props.products[product_id-1].name)
-            {
-                // debugger
-                // location.reload();
-                return null;
-            } else {
-                // debugger 
-                // debugger
-                const { photoUrl, price, name } = this.props.products[product_id-1];
-                
-                return (
-                    <div>
-                    <div>
+            !this.state.photoUrl ||
+            !this.state.price ||
+            !this.state.name) {
+            // debugger
+            location.reload();
+            // return null;
+        } else {
+            const {
+                product_id,
+                quantity,
+            } = this.props.cartItem;
+
+            const { photoUrl, price, name } = this.state;
+
+            return (
+                <div className="cart-items-list-top">
+                    <div className="cart-items-element">
                         <Link
                             className="cart-items"
-                            to={`/products/${product_id-1}`}>
+                            to={`/products/${product_id}`}>
                             <img
                                 className="cart-item-img"
                                 src={photoUrl} alt=""
@@ -86,17 +77,22 @@ class CartItemIndexItem extends React.Component {
                         </Link>
                     </div>
 
-                    <div>
-                        <div>{name}</div>
+                    <div className="cart-items-element">
+                        <div className="cart-item-name">{name}</div>
                         <div>
-                            <button onClick={(e) => this.handleDelete(e)}>
+                            <button 
+                                className="cart-item-delete"
+                                onClick={(e) => this.handleDelete(e)}>
                                 Remove
                             </button>
                         </div>
                     </div>
 
-                    <div>
-                        <select onChange={this.onChange} value={quantity}>
+                    <div className="cart-items-element">
+                        <select
+                            className="cart-quantity-button"
+                            onChange={this.onChange} 
+                            value={this.state.quantity}>
                             <option value={1}>1</option>
                             <option value={2}>2</option>
                             <option value={3}>3</option>
@@ -107,13 +103,12 @@ class CartItemIndexItem extends React.Component {
                         </select>
                     </div>
 
-                    <div>
-                        <div>{price*quantity}</div>
+                    <div className="cart-items-element">
+                        <div className="cart-item-price">${price * this.state.quantity}</div>
                     </div>
                 </div>
             )
         }
-
     }
 }
 

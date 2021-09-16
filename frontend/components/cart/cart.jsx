@@ -1,5 +1,6 @@
 import React from 'react';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import { Link } from 'react-router-dom';
 
 class Cart extends React.Component {
 
@@ -7,7 +8,9 @@ class Cart extends React.Component {
         return (
             <div className="cart-icon">
                 <button className="cart-button">
-                    <ShoppingCartIcon />
+                    <Link to="/cart_items">
+                        <ShoppingCartIcon />    
+                    </Link>
                 </button>
             </div>
         )

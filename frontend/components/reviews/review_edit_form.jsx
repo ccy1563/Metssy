@@ -11,6 +11,10 @@ class ReviewEditForm extends React.Component {
         this.navigateToReviewShow = this.navigateToReviewShow.bind(this);
     }
 
+    componentDidMount() {
+        // this.props.fetchReview(this.props.match.params.reviewId)
+    }
+
     handleSubmit(e) {
         e.preventDefault();
 
@@ -37,29 +41,51 @@ class ReviewEditForm extends React.Component {
     render() {
 
         // debugger
+
+        const { product } = this.props;
+        const { name, photoUrl, price, description } = this.props.product;
+
+        debugger;
+
         return (
-            <div >
-                <form onSubmit={(e) => this.handleSubmit(e)}>
-                    <Box component="fieldset" mb={3} borderColor="transparent">
-                        <Rating
-                            style={{ color: "black" }}
-                            name="Rating Label"
-                            value={this.state.rating}
-                            precision={0.5}
-                            onChange={this.update("rating")}
-                        />
-                    </Box>
-                    <textarea
-                        className="create-review-textarea"
-                        id="review-submit-button"
-                        cols="65"
-                        rows="20"
-                        value={this.state.body}
-                        onChange={this.update("body")}
-                    />
-                    <input type="submit" className="review-submit-bttn" />
-                </form>
+            <div className="review-edit-form-top-top">
+                
+                <div className="review-edit-form-product-list">
+                    <div>{name}</div>
+                    <div>
+                        <Link to={`/products/${product.id}`}>
+                            <img className="review-edit-form-img" src={photoUrl} alt="" />
+                        </Link>
+                    </div>
+                    <div>${price}</div>
+                    <div>{description}</div>
                 </div>
+
+                <div className="review-edit-form-top">
+                    <div>
+                        <form onSubmit={(e) => this.handleSubmit(e)}>
+                            <Box component="fieldset" mb={3} borderColor="transparent">
+                                <Rating
+                                    style={{ color: "black" }}
+                                    name="Rating Label"
+                                    value={this.state.rating}
+                                    precision={0.5}
+                                    onChange={this.update("rating")}
+                                />
+                            </Box>
+                            <textarea
+                                className="create-review-textarea"
+                                id="review-submit-button"
+                                cols="65"
+                                rows="20"
+                                value={this.state.body}
+                                onChange={this.update("body")}
+                            />
+                            <input type="submit" className="review-submit-bttn" />
+                        </form>
+                    </div>
+                </div>
+            </div>
         )
     }
 }
