@@ -21,6 +21,8 @@ import ReviewEditContainer from './reviews/review_edit_container'
 import CartContainer from './cart/cart_container'
 import CartItemIndexContainer from './cart_items/cart_item_index_container'
 
+import CartFooter from './cart_footer/cart_footer'
+
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import {
     Route,
@@ -43,22 +45,32 @@ const App = () => (
             {/* <AuthRoute exact path="/login" component={Login} />
             <AuthRoute exact path="/signup" component={SignUp} /> */}
 
-            <Route exact path="/products/:productId" component={ProductShowContainer} />
+            <Route exact path="/products/:productId">
+                <ProductShowContainer />
+                <Announcement />
+                <Footer />
+            </Route>
             {/* <Route exact path="/products" component={ProductIndexContainer} /> */}
 
-            <Route exact path="/products/:productId/reviews/:reviewId" component={ReviewEditContainer} />
+            <Route exact path="/products/:productId">
+                <ReviewEditContainer />
+                <Announcement />
+                <Footer />
+            </Route>
 
-            <Route exact path="/cart_items" component={CartItemIndexContainer} />
+            <Route exact path="/cart_items">
+                <CartItemIndexContainer />
+                <CartFooter />
+            </Route>
             
             <Route exact path="/">
                 <Welcome />
                 <ProductIndexContainer />
+                <Announcement />
+                <Footer />
             </Route>
 
         </Switch>
-
-        <Announcement />
-        <Footer />
     </div>
 );
 

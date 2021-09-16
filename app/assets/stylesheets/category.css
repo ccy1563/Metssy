@@ -8,3 +8,8 @@
     line-height: 18px;
     margin: 1% 0 1% 0;
 }
+
+.categories-line {
+    border-bottom: 2px solid rgb(206, 206, 206);
+    margin-bottom: 40px;
+}

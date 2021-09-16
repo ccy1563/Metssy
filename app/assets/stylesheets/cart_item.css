@@ -222,7 +222,7 @@
 
 .shop-line-divide {
     width: 400px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(204, 204, 204);
 }
 
 .cart-items-top {
@@ -276,3 +276,4 @@
     -webkit-transition: opacity .5s ease-out;
     -o-transition: opacity .5s ease-out;
 }
+
