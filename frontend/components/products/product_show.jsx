@@ -126,20 +126,20 @@ class ProductShow extends React.Component {
                     <div>
                         <div className="cart-and-van-list-item">
                             <div><ShoppingCartTwoToneIcon /></div>
-                            <div className="cart-and-van-div-item-1">
-                                <div>Other people want this.</div>
-                                <div>18 people have this in their carts right now.</div>
+                            <div className="van-sen-div">
+                                <div className='cart-and-van-desc'>Other people want this.</div>
+                                <div className='cart-and-van-desc'>18 people have this in their carts right now.</div>
                             </div>
                         </div>
                         <div className="cart-and-van-list-item">
                             <div><LocalShippingOutlinedIcon /></div>
                             <div>
                                 <div className="van-sen-div">
-                                    <div className="van-sen-items">Arrives by</div>
-                                    <div className="van-sen-items">Sep 16-21</div>
-                                    <div className="van-sen-items">if you order today.</div>
-                                    <div className="van-sen-items">Nice choice!</div>
-                                    <div className="van-sen-items">Enjoy free shipping to the US when you spend $35+ at this shop.</div>
+                                    <div className='cart-and-van-desc'>Arrives by</div>
+                                    <div className='cart-and-van-desc'>Sep 16-21</div>
+                                    <div className='cart-and-van-desc'>if you order today.</div>
+                                    <div className='cart-and-van-desc'>Nice choice!</div>
+                                    <div className='cart-and-van-desc'>Enjoy free shipping to the US when you spend $35+ at this shop.</div>
                                 </div>
                             </div>
                         </div>
@@ -160,17 +160,76 @@ class ProductShow extends React.Component {
                         </button>
 
                         <div id="show-policies" className="policy-descriptions">
-                            <div>Estimated arrival</div>
-                            <div>{this.getShippingDate()}</div>
-                            <div>
-                                <div><PanToolIcon /></div>
-                                <div><LocalShippingOutlinedIcon /></div>
-                                <div><RedeemIcon /></div>
+                            <div className='policy-desc-something-1'>
+                                <div className='policy-desc-1'>Estimated arrival</div>
+                                <div className='policy-desc-2'>{this.getShippingDate()}</div>
+                            </div>
+                            <div className="show-page-ship-icons-list-top">
+                                <div className='show-page-ship-icons-list'>
+                                    <div className="show-page-ship-icons">
+                                        <PanToolIcon className='show-page-ship-icons' />
+                                    </div>
+                                    <div className='show-page-ship-line-divide'></div>
+                                    <div className="show-page-ship-icons">
+                                        <LocalShippingOutlinedIcon className='show-page-ship-icons'/>
+                                    </div>
+                                    <div className='show-page-ship-line-divide'></div>
+                                    <div className="show-page-ship-icons">
+                                        <RedeemIcon className='show-page-ship-icons'/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='running-out-of-names-1'>
+                                <div>
+                                    <div>Sept 16</div>
+                                </div>
+                                <div className='jank-css'>
+                                    <div>Sept 17-20</div>
+                                </div>
+                                <div>
+                                    <div>Sept 18-25</div>
+                                </div>
+                            </div>
+
+                            <div className='running-out-of-names-2'>
+                                <div>
+                                    <div className='running-out-of-names-2-inner'>Order Placed</div>
+                                </div>
+                                <div>
+                                    <div className='running-out-of-names-2-inner'>Order Ships</div>
+                                </div>
+                                <div>
+                                    <div className='running-out-of-names-2-inner'>Delivered!</div>
+                                </div>
+                            </div>
+
+                            <div className='cost-return-top'>
+                                <div>
+                                    <div className='cost-return-cost-to-ship'>
+                                        Cost to ship
+                                    </div>
+                                    <div className='cost-return-free'>
+                                        Free
+                                    </div>
+                                </div>
+
+
+                                <div className='cost-return-top-list-2'>
+                                    <div className='cost-return-cost-to-ship'>
+                                        Returns
+                                    </div>
+                                    <div className='cost-return-free'>
+                                        Accepted
+                                    </div>
+                                    <div className='cost-return-cost-to-ship-2'>
+                                        Exceptions may apply
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
-        
-
+    
 
 
                 </div>

@@ -150,10 +150,12 @@
 
 .cart-and-van-list-item-1 {
     /* display: flex; */
+    /* padding-left: 10px; */
 }
 
 .van-sen-div {
     /* display: flex; */
+    padding-left: 10px;
 }
 
 .van-sen-items {
@@ -165,4 +167,118 @@
     background-image: linear-gradient(-15deg,rgba(163, 163, 163, 0.25),#fff);
     border-radius: 5px;
     outline: none;
+}
+
+.policy-descriptions {
+    
+}
+
+.policy-desc-something-1 {
+   
+}
+
+.policy-desc-1 {
+    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+    font-weight: 200;
+    font-size: 12px;
+    line-height: 28px;
+    /* border-bottom: 1px dashed black;
+    width: 90px; */
+    text-decoration: underline dashed;
+}
+
+.policy-desc-2 {
+    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 28px;
+}
+
+.show-page-ship-icons-list-top {
+    padding-top: 30px;
+}
+
+.show-page-ship-icons-list {
+    display: flex;
+    justify-content: space-between;
+}
+/* 
+.show-page-ship-icons {
+    border-radius: 50px;
+    background-color: grey;
+    width: 30px;
+    height: 30px;
+} */
+
+.show-page-ship-icons {
+    background-color: rgb(209, 209, 209);
+    border-radius: 50px;
+}
+
+.show-page-ship-line-divide {
+    width: 180px;
+    margin-bottom: 12px;
+    border-bottom: 2px solid rgb(209, 209, 209);
+}
+
+.jank-css {
+    padding-left: 4vh;
+}
+
+.running-out-of-names-1 {
+    display: flex;
+    /* padding-top: 2vh; */
+    justify-content: space-between;
+    ont-family: "Graphik Webfont", Klarna Text, "Klarna Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    padding: 10px 0 0 0;
+}
+
+.running-out-of-names-2 {
+    display: flex;
+    /* padding-top: 2vh; */
+    justify-content: space-between;
+    ont-family: "Graphik Webfont", Klarna Text, "Klarna Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    padding: 10px 0 10px 0;
+}
+
+.cart-and-van-desc {
+    /* padding-right: 3px; */
+    font-family: "Graphik Webfont", Klarna Text, "Klarna Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+.running-out-of-names-2-inner {
+    text-decoration: underline dashed;
+}
+
+.cost-return-top {
+    display: flex;
+    padding-top: 20px;
+}
+
+.cost-return-cost-to-ship {
+    font-family: "Graphik Webfont", Klarna Text, "Klarna Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: rgb(138, 138, 138);
+}
+
+.cost-return-free {
+    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 28px;
+    padding-top: 10px;
+}
+
+.cost-return-top-list-2 {
+    padding-left: 20vh;
+}
+
+.cost-return-cost-to-ship-2 {
+    font-family: "Graphik Webfont", Klarna Text, "Klarna Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: rgb(138, 138, 138);
+    padding-top: 5px;
 }

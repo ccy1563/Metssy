@@ -116,11 +116,43 @@
 }
 
 .review-edit-form-img {
-    width: 600px;
+    width: 500px;
     height: 500px;
+    border-color: #b8b8b8;
+    box-shadow: 0 0 10px #b8b8b8;
+    border-radius: 5px;
 }
 
 .review-edit-form-product-list {
     margin: 0 100px 0 100px;
 }
 
+.edit-review-form-name {
+    font-family: "Guardian-EgypTT",Charter,"Charter Bitstream",Cambria,"Noto Serif Light","Droid Serif",Georgia,serif;
+    font-weight: 300;
+    font-size: 4vh;
+    letter-spacing: 0.35px;
+    color: #222222;
+    -webkit-font-smoothing: antialiased;
+    margin-bottom: 2vh;
+}
+
+.review-edit-form-price {
+    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 36px;
+    margin: 10px 0 0 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+.review-edit-form-desc {
+    margin: 20px 0 0 0;
+    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    width: 500px;
+    -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+}

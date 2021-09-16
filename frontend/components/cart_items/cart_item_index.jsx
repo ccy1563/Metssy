@@ -46,7 +46,9 @@ class CartItemIndex extends React.Component {
 
         let totalPrice = 0;
         this.props.cartItems.forEach(cartItem => {
-            totalPrice += cartItem.price;
+            // debugger
+            
+            totalPrice += (cartItem.price * cartItem.quantity);
         })
 
         const discount = 0.01;

@@ -45,20 +45,22 @@ class ReviewEditForm extends React.Component {
         const { product } = this.props;
         const { name, photoUrl, price, description } = this.props.product;
 
-        debugger;
+        // debugger;
 
         return (
             <div className="review-edit-form-top-top">
                 
                 <div className="review-edit-form-product-list">
-                    <div>{name}</div>
+                    <div>
+                        <div className='edit-review-form-name'>{name}</div>
+                        <div className='review-edit-form-price'>${price}</div>
+                    </div>
                     <div>
                         <Link to={`/products/${product.id}`}>
                             <img className="review-edit-form-img" src={photoUrl} alt="" />
                         </Link>
                     </div>
-                    <div>${price}</div>
-                    <div>{description}</div>
+                    <div className='review-edit-form-desc'>{description}</div>
                 </div>
 
                 <div className="review-edit-form-top">

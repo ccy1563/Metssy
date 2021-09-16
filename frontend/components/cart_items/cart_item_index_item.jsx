@@ -28,15 +28,26 @@ class CartItemIndexItem extends React.Component {
         e.preventDefault();
 
 
+        // const newCartItem = Object.assign({}, this.state, {
+        //     product_id: this.state.productId,
+        //     quantity: e.currentTarget.value,
+        // });
+        // // debugger
+        // this.props.updateCartItem(newCartItem);
+        // this.setState({ ...newCartItem })
+        // this.state = this.props.cartItem;
+        // debugger
+
+        e.preventDefault();
+
+
         const newCartItem = Object.assign({}, this.state, {
             product_id: this.state.productId,
             quantity: e.currentTarget.value,
         });
         // debugger
-        this.setState({ ...newCartItem })
-        // debugger
         this.props.updateCartItem(newCartItem);
-        // debugger
+        this.setState({ quantity: e.currentTarget.value })
     }
 
     handleDelete(e) {
@@ -52,7 +63,8 @@ class CartItemIndexItem extends React.Component {
         if (
             !this.state.photoUrl ||
             !this.state.price ||
-            !this.state.name) {
+            !this.state.name ||
+            !this.state.quantity) {
             // debugger
             location.reload();
             // return null;
