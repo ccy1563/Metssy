@@ -89,7 +89,11 @@ class SessionForm extends React.Component {
               <li><input className="submit-button" type="submit" value="Continue"></input></li>
             </div>
             <div className='sign-in-trouble'>Trouble signing in?</div>
-            <div className='modal-form-or'>OR</div>
+            <div className='modal-form-thingy-top'>
+              <div className='modal-form-line'></div>
+              <div className='modal-form-or'>OR</div>
+              <div className='modal-form-line'></div>
+            </div>
             <div>
               <div><button className="other-modal-buttons" onClick={(e) => this.handleDemoUser(e)}>Demo User</button></div>
               <div><button className="other-modal-buttons" onClick={() => this.props.openModal('signup')}>Sign Up</button></div>
