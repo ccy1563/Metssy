@@ -46,10 +46,6 @@ class CartItemIndexItem extends React.Component {
     }
 
     render() {
-        // debugger 
-
-        // debugger
-
         // debugger
         const {
             product_id,
