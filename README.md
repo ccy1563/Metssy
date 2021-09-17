@@ -1,24 +1,20 @@
-# README
+# Yeetsy
+## Overview
+Yeetsy is Etsy clone, an E-commerce website with a concentration hand-crafted artisan goods.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Technology
+* Ruby on Rails
+* PostgreSQL
+* Rails Active Storage with Amazon's S3
+* React.js
+* Redux
 
-Things you may want to cover:
+## Core Features
+### Product Listing
+* Displays an assortment of products which the user can view and select.
+* The products are listed in sections of rows which display the products by category or row style.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Cart Item
+* Yeetsy is an E-commerce website, users can buy products.
+* Users can add products to the cart, delete products from the cart, and update from the cart.
+* Users can checkout to proceed to the checkout page.
