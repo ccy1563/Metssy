@@ -47,9 +47,9 @@ class CartItemIndexItem extends React.Component {
             product_id: this.props.cartItem.product_id,
             quantity: e.currentTarget.value,
         };
-        debugger
-        this.props.updateCartItem(newCartItem)
-            .then(this.setState({ ...newCartItem }))
+        // debugger
+        this.props.updateCartItem(newCartItem);
+        this.setState({ ...newCartItem });
         location.reload();
     }
 
@@ -75,7 +75,7 @@ class CartItemIndexItem extends React.Component {
             
         // }
 
-        if (!this.props.products[this.props.cartItem.product_id - 1]) {
+        if (!this.props.products[this.props.cartItem.product_id-1]) {
             return null;
         }
         const {
@@ -83,7 +83,7 @@ class CartItemIndexItem extends React.Component {
             quantity,
         } = this.props.cartItem;
 
-        const { photoUrl, price, name } = this.props.products[this.props.cartItem.product_id - 1];
+        const { photoUrl, price, name } = this.props.products[this.props.cartItem.product_id-1];
         
         // debugger
 
