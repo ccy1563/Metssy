@@ -19,3 +19,4 @@ Yeetsy is Etsy clone, an E-commerce website with a concentration hand-crafted ar
 * Yeetsy is an E-commerce website, users can buy products.
 * Users can add products to the cart, delete products from the cart, and update from the cart.
 * Users can checkout to proceed to the checkout page.
+![cart_item](cart_item.png)
