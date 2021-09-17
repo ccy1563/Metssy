@@ -39,4 +39,4 @@ const mDTP = dispatch => ({
     // createCartItem: cartItem => dispatch(createCartItem(cartItem)),
 });
 
-export default withRouter(connect(mSTP, mDTP)(CartItemIndex));
+export default connect(mSTP, mDTP)(CartItemIndex);

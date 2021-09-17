@@ -7,6 +7,7 @@ class CartItemIndex extends React.Component {
 
     constructor(props) {
         super(props);
+        this.handleCheckout = this.handleCheckout.bind(this);
     }
 
     componentDidMount() {
@@ -51,21 +52,68 @@ class CartItemIndex extends React.Component {
             totalPrice += (cartItem.price * cartItem.quantity);
         })
 
+        if (!totalPrice) {
+            // not sure if this is right, but I need to do this in order to fetch the newly updated values from cart_item_index_item, otherwise totalPrice ends up as NaN.
+            this.props.fetchCartItems();
+        }
+
         let totalCartItems = this.props.cartItems.length;
 
         const discount = 0.01;
 
         return (
+
             <div>
                 <div className='cart-item-counter-top'>
-                    <div className='cart-item-counter-text'>{totalCartItems > 1 ? `${totalCartItems} items in your cart` : `${totalCartItems.toFixed(2)} item in your cart`}</div>
+                    <div className='cart-item-counter-text'>{totalCartItems > 1 ? `${totalCartItems} items in your cart` : `${totalCartItems} item in your cart`}</div>
                 </div>
                 <div className="cart-top">
-                    <div className="cart-items-top">
-                        <div>{allCartItems}</div>
-                    </div>
-
                     <div>
+                        <div className="cart-items-top">
+                            <div>{allCartItems}</div>
+                        </div>
+                        <div className='bottom-left-cart-top-top'>
+                            <div className='bottom-left-cart-top-left'>
+                                <div className='bottom-left-cart-radio'>
+                                    <div>
+                                        <div className='this-order-gift'>
+                                            <input className='bottom-left-cart-radio-thing' type="radio" id="credit-card" />
+                                            <div className='bottom-left-cart-radio-thing-desc'>This order is a gift</div>
+                                        </div>
+                                        <div className='price-not-shown'>Prices will not be shown on packing slip</div>
+                                        <div>
+                                            <textarea 
+                                                className='cart-item-textarea'
+                                                name="" 
+                                                id="" 
+                                                cols="50" 
+                                                rows="4"
+                                                placeholder='Add a note (optional)' />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div className='coupon-top'>
+                                            <div className='apply-shop-coupon-code-1'>
+                                                <img className="ticket-img" src={window.ticket} />
+                                                <p className='apply-shop-coupon-text'>Apply shop coupon code</p>
+                                            </div>
+                                            <div className='apply-shop-coupon-code-2'>
+                                                Estimated delivery: Sep 21-27
+                                            </div>
+                                            <div className='apply-shop-coupon-code-2'>
+                                                from United States
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='carbon-message'>
+                                    <img className="leaf-img" src={window.leaf} />
+                                    <div className='carbon-message-text'>Etsy offsets carbon emissions from every delivery</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='toptoptop'>
                         <div className="all-cards-list-top">
                             <div className="all-cards-list">
                                 <div className="cc-img-list">
@@ -133,15 +181,15 @@ class CartItemIndex extends React.Component {
                                 Proceed to checkout
                             </button>
                         </div>
-
-                        {/* <div className="uplift-fund">
+                        <div className="uplift-fund">
                             <div className="uplift-fund-1">
                                 The Uplift Fund supports nonprofits that provide resources to creative entrepreneurs in communities that need it most. You can donate your change at Checkout. Learn more
                             </div>
-                        </div> */}
+                            <div>
+                                <img className="hand-img" src={window.hand} />
+                            </div>
+                        </div>
                     </div>
-
-
                 </div>
             </div>
         )

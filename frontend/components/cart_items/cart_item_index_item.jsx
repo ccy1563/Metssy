@@ -41,13 +41,14 @@ class CartItemIndexItem extends React.Component {
         e.preventDefault();
 
 
-        const newCartItem = Object.assign({}, this.state, {
+        let newCartItem = Object.assign({}, this.state, {
             product_id: this.state.productId,
             quantity: e.currentTarget.value,
         });
         // debugger
-        this.props.updateCartItem(newCartItem);
-        this.setState({ quantity: e.currentTarget.value })
+        this.setState({ ...newCartItem })
+        this.props.updateCartItem(newCartItem)
+        // location.reload();
     }
 
     handleDelete(e) {
@@ -60,23 +61,30 @@ class CartItemIndexItem extends React.Component {
         // debugger 
 
         // debugger
-        if (
-            !this.state.photoUrl ||
-            !this.state.price ||
-            !this.state.name ||
-            !this.state.quantity) {
-            // debugger
-            location.reload();
-            // return null;
-        } else {
-            const {
-                product_id,
-                quantity,
-            } = this.props.cartItem;
+        // if (
+        //     !this.state.photoUrl ||
+        //     !this.state.price ||
+        //     !this.state.name ||
+        //     !this.state.quantity) {
+        //     debugger
+        //     // location.reload();
+        //     return null;
+        // } 
+            
+        // }
 
-            const { photoUrl, price, name } = this.state;
+        if (!this.props.products[this.props.cartItem.product_id - 1]) {
+            return null;
+        }
+        const {
+            product_id,
+            quantity,
+        } = this.props.cartItem;
 
-            return (
+        const { photoUrl, price, name } = this.props.products[this.props.cartItem.product_id - 1];
+        
+        return (
+            <div>
                 <div className="cart-items-list-top">
                     <div className="cart-items-element">
                         <Link
@@ -92,7 +100,7 @@ class CartItemIndexItem extends React.Component {
                     <div className="cart-items-element">
                         <div className="cart-item-name">{name}</div>
                         <div>
-                            <button 
+                            <button
                                 className="cart-item-delete"
                                 onClick={(e) => this.handleDelete(e)}>
                                 Remove
@@ -103,7 +111,7 @@ class CartItemIndexItem extends React.Component {
                     <div className="cart-items-element">
                         <select
                             className="cart-quantity-button"
-                            onChange={this.onChange} 
+                            onChange={this.onChange}
                             value={this.state.quantity}>
                             <option value={1}>1</option>
                             <option value={2}>2</option>
@@ -119,8 +127,8 @@ class CartItemIndexItem extends React.Component {
                         <div className="cart-item-price">${(price * this.state.quantity).toFixed(2)}</div>
                     </div>
                 </div>
-            )
-        }
+            </div>
+        )
     }
 }
 

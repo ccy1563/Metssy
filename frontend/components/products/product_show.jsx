@@ -19,8 +19,6 @@ class ProductShow extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            // user_id: null,
-            // product_id: null,
             quantity: 1,
         }
         this.navigateToCartItemIndex = this.navigateToCartItemIndex.bind(this);
@@ -37,7 +35,8 @@ class ProductShow extends React.Component {
                 product_id: productId,
                 user_id: this.props.user,
             });
-            this.props.createCartItem(cartItem).then(this.navigateToCartItemIndex)
+            this.props.createCartItem(cartItem);
+            this.navigateToCartItemIndex();
         }
     }
 
@@ -48,8 +47,8 @@ class ProductShow extends React.Component {
     }
     
     componentDidMount() {
-        this.props.fetchProduct(this.props.match.params.productId)
-            .then(this.props.fetchReviews(this.props.match.params.productId));
+        this.props.fetchProduct(this.props.match.params.productId);
+        this.props.fetchReviews(this.props.match.params.productId);
     }
     
     getShippingDate() {
@@ -91,6 +90,7 @@ class ProductShow extends React.Component {
 
         const { product } = this.props;
         if (!product) {
+            // debugger
             return null;
         }
         // debugger
@@ -99,6 +99,20 @@ class ProductShow extends React.Component {
                 <div className="show-page-image-div">
                     <img className="show-page-image" src={product.photoUrl} alt="" />
                     <div className="review-top">
+
+
+
+                        {/* 
+                        return {product: state.entities.products[ownProps.match.params.productId],
+                        user: state.session.id,
+                        currentUser: state.entities.users[state.session.id],}
+
+                        fetchProduct: productId => dispatch(fetchProduct(productId)),
+                        fetchReviews: productId => dispatch(fetchReviews(productId)),
+
+                        createCartItem: cartItem => dispatch(createCartItem(cartItem)), 
+                        */}
+
                         <ReviewFormContainer
                             product={product}
                         />

@@ -79,7 +79,7 @@ class ReviewEditForm extends React.Component {
                                 className="create-review-textarea"
                                 id="review-submit-button"
                                 cols="65"
-                                rows="20"
+                                rows="4"
                                 value={this.state.body}
                                 onChange={this.update("body")}
                             />

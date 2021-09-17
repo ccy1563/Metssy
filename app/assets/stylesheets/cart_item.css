@@ -215,10 +215,6 @@
     text-decoration: underline;
 }
 
-.uplift-fund {
-    
-}
-
 
 .shop-line-divide {
     width: 400px;
@@ -289,4 +285,123 @@
     letter-spacing: 0.35px;
     color: #222222;
     -webkit-font-smoothing: antialiased;
+}
+
+.uplift-fund {
+    display: flex;
+    padding: 30px 30px 0 110px ;
+}
+.toptoptop {
+    margin: 0 50px 0 0;
+    padding-right: 100px;
+}
+
+.uplift-fund-1 {
+    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+    font-weight: 200;
+    font-size: 12px;
+    line-height: 28px;
+}
+
+.bottom-left-cart-radio {
+    display: flex;
+    padding-left: 60px;
+}
+
+.bottom-left-cart-top {
+    
+}
+
+.this-order-gift {
+    display: flex;
+    /* margin-left: 50px; */
+}
+
+.coupon-top {
+    /* margin-left: 30px; */
+}
+
+.apply-shop-coupon-code-1 {
+    display: flex;
+    padding-left: 150px;
+    /* border: 0 60px 0 60px; */
+    padding-bottom: 50px;
+}
+
+.apply-shop-coupon-text {
+    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.apply-shop-coupon-code-2 {
+    padding-left: 150px;
+    /* border: 0 60px 0 60px; */
+    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+    font-weight: 200;
+    font-size: 12px;
+    /* line-height: 28px; */
+}
+
+.shopping-cart-bottom {
+    display: flex;
+}
+
+.bottom-left-cart-top-top {
+    /* width: 2000px */
+    margin-top: 60px;
+}
+
+.cart-item-textarea {
+    background: #FFFFFF;
+    box-shadow: 0 1px 4px 0 rgb(34 34 34 / 10%) inset;
+    border-color: rgba(34, 34, 34, 0.15);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 6px;
+    color: #222222;
+    outline: none;
+    resize: none;
+    margin-top: 30px;
+}
+
+.bottom-left-cart-radio-thing {
+  appearance: none;
+  background: white;
+  outline: 1px solid #cacaca;
+  border: 1.5px solid #cacaca;
+  width: 14px;
+  box-shadow: 0 0 50px #cacaca;
+  height: 14px;
+}
+
+.bottom-left-cart-radio-thing-desc {
+    padding-left: 5px;
+    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.price-not-shown {
+    padding-top: 10px;
+    padding-left: 30px;
+    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+    font-weight: 200;
+    font-size: 12px;
+    /* line-height: 28px; */
+}
+
+.carbon-message {
+    display: flex;
+    padding-left: 520px;
+    padding-top: 50px;
+}
+
+.carbon-message-text {
+    margin-top: 4px;
+    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+    font-weight: 200;
+    font-size: 12px;
+    /* line-height: 28px; */
 }
