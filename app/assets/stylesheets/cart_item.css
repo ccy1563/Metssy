@@ -277,3 +277,16 @@
     -o-transition: opacity .5s ease-out;
 }
 
+.cart-item-counter-top {
+    margin: 0 0 50px 10px;
+    padding-left: 50px;
+}
+
+.cart-item-counter-text {
+    font-family: "Guardian-EgypTT",Charter,"Charter Bitstream",Cambria,"Noto Serif Light","Droid Serif",Georgia,serif;
+    font-weight: 300;
+    font-size: 4vh;
+    letter-spacing: 0.35px;
+    color: #222222;
+    -webkit-font-smoothing: antialiased;
+}

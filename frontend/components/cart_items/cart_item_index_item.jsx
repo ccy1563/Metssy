@@ -116,7 +116,7 @@ class CartItemIndexItem extends React.Component {
                     </div>
 
                     <div className="cart-items-element">
-                        <div className="cart-item-price">${price * this.state.quantity}</div>
+                        <div className="cart-item-price">${(price * this.state.quantity).toFixed(2)}</div>
                     </div>
                 </div>
             )

@@ -51,15 +51,15 @@ class CartItemIndex extends React.Component {
             totalPrice += (cartItem.price * cartItem.quantity);
         })
 
-        // let totalCartItems = this.props.cartItems.length;
+        let totalCartItems = this.props.cartItems.length;
 
         const discount = 0.01;
 
         return (
             <div>
-                {/* <div class='cart-item-counter'> */}
-                    {/* <div>{totalCartItems > 1? 'items in your cart' : 'item in your cart'}</div> */}
-                {/* </div> */}
+                <div className='cart-item-counter-top'>
+                    <div className='cart-item-counter-text'>{totalCartItems > 1 ? `${totalCartItems} items in your cart` : `${totalCartItems.toFixed(2)} item in your cart`}</div>
+                </div>
                 <div className="cart-top">
                     <div className="cart-items-top">
                         <div>{allCartItems}</div>
@@ -105,7 +105,7 @@ class CartItemIndex extends React.Component {
 
                                         <div className="item-total-list">
                                             <div className="item-price-thing-1-1">Item(s) total</div>
-                                            <div className="item-price-thing-1-2">${totalPrice}</div>
+                                            <div className="item-price-thing-1-2">${totalPrice.toFixed(2)}</div>
                                         </div>
                                         <div className="shop-discount-list">
                                             <div className="item-price-thing-2-1">Shop discount</div>
@@ -114,7 +114,7 @@ class CartItemIndex extends React.Component {
                                         <div className="shop-line-divide"></div>
                                         <div className="subtotal-list">
                                             <div>Subtotal</div>
-                                            <div>{totalPrice - discount}</div>
+                                            <div>{(totalPrice - discount).toFixed(2)}</div>
                                         </div>
                                         <div className="shipping-list">
                                             <div className="shipping-list-1">Shipping</div>
@@ -134,11 +134,11 @@ class CartItemIndex extends React.Component {
                             </button>
                         </div>
 
-                        <div className="uplift-fund">
+                        {/* <div className="uplift-fund">
                             <div className="uplift-fund-1">
                                 The Uplift Fund supports nonprofits that provide resources to creative entrepreneurs in communities that need it most. You can donate your change at Checkout. Learn more
                             </div>
-                        </div>
+                        </div> */}
                     </div>
 
 

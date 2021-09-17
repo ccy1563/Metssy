@@ -45,14 +45,16 @@ const App = () => (
             {/* <AuthRoute exact path="/login" component={Login} />
             <AuthRoute exact path="/signup" component={SignUp} /> */}
 
-            <Route exact path="/products/:productId">
+            {/* <Route exact path="/products/:productId" component={ProductShowContainer} /> */}
+
+            <Route exact path="/products/:productId/">
                 <ProductShowContainer />
                 <Announcement />
                 <Footer />
             </Route>
-            {/* <Route exact path="/products" component={ProductIndexContainer} /> */}
 
-            <Route exact path="/products/:productId">
+            {/* <Route exact path="/products" component={ProductIndexContainer} /> */}
+            <Route exact path="/products/:productId/reviews/:reviewId">
                 <ReviewEditContainer />
                 <Announcement />
                 <Footer />
@@ -62,7 +64,7 @@ const App = () => (
                 <CartItemIndexContainer />
                 <CartFooter />
             </Route>
-            
+
             <Route exact path="/">
                 <Welcome />
                 <ProductIndexContainer />

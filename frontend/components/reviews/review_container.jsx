@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom'
 
 import {
     fetchReviews,
@@ -32,4 +33,4 @@ const mDTP = dispatch => ({
     // updateReview: review => dispatch(updateReview(review)),
 });
 
-export default connect(mSTP, mDTP)(ReviewIndex);
+export default withRouter(connect(mSTP, mDTP)(ReviewIndex));

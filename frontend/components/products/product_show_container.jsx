@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import { fetchProducts, fetchProduct } from '../../actions/product_actions';
 import ProductShow from './product_show';
 import { fetchReviews } from '../../actions/review_actions';
@@ -13,11 +14,12 @@ import {
     deleteCartItem
 } from '../../actions/cart_item_actions';
 
-const mSTP = (state, ownProps) => ({
-    product: state.entities.products[ownProps.match.params.productId],
+const mSTP = (state, ownProps) => {
+    // debugger;
+    return {product: state.entities.products[ownProps.match.params.productId],
     user: state.session.id,
-    currentUser: state.entities.users[state.session.id],
-});
+    currentUser: state.entities.users[state.session.id],}
+};
 
 const mDTP = dispatch => ({
     fetchProduct: productId => dispatch(fetchProduct(productId)),
@@ -29,4 +31,4 @@ const mDTP = dispatch => ({
     createCartItem: cartItem => dispatch(createCartItem(cartItem)),
 });
 
-export default connect(mSTP, mDTP)(ProductShow);
+export default withRouter(connect(mSTP, mDTP)(ProductShow))
