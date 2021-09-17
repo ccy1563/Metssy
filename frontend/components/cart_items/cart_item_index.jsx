@@ -51,12 +51,12 @@ class CartItemIndex extends React.Component {
             totalPrice += (cartItem.price * cartItem.quantity);
         })
 
-        let totalCartItems = this.props.cartItems.length;
+        let totalCartItems = this.props.cartItems.length    ;
 
         const discount = 0.01;
 
         return (
-            <div>
+            <div className="very-top">
                 <div className='cart-item-counter-top'>
                     <div className='cart-item-counter-text'>{totalCartItems > 1 ? `${totalCartItems} items in your cart` : `${totalCartItems} item in your cart`}</div>
                 </div>

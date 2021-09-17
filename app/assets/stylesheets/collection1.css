@@ -71,3 +71,7 @@
 .category-text:hover {
     text-decoration: underline;
 }
+
+.very-top {
+    width: 500px;
+}
