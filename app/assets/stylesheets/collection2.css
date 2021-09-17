@@ -6,9 +6,9 @@
 .square-category-image {
     border: 1px solid rgba(34, 34, 34, 0.15);
     border-radius: 5%;
-    max-width:100%;
+    max-width:70%;
     cursor: pointer;
-    margin: 0 auto   0 auto;
+    margin: 0 0 0 20%;
         /* object-fit:scale-down; */
     width:  300px;
     height: 200px;
@@ -73,16 +73,7 @@
 }
 
 .sub-square-categories {
-    margin: auto;
-    /* border-left: 20%; */
-    padding-left: 10%;
-    padding-right: 10%;
-}
 
-.square-category-top {
-    margin: 0 auto 0 auto;
-    width: 100%;
-    height: 100%;
 }
 
 .small-square-category-text {
