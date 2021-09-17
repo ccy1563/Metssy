@@ -41,13 +41,13 @@ class CartItemIndexItem extends React.Component {
         e.preventDefault();
 
 
-        let newCartItem = Object.assign({}, this.state, {
+        const newCartItem = Object.assign({}, this.state, {
             product_id: this.state.productId,
             quantity: e.currentTarget.value,
         });
         // debugger
-        this.setState({ ...newCartItem })
-        this.props.updateCartItem(newCartItem)
+        this.props.updateCartItem(newCartItem);
+        this.setState({ quantity: e.currentTarget.value })
         location.reload();
     }
 
@@ -61,29 +61,23 @@ class CartItemIndexItem extends React.Component {
         // debugger 
 
         // debugger
-        // if (
-        //     !this.state.photoUrl ||
-        //     !this.state.price ||
-        //     !this.state.name ||
-        //     !this.state.quantity) {
-        //     debugger
-        //     // location.reload();
-        //     return null;
-        // } 
-            
-        // }
+        if (
+            !this.state.photoUrl ||
+            !this.state.price ||
+            !this.state.name ||
+            !this.state.quantity) {
+            // debugger
+            location.reload();
+            // return null;
+        } else {
+            const {
+                product_id,
+                quantity,
+            } = this.props.cartItem;
 
-        if (!this.props.products[this.props.cartItem.product_id - 1]) {
-            return null;
-        }
-        const {
-            product_id,
-            quantity,
-        } = this.props.cartItem;
+            const { photoUrl, price, name } = this.state;
 
-        const { photoUrl, price, name } = this.props.products[this.props.cartItem.product_id - 1];
-        
-        return (
+            return (
             <div>
                 <div className="cart-items-list-top">
                     <div className="cart-items-element">
@@ -129,6 +123,7 @@ class CartItemIndexItem extends React.Component {
                 </div>
             </div>
         )
+            }
     }
 }
 

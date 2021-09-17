@@ -7,12 +7,11 @@ class CartItemIndex extends React.Component {
 
     constructor(props) {
         super(props);
-        this.handleCheckout = this.handleCheckout.bind(this);
     }
 
     componentDidMount() {
-        this.props.fetchCartItems()
-            .then(this.props.fetchProducts());
+        this.props.fetchCartItems();
+        this.props.fetchProducts();
     }
 
     handleCheckout(e) {
@@ -48,22 +47,15 @@ class CartItemIndex extends React.Component {
         let totalPrice = 0;
         this.props.cartItems.forEach(cartItem => {
             // debugger
-            
+
             totalPrice += (cartItem.price * cartItem.quantity);
         })
-
-        // if (!totalPrice) {
-        //     // this.props.fetchCartItems();
-        //     // debugger;
-        //     return null;
-        // }
 
         let totalCartItems = this.props.cartItems.length;
 
         const discount = 0.01;
 
         return (
-
             <div>
                 <div className='cart-item-counter-top'>
                     <div className='cart-item-counter-text'>{totalCartItems > 1 ? `${totalCartItems} items in your cart` : `${totalCartItems} item in your cart`}</div>

@@ -9,7 +9,7 @@ import PanToolIcon from '@material-ui/icons/PanTool';
 import RedeemIcon from '@material-ui/icons/Redeem';
 
 class ProductShow extends React.Component {
-    
+
 
     // cart item needs 
     // t.integer "user_id", null: false
@@ -19,6 +19,8 @@ class ProductShow extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            // user_id: null,
+            // product_id: null,
             quantity: 1,
         }
         this.navigateToCartItemIndex = this.navigateToCartItemIndex.bind(this);
@@ -35,8 +37,7 @@ class ProductShow extends React.Component {
                 product_id: productId,
                 user_id: this.props.user,
             });
-            this.props.createCartItem(cartItem);
-            this.navigateToCartItemIndex();
+            this.props.createCartItem(cartItem).then(this.navigateToCartItemIndex)
         }
     }
 
@@ -45,12 +46,12 @@ class ProductShow extends React.Component {
         const url = `/cart_items`
         this.props.history.push(url);
     }
-    
+
     componentDidMount() {
-        this.props.fetchProduct(this.props.match.params.productId);
-        this.props.fetchReviews(this.props.match.params.productId);
+        this.props.fetchProduct(this.props.match.params.productId)
+            .then(this.props.fetchReviews(this.props.match.params.productId));
     }
-    
+
     getShippingDate() {
         var today = new Date();
         var dd = String(today.getDate()).padStart(2, '0');
@@ -90,7 +91,6 @@ class ProductShow extends React.Component {
 
         const { product } = this.props;
         if (!product) {
-            // debugger
             return null;
         }
         // debugger
