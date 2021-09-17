@@ -11,8 +11,8 @@ class CartItemIndex extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchCartItems();
-        this.props.fetchProducts();
+        this.props.fetchCartItems()
+            .then(this.props.fetchProducts());
     }
 
     handleCheckout(e) {
@@ -52,10 +52,11 @@ class CartItemIndex extends React.Component {
             totalPrice += (cartItem.price * cartItem.quantity);
         })
 
-        if (!totalPrice) {
-            // not sure if this is right, but I need to do this in order to fetch the newly updated values from cart_item_index_item, otherwise totalPrice ends up as NaN.
-            this.props.fetchCartItems();
-        }
+        // if (!totalPrice) {
+        //     // this.props.fetchCartItems();
+        //     // debugger;
+        //     return null;
+        // }
 
         let totalCartItems = this.props.cartItems.length;
 

@@ -15,7 +15,7 @@ class CartItemIndexItem extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = this.props.cartItem;
+        // this.state = this.props.cartItem;
         this.onChange = this.onChange.bind(this)
     }
 
@@ -41,14 +41,16 @@ class CartItemIndexItem extends React.Component {
         e.preventDefault();
 
 
-        let newCartItem = Object.assign({}, this.state, {
-            product_id: this.state.productId,
+        let newCartItem = {
+            id: this.props.cartItem.id,
+            user_id: this.props.cartItem.user_id,
+            product_id: this.props.cartItem.product_id,
             quantity: e.currentTarget.value,
-        });
-        // debugger
-        this.setState({ ...newCartItem })
+        };
+        debugger
         this.props.updateCartItem(newCartItem)
-        // location.reload();
+            .then(this.setState({ ...newCartItem }))
+        location.reload();
     }
 
     handleDelete(e) {
@@ -83,6 +85,8 @@ class CartItemIndexItem extends React.Component {
 
         const { photoUrl, price, name } = this.props.products[this.props.cartItem.product_id - 1];
         
+        // debugger
+
         return (
             <div>
                 <div className="cart-items-list-top">
@@ -112,7 +116,7 @@ class CartItemIndexItem extends React.Component {
                         <select
                             className="cart-quantity-button"
                             onChange={this.onChange}
-                            value={this.state.quantity}>
+                            value={quantity}>
                             <option value={1}>1</option>
                             <option value={2}>2</option>
                             <option value={3}>3</option>
@@ -124,7 +128,7 @@ class CartItemIndexItem extends React.Component {
                     </div>
 
                     <div className="cart-items-element">
-                        <div className="cart-item-price">${(price * this.state.quantity).toFixed(2)}</div>
+                        <div className="cart-item-price">${(price * quantity).toFixed(2)}</div>
                     </div>
                 </div>
             </div>
