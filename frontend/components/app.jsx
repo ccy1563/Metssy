@@ -23,6 +23,8 @@ import CartItemIndexContainer from './cart_items/cart_item_index_container'
 
 import CartFooter from './cart_footer/cart_footer'
 
+import SearchIndexContainer from './search/search_index_container'
+
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import {
     Route,
@@ -65,12 +67,17 @@ const App = () => (
                 <CartFooter />
             </Route>
 
+            <Route exact path="/search">
+                <SearchIndexContainer />
+            </Route>
+
             <Route exact path="/">
                 <Welcome />
                 <ProductIndexContainer />
                 <Announcement />
                 <Footer />
             </Route>
+
 
         </Switch>
     </div>
