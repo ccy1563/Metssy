@@ -2,6 +2,8 @@
 ## Overview
 Yeetsy is Etsy clone, an E-commerce website with a concentration hand-crafted artisan goods.
 
+<img align="center" width="500" height="300" src="https://github.com/ccy1563/Yeetsy/blob/main/yeetzy.gif">
+
 ## Technology
 * Ruby on Rails
 * PostgreSQL
