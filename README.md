@@ -1,9 +1,9 @@
 # Yeetsy
 
-<img align="center" width="500" height="300" src="https://github.com/ccy1563/Yeetsy/blob/main/yeetzy.gif">
-
 ## Overview
 Yeetsy is Etsy clone, an E-commerce website with a concentration hand-crafted artisan goods.
+
+<img align="center" width="500" height="300" src="https://github.com/ccy1563/Yeetsy/blob/main/yeetzy.gif">
 
 ## Technology
 * Ruby on Rails
@@ -25,3 +25,30 @@ Yeetsy is Etsy clone, an E-commerce website with a concentration hand-crafted ar
 * Users can checkout to proceed to the checkout page.
 
 ![cart_item](cart_item.png)
+
+## Code Snippet
+* I wanted to be able to display multiple products displayed in different grouping formats on the homepage.
+* Rather than making several different components, I decided to implement this as a single component.
+* In order to do this, I had to allow each grouping to be able to dynamically take HTML tags.
+
+```Javascript
+    render() {
+        const { product, classDiv, classTop, classImage, classPrice} = this.props;
+        return (
+            <div className={classDiv}>
+                <div className={classTop}>
+                    <Link to={`/products/${product.id}`}>
+                        <img className={classImage} src={product.photoUrl} alt="" />
+                    </Link>
+                </div>
+                <div className={classTop}>
+                    <Link to={`/products/${product.id}`}>
+                        <button className={classPrice}>
+                            ${product.price}
+                        </button>
+                    </Link>
+                </div>
+            </div>
+        )
+    }
+```
