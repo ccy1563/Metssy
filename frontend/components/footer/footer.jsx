@@ -35,7 +35,7 @@ class Footer extends React.Component {
                 </div>
                 
                 <div className="footer-option">
-                    <p className="footer-option-head">Technologies</p>
+                    <p className="footer-option-head">Technology</p>
                     {/* <li>Yeetsy, Inc.</li>
                     <li>Policies</li>
                     <li>Investors</li>
