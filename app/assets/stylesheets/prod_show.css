@@ -287,3 +287,34 @@
     color: rgb(138, 138, 138);
     padding-top: 5px;
 }
+
+.total-reviews-top {
+    display: flex;
+    padding-top: 10%;
+}
+
+
+.total-num-reviews {
+    font-family: "Guardian-EgypTT",Charter,"Charter Bitstream",Cambria,"Noto Serif Light","Droid Serif",Georgia,serif;
+    font-weight: 250;
+    letter-spacing: 0.35px;
+    font-size: 26px;
+}
+
+.total-reviews-string {
+    font-family: "Guardian-EgypTT",Charter,"Charter Bitstream",Cambria,"Noto Serif Light","Droid Serif",Georgia,serif;
+    font-weight: 250;
+    letter-spacing: 0.35px;
+    font-size: 26px;
+    padding-left: 10px;
+}
+
+.total-reviews-star-avg {
+    padding-left: 10px;
+}
+
+.total-reviews-line {
+    width: 550px;
+    margin-bottom: 12px;
+    border-bottom: 2px solid rgb(209, 209, 209);
+}
