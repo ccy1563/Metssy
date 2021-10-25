@@ -26,9 +26,7 @@ class Search extends React.Component {
         e.preventDefault();
         // debugger
         this.setState({ "search": true });
-        console.log(`${this.state.query} working?}`)
-
-        // query is set and need to use query to filter through fetched products
+        // console.log(`${this.state.query} working?}`)
     }
 
     handleKeypress = e => {

@@ -88,7 +88,7 @@ class SessionForm extends React.Component {
             <div className="submit-button-list">
               <li><input className="submit-button" type="submit" value="Continue"></input></li>
             </div>
-            <div className='sign-in-trouble'>Trouble signing in?</div>
+            {/* <div className='sign-in-trouble'>Trouble signing in?</div> */}
             <div className='modal-form-thingy-top'>
               <div className='modal-form-line'></div>
               <div className='modal-form-or'>OR</div>
