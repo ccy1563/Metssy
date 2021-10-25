@@ -58,7 +58,9 @@ class CartItemIndex extends React.Component {
         return (
             <div className="very-top">
                 <div className='cart-item-counter-top'>
-                    <div className='cart-item-counter-text'>{totalCartItems > 1 ? `${totalCartItems} items in your cart` : `${totalCartItems} item in your cart`}</div>
+                    <div className='cart-item-counter-text'>{totalCartItems === 0 ? "Your cart is empty." : null}</div>
+                    <div className='cart-item-counter-text'>{totalCartItems === 1 ? `${totalCartItems} item in your cart` : null}</div>
+                    <div className='cart-item-counter-text'>{totalCartItems > 1 ? `${totalCartItems} items in your cart` : null}</div>
                 </div>
                 <div className="cart-top">
                     <div>
@@ -113,7 +115,7 @@ class CartItemIndex extends React.Component {
                                     <form>
                                         <div className="radio-cc-top">
                                             <div>
-                                                <input type="radio" id="credit-card" />
+                                                <input type="radio" name="card" id="credit-card" />
                                             </div>
                                             <div>
                                                 <img className="cc-img" src={window.mastercard} />
@@ -124,14 +126,14 @@ class CartItemIndex extends React.Component {
                                         </div>
                                         <div className="radio-pp-top">
                                             <div>
-                                                <input type="radio" id="paypal" />
+                                                <input type="radio" name="card" id="paypal" />
                                             </div>
                                             <div>
                                                 <img className="cc-img" src={window.paypal} />
                                             </div>
                                         </div>
                                         <div className="klarna-top">
-                                            <input type="radio" id="klarna" />
+                                            <input type="radio" name="card" id="klarna" />
                                             <img className="cc-img" src={window.klarna} />
                                             <div>
                                                 <p className="klarna-text">4-interest free installments</p>

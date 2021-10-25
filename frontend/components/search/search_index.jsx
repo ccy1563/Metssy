@@ -31,7 +31,7 @@ class SearchIndex extends React.Component {
         })
 
         return (
-            <div>
+            <div className='search-index-top'>
                 {filteredProductsComponents}
             </div>
         )

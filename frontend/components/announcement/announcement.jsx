@@ -10,7 +10,7 @@ class Announcement extends React.Component {
                         What is Yeetsy?
                     </div>
                     <div className="announcement-head-bottom">
-                        Read our wonderfully weird story
+                        {/* Read our wonderfully weird story */}
                     </div>
                 </div>
 
@@ -41,9 +41,9 @@ class Announcement extends React.Component {
 
                 <div className="announcement-bottom">
                     Have a question? Well, we’ve got some answers.
-                    <button className="get-help-button">
+                    {/* <button className="get-help-button">
                         Go to Help Center
-                    </button>
+                    // </button> */}
                 </div>
 
             </div>

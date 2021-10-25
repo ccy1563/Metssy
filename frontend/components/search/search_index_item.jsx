@@ -19,6 +19,11 @@ class SearchIndexItem extends React.Component {
                         </button>
                     </Link>
                 </div>
+                <div className='search-name'>
+                    <Link className='search-name-link' to={`/products/${product.id}`}>
+                        {product.name}
+                    </Link>
+                </div>
             </div>
         )
     }
