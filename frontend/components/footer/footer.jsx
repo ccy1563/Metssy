@@ -75,17 +75,17 @@ class Footer extends React.Component {
                             <li> <img className="cart-footer-united-states-img" src={window.angellist} /></li> */}
 
                             <li>
-                                <a href="https://github.com/ccy1563">
+                                <a href="https://github.com/ccy1563" target="_blank">
                                     <img className="footer-social" src={window.github} alt="logo" />
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.linkedin.com/in/chris-c-160950221/">
+                                <a href="https://www.linkedin.com/in/chris-c-160950221/" target="_blank">
                                     <img className="footer-social" src={window.linkedin} alt="logo" />
                                 </a>
                             </li>
                             <li>
-                                <a href="https://angel.co/u/christopher-chung-16">
+                                <a href="https://angel.co/u/christopher-chung-16" target="_blank">
                                     <img className="footer-social" src={window.angellist} alt="logo" />
                                 </a>
                             </li>
