@@ -7,7 +7,7 @@ class Welcome extends React.Component {
         return (
             <div className="welcome-form">
                 <p className="welcome-text">
-                    Prep for fall with unique picks
+                    Welcome to Yeetsy!
                 </p>
             </div>
         )
