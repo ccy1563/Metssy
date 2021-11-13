@@ -188,3 +188,12 @@ email-item {
 .modal-form-thingy-top {
   display: flex;
 }
+
+.modal-error {
+  color: #A61A2E;
+  font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+  transition: opacity 200ms ease-in;
+  line-height: 28px;
+  letter-spacing: 1px;
+
+}

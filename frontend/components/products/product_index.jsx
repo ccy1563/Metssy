@@ -1,6 +1,6 @@
 import React from 'react';
 import ProductIndexItem from './product_index_item';
-import { Link } from 'react-router-dom';
+import { Link, withRouter, Redirect } from 'react-router-dom';
 
 import ReviewIndexItem from '../reviews/review_index_item';
 
@@ -8,11 +8,17 @@ class ProductIndex extends React.Component {
 
     constructor(props) {
         super(props);
+        this.state = {
+            cat_filter: [],
+            redirect: false,
+        }
+        this.handleRedirect = this.handleRedirect.bind(this)
     }
 
     componentDidMount() {
         this.props.fetchProducts();
         // this.props.fetchReviews();
+        this.handleRedirect()
     }
 
     // shuffle(array) {
@@ -25,6 +31,27 @@ class ProductIndex extends React.Component {
     //     }
     //     return array;
     // }
+
+    componentDidMount() {
+        this.props.fetchProducts();
+        // debugger
+        this.handleRedirect()
+    }
+
+    handleFilter(e, cats) {
+        e.preventDefault();
+        console.log("clicking");
+        this.setState({
+            cat_filter: cats,
+            redirect: true,
+        })
+    }
+
+    handleRedirect() {
+        this.setState({
+            redirect: false,
+        })
+    }
 
     createProductIndexItem(i, j, div, top, image, price) {
         const ret = this.props.products.slice(i, j).map(product => {
@@ -87,6 +114,22 @@ class ProductIndex extends React.Component {
             "third-cat-price"
         )
 
+        const { products } = this.props;
+        if (!products) return null;
+
+        if (this.state.redirect) {
+            { this.handleRedirect() }
+            // debugger
+            return (
+                <Redirect to={{
+                    pathname: '/category',
+                    state: { stateName: this.state.cat_filter },
+                    category: "?" + this.state.cat_filter,
+                    fetchProducts: this.props.fetchProducts,
+                }}>
+                </Redirect>
+            )
+        }
 
         return (
             <div className="toptop">
@@ -94,28 +137,71 @@ class ProductIndex extends React.Component {
                 {/* these would be categories, i'll bootstrap these images for now */}
                 <div className="sub-categories">
                     <div className="sub-cat-list">
-                        <img className="category-image" src={window.cat_clothes} />
-                        <p className="category-text">Clothes</p>
+                        <img 
+                            className="category-image" 
+                            src={window.cat_clothes}
+                            onClick={(e) => this.handleFilter(e, ["clothes"])}/>
+                        <p 
+                            className="category-text"
+                            onClick={(e) => this.handleFilter(e, ["clothes"])}>
+                            Clothes
+                        </p>
                     </div>
                     <div className="sub-cat-list">
-                        <img className="category-image" src={window.cat_decorations} />
-                        <p className="category-text">Decorations</p>
+                        <img 
+                            className="category-image"
+                            src={window.cat_decorations}
+                            onClick={(e) => this.handleFilter(e, ["decoration"])}/>
+                        <p 
+                            className="category-text"
+                            onClick={(e) => this.handleFilter(e, ["decoration"])}>
+                            Decorations
+                        </p>
                     </div>
                     <div className="sub-cat-list">
-                        <img className="category-image" src={window.cat_jewelry} />
-                        <p className="category-text">Jewlery</p>
+                        <img 
+                            className="category-image"
+                            src={window.cat_jewelry}
+                            onClick={(e) => this.handleFilter(e, ["jewelry"])}/>
+                        <p 
+                            className="category-text"
+                            onClick={(e) => this.handleFilter(e, ["jewelry"])}>
+                            Jewelery
+                        </p>
                     </div>
                     <div className="sub-cat-list">
-                        <img className="category-image" src={window.cat_skincare} />
-                        <p className="category-text">Skincare</p>
+                        <img
+                            className="category-image"
+                            src={window.cat_skincare}
+                            onClick={(e) => this.handleFilter(e, ["cosmetic"])}
+                        />
+                        <p
+                            className="category-text"
+                            onClick={(e) => this.handleFilter(e, ["cosmetic"])}>
+                            Skincare
+                        </p>
                     </div>
                     <div className="sub-cat-list">
-                        <img className="category-image" src={window.cat_halloween} />
-                        <p className="category-text">Halloween</p>
+                        <img
+                            className="category-image" 
+                            src={window.cat_halloween}
+                            onClick={(e) => this.handleFilter(e, ["halloween"])}/>
+                        <p 
+                            className="category-text"
+                            onClick={(e) => this.handleFilter(e, ["halloween"])}>
+                            Halloween
+                        </p>
                     </div>
                     <div className="sub-cat-list">
-                        <img className="category-image" src={window.cat_sale} />
-                        <p className="category-text">For Sale</p>
+                        <img 
+                            className="category-image" 
+                            src={window.cat_sale}
+                            onClick={(e) => this.handleFilter(e, ["sale"])}/>
+                        <p
+                            className="category-text"
+                            onClick={(e) => this.handleFilter(e, ["sale"])}>
+                            For Sale
+                        </p>
                     </div>
                 </div>
 
@@ -201,4 +287,4 @@ class ProductIndex extends React.Component {
     }
 }
 
-export default ProductIndex;
+export default withRouter(ProductIndex);

@@ -27,7 +27,7 @@ class Category extends React.Component {
         })
     }
 
-    handleRedirect(e) {
+    handleRedirect() {
         this.setState({
             redirect: false,
         })

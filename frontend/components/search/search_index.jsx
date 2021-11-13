@@ -32,7 +32,7 @@ class SearchIndex extends React.Component {
 
         if (query !== "") {
             return (
-                <div>
+                <div >
                     <div className='search-index-top'>
                         {filteredProductsComponents}
                     </div>
@@ -41,7 +41,12 @@ class SearchIndex extends React.Component {
             )
         } else {
             return (
-                <div className='footer-stopper'></div>
+                <div >
+                    <div className='search-index-top'>
+
+                    </div>
+                    <div className='footer-stopper'></div>
+                </div>
             )
         }
     }

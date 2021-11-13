@@ -5,7 +5,8 @@ class SessionForm extends React.Component {
     super(props);
     this.state = {
       email: '',
-      password: ''
+      password: '',
+      signup: false,
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -32,6 +33,26 @@ class SessionForm extends React.Component {
     this.props.processForm(caveman).then(this.props.closeModal)
   }
 
+  handleSwap(e) {
+    e.preventDefault();
+    if (!this.state.signup) {
+      this.setState({
+        signup: true,
+      })
+    } else {
+      this.setState({
+        signup: false,
+      })
+    }
+    if (!this.state.signup) {
+      // this.props.closeModal("login")
+      this.props.openModal('signup')
+    } else {
+      // this.props.closeModal("signup")
+      this.props.openModal('login')
+    }
+  }
+
   renderErrors() {
     // removing dup errors, super janky, find root problem
     const uniq = [... new Set(this.props.errors)]
@@ -47,20 +68,23 @@ class SessionForm extends React.Component {
   }
 
   render() {
+    // debugger
     return (
       <div>
         <div>
           <form className="modal-form" onSubmit={this.handleSubmit}>
             <div>
               <div className='sign-in-to-continue'>
-                Sign in to continue
+                {(!this.state.signup) ? "Sign in to continue" : "Create your account"}
               </div>
               <div className='sign-in-or-register'>
-                Sign in or register with your email address
+                {(!this.state.signup) ? "Sign in or register with your email address" : "Registration is easy."}
               </div>
             </div>
             <div onClick={this.props.closeModal} className="close-x">X</div>
-            {this.renderErrors()}
+            <div className='modal-error'>
+              {this.renderErrors()}
+            </div>
             {/* <div className="email-item"> */}
             <div className="form-text-box">
               <label className="form-text" htmlFor="email-label1">Email Address
@@ -96,7 +120,10 @@ class SessionForm extends React.Component {
             </div>
             <div>
               <div><button className="other-modal-buttons" onClick={(e) => this.handleDemoUser(e)}>Demo User</button></div>
-              <div><button className="other-modal-buttons" onClick={() => this.props.openModal('signup')}>Sign Up</button></div>
+              <div>
+                {(!this.state.signup) ? <button className="other-modal-buttons" onClick={(e) => this.handleSwap(e)}>Sign Up</button> : <button className="other-modal-buttons" onClick={(e) => this.handleSwap(e)}>Sign In</button>}
+                {/* <button className="other-modal-buttons" onClick={() => this.props.openModal('signup')}>Sign Up</button> */}
+              </div>
             </div>
             <div className='sign-up-policy'>
               By clicking Continue or Continue with Google, Facebook, or Apple, you agree to Yeetsy's Terms of Use and Privacy Policy. Yeetsy may send you communications; you may change your preferences in your account settings. We'll never post without your permission.
