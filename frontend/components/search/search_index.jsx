@@ -30,11 +30,20 @@ class SearchIndex extends React.Component {
             )
         })
 
-        return (
-            <div className='search-index-top'>
-                {filteredProductsComponents}
-            </div>
-        )
+        if (query !== "") {
+            return (
+                <div>
+                    <div className='search-index-top'>
+                        {filteredProductsComponents}
+                    </div>
+                    <div className='footer-stopper'></div>
+                </div>
+            )
+        } else {
+            return (
+                <div className='footer-stopper'></div>
+            )
+        }
     }
 }
 

@@ -34,7 +34,7 @@ class CategoryIndex extends React.Component {
             return this.arrayFilter(product.category, cats);
         })
 
-        debugger
+        // debugger
 
         const filteredProductsComponents = filteredProducts.map(product => {
             return (
