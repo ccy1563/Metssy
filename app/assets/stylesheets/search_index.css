@@ -5,13 +5,18 @@
     grid-template-columns: repeat(4, 1fr);
     column-gap: 1px; */
     /* display: flex; */
+    /* margin-top: 5%; */
     display: grid;
-    height: 100px;
+    /* height: 100px; */
     column-gap: 1px;
     grid-template-columns: repeat(4, 1fr);
     padding-left: 3.5%;
     row-gap: 5%;
+    /* background-color: red; */
+    /* padding-bottom: auto; */
     /* grid-template-rows: 100px; */
+    min-height: 50vh;
+    overflow: scroll;
 }
 
 .search-item {

@@ -71,10 +71,12 @@ const App = () => (
 
             <Route exact path="/search">
                 <SearchIndexContainer />
+                <Footer />
             </Route>
 
             <Route exact path="/category">
                 <CategoryIndexContainer />
+                <Footer />
             </Route>
 
             <Route exact path="/">
