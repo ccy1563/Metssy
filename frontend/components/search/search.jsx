@@ -18,7 +18,7 @@ class Search extends React.Component {
     }
 
     update(property) {
-        console.log(this.state.query)
+        // console.log(this.state.query)
         return e => this.setState({ [property]: e.currentTarget.value });
     }
 

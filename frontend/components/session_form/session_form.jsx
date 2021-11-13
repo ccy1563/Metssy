@@ -108,7 +108,7 @@ class SessionForm extends React.Component {
     this.handleState(e)
     this.props.openModal('signup')
     // this.props.closeModal()
-    console.log(this.state.option)
+    // console.log(this.state.option)
   }
 
   handleLogin(e) {
@@ -122,7 +122,7 @@ class SessionForm extends React.Component {
     this.handleState(e)
     this.props.openModal('login')
     // this.props.closeModal()
-    console.log(this.state.option)
+    // console.log(this.state.option)
   }
 
   // handleExit() {

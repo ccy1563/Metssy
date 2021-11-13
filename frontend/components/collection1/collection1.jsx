@@ -22,7 +22,7 @@ class SubCategories extends React.Component {
 
     handleFilter(e, cats) {
         e.preventDefault();
-        console.log("clicking");
+        // console.log("clicking");
         this.setState({
             cat_filter: cats,
             redirect: true,
