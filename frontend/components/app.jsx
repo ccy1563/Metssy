@@ -25,6 +25,8 @@ import CartFooter from './cart_footer/cart_footer'
 
 import SearchIndexContainer from './search/search_index_container'
 
+import CategoryIndexContainer from './category/category_index_container'
+
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import {
     Route,
@@ -69,6 +71,10 @@ const App = () => (
 
             <Route exact path="/search">
                 <SearchIndexContainer />
+            </Route>
+
+            <Route exact path="/category">
+                <CategoryIndexContainer />
             </Route>
 
             <Route exact path="/">

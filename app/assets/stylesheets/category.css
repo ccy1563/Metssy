@@ -9,6 +9,11 @@
     margin: 1% 0 1% 0;
 }
 
+.categories-bttn {
+    background-color: transparent;
+    border: none;
+}
+
 .categories-line {
     border-bottom: 2px solid rgb(206, 206, 206);
     margin-bottom: 40px;
