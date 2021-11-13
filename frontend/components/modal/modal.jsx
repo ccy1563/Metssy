@@ -12,9 +12,11 @@ class Modal extends React.Component {
         let component;
         switch (this.props.modal) {
             case 'login':
+                // this.props.closeModal();
                 component = <LoginFormContainer />;
                 break;
             case 'signup':
+                // this.props.closeModal();
                 component = <SignupFormContainer />;
                 break;
             case 'editReview':

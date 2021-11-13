@@ -8,7 +8,9 @@ class Greeting extends React.Component {
   //   console.log(this.props.currentUser);
   // }
 
+  
   render() {
+    // debugger
     if (this.props.currentUser) {
       return(
         <div>

@@ -22,6 +22,7 @@ const mapDispatchToProps = dispatch => {
       </button>
     ),
     closeModal: () => dispatch(closeModal()),
+    openModal: modal => dispatch(openModal(modal)),
     removeErrors: () => dispatch(removeErrors()),
   };
 };

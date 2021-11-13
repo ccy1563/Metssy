@@ -5,7 +5,8 @@ import { openModal } from '../../actions/modal_actions';
 import Greeting from './greeting';
 
 const mapStateToProps = ({ session, entities: { users } }) => ({
-  currentUser: users[session.id]
+  currentUser: users[session.id],
+  // modal: undefined,
 })
 
 const mapDispatchToProps = dispatch => ({
