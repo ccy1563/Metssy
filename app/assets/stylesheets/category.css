@@ -14,6 +14,15 @@
     border: none;
 }
 
+.categories-bttn:hover {
+    opacity: .5;    
+    transition: opacity .5s ease-out;
+    -moz-transition: opacity .5s ease-out;
+    -webkit-transition: opacity .5s ease-out;
+    -o-transition: opacity .5s ease-out;
+    cursor: pointer;
+}
+
 .categories-line {
     border-bottom: 2px solid rgb(206, 206, 206);
     margin-bottom: 40px;
