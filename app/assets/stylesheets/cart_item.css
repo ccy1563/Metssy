@@ -343,6 +343,15 @@
     /* line-height: 28px; */
 }
 
+.apply-shop-coupon-code-3 {
+    padding-left: 220px;
+    /* border: 0 60px 0 60px; */
+    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+    font-weight: 200;
+    font-size: 12px;
+    /* line-height: 28px; */
+}
+
 .shopping-cart-bottom {
     display: flex;
 }

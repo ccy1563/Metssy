@@ -72,7 +72,7 @@
     font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
     font-weight: 200;
     font-size: 13px;
-    text-decoration: underline;
+    /* text-decoration: underline; */
     -webkit-font-smoothing: antialiased;
 }
 
@@ -83,6 +83,19 @@
     font-size: 13px;
     text-decoration: underline;
     -webkit-font-smoothing: antialiased;
+}
+
+.cart-footer-right-item-3:hover {
+    opacity: .5;    
+    transition: opacity .5s ease-out;
+    -moz-transition: opacity .5s ease-out;
+    -webkit-transition: opacity .5s ease-out;
+    -o-transition: opacity .5s ease-out;
+}
+
+.cart-footer-right-item-3-link {
+    text-decoration: none;
+    color: black
 }
 
 .cart-footer-right-item-4 {

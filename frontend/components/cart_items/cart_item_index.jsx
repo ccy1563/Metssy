@@ -21,6 +21,28 @@ class CartItemIndex extends React.Component {
         })
     }
 
+    getShippingDate() {
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = today.getMonth();
+        var yyyy = today.getFullYear();
+        var month = new Array();
+        month[0] = "Jan";
+        month[1] = "Feb";
+        month[2] = "Mar";
+        month[3] = "Apr";
+        month[4] = "May";
+        month[5] = "Jun";
+        month[6] = "Jul";
+        month[7] = "Aug";
+        month[8] = "Sep";
+        month[9] = "Oct";
+        month[10] = "Nov";
+        month[11] = "Dec";
+
+        return month[mm] + ' ' + (parseInt(dd) + 4) + '-' + yyyy;
+    }
+
     render() {
 
         // debugger
@@ -89,13 +111,14 @@ class CartItemIndex extends React.Component {
                                     <div>
                                         <div className='coupon-top'>
                                             <div className='apply-shop-coupon-code-1'>
-                                                <img className="ticket-img" src={window.ticket} />
-                                                <p className='apply-shop-coupon-text'>Apply shop coupon code</p>
+                                                {/* <img className="ticket-img" src={window.ticket} /> */}
+                                                {/* <p className='apply-shop-coupon-text'>Apply shop coupon code</p> */}
                                             </div>
                                             <div className='apply-shop-coupon-code-2'>
-                                                Estimated delivery: Sep 21-27
+                                                {/* Estimated delivery: Sep 21-27 */}
+                                                {`Estimated delivery: ${this.getShippingDate()}`}
                                             </div>
-                                            <div className='apply-shop-coupon-code-2'>
+                                            <div className='apply-shop-coupon-code-3'>
                                                 from United States
                                             </div>
                                         </div>
@@ -143,7 +166,7 @@ class CartItemIndex extends React.Component {
                                         <div className="cart-installment-text">
                                             <div className="cart-installment-text-1">Pay in 4 installments of $14.20. &nbsp;</div>
                                             <div className="cart-installment-text-2">Klarna. &nbsp;</div>
-                                            <div className="cart-installment-text-3">Learn more</div>
+                                            {/* <div className="cart-installment-text-3">Learn more</div> */}
                                         </div>
 
                                         <div className="item-total-list">
@@ -177,8 +200,11 @@ class CartItemIndex extends React.Component {
                             </button>
                         </div>
                         <div className="uplift-fund">
-                            <div className="uplift-fund-1">
+                            {/* <div className="uplift-fund-1">
                                 The Uplift Fund supports nonprofits that provide resources to creative entrepreneurs in communities that need it most. You can donate your change at Checkout. Learn more
+                            </div> */}
+                            <div className="uplift-fund-1">
+                                The Uplift Fund supports nonprofits that provide resources to creative entrepreneurs in communities that need it most. You can donate your change at Checkout.
                             </div>
                             <div>
                                 <img className="hand-img" src={window.hand} />
