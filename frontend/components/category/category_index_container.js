@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import React from 'react';
-import SearchIndex from './search_index';
+import CategoryIndex from './category_index';
 import { fetchProducts } from '../../actions/product_actions';
 
 const mSTP = state => {
@@ -10,11 +10,10 @@ const mSTP = state => {
 }
 
 const mDTP = dispatch => {
-    // console.log("fetching products")
+    console.log("fetching products")
     return {
         fetchProducts: () => dispatch(fetchProducts()),
     }
 }
 
-export default connect(mSTP, mDTP)(SearchIndex);
-
+export default connect(mSTP, mDTP)(CategoryIndex);
