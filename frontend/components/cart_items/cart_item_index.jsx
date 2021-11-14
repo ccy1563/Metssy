@@ -77,6 +77,25 @@ class CartItemIndex extends React.Component {
 
         const discount = 0.01;
 
+        if (totalCartItems === undefined || totalCartItems === 0) {
+            // debugger
+            return (
+                <div className="cart-item-empty-top">
+                    <div className='cart-item-counter-text-empty'>Your cart is empty.</div>
+                    <div className='cart-item-counter-text2-empty'>
+                        <Link to={`/`} className='cart-item-counter-text2-empty-link'>
+                            Discover something unique to fill it up
+                        </Link>
+                    </div>
+                    <div className='carbon-message2'>
+                        <img className="leaf-img" src={window.leaf} />
+                        <div className='carbon-message-text'>Etsy offsets carbon emissions from every delivery</div>
+                    </div>
+                </div>
+            )
+        }
+
+        // debugger
         return (
             <div className="very-top">
                 <div className='cart-item-counter-top'>
@@ -99,11 +118,11 @@ class CartItemIndex extends React.Component {
                                         </div>
                                         <div className='price-not-shown'>Prices will not be shown on packing slip</div>
                                         <div>
-                                            <textarea 
+                                            <textarea
                                                 className='cart-item-textarea'
-                                                name="" 
-                                                id="" 
-                                                cols="50" 
+                                                name=""
+                                                id=""
+                                                cols="50"
                                                 rows="4"
                                                 placeholder='Add a note (optional)' />
                                         </div>
