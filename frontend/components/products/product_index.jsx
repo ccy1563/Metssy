@@ -262,30 +262,56 @@ class ProductIndex extends React.Component {
 
 
 
-                <p className="prints-text-big">Prints</p>
-                <p className="prints-text-small">Based on your activity</p>
+                <div className='last-cat-main'>
+                    <div className='last-cat-main-2'>
+                        <p className="prints-text-big">Prints</p>
+                        <p className="prints-text-small">Based on your activity</p>
 
-                <div className="prod-sec-3-top">
-                    <div className="prod-sec-3-list">
-                        <div className="prod-sec-3-list-items">
-                            <div>{productSection3[0]}</div>
-                            <div><p className="prod-sec-3-list-items-text">Holographic</p></div>
-                        </div>
-                        <div className="prod-sec-3-list-items">
-                            <div>{productSection3[1]}</div>
-                            <div><p className="prod-sec-3-list-items-text">Dismaland</p></div>
-                        </div>
-                        <div className="prod-sec-3-list-items">
-                            <div>{productSection3[2]}</div>
-                            <div><p className="prod-sec-3-list-items-text">Pizza Joint</p></div>
-                        </div>
-                        <div className="prod-sec-3-list-items">
-                            <div>{productSection3[3]}</div>
-                            <div><p className="prod-sec-3-list-items-text">Hexen 2.0</p></div>
-                        </div>
-                        <div className="prod-sec-3-list-items">
-                            <div>{productSection3[4]}</div>
-                            <div><p className="prod-sec-3-list-items-text">Untitled Skull</p></div>
+                        {/* <div className="prod-sec-3-top">
+                            <div className="prod-sec-3-list">
+                                <div className="prod-sec-3-list-items">
+                                    <div>{productSection3[0]}</div>
+                                    <div><p className="prod-sec-3-list-items-text">Holographic</p></div>
+                                </div>
+                                <div className="prod-sec-3-list-items">
+                                    <div>{productSection3[1]}</div>
+                                    <div><p className="prod-sec-3-list-items-text">Dismaland</p></div>
+                                </div>
+                                <div className="prod-sec-3-list-items">
+                                    <div>{productSection3[2]}</div>
+                                    <div><p className="prod-sec-3-list-items-text">Pizza Joint</p></div>
+                                </div>
+                                <div className="prod-sec-3-list-items">
+                                    <div>{productSection3[3]}</div>
+                                    <div><p className="prod-sec-3-list-items-text">Hexen 2.0</p></div>
+                                </div>
+                                <div className="prod-sec-3-list-items">
+                                    <div>{productSection3[4]}</div>
+                                    <div><p className="prod-sec-3-list-items-text">Untitled Skull</p></div>
+                                </div>
+                            </div>
+                        </div> */}
+                        <div className="prod-sec-3-list">
+                            <div className="prod-sec-3-list-items">
+                                <div>{productSection3[0]}</div>
+                                <div><p className="prod-sec-3-list-items-text">Holographic</p></div>
+                            </div>
+                            <div className="prod-sec-3-list-items">
+                                <div>{productSection3[1]}</div>
+                                <div><p className="prod-sec-3-list-items-text">Dismaland</p></div>
+                            </div>
+                            <div className="prod-sec-3-list-items">
+                                <div>{productSection3[2]}</div>
+                                <div><p className="prod-sec-3-list-items-text">Pizza Joint</p></div>
+                            </div>
+                            <div className="prod-sec-3-list-items">
+                                <div>{productSection3[3]}</div>
+                                <div><p className="prod-sec-3-list-items-text">Hexen 2.0</p></div>
+                            </div>
+                            <div className="prod-sec-3-list-items">
+                                <div>{productSection3[4]}</div>
+                                <div><p className="prod-sec-3-list-items-text">Untitled Skull</p></div>
+                            </div>
                         </div>
                     </div>
                 </div>

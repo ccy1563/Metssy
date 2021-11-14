@@ -224,8 +224,10 @@
     font-weight: 700;
     font-size: 28px;
     line-height: 36px;
-    margin: 0 0 0 4%;
+    /* margin: 0 0 0 4%; */
     cursor: pointer;
+    display: flex;
+    padding-left: 2%;
 }
 
 .prints-text-small {
@@ -234,12 +236,26 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 28px;
-    margin-left: 4%;
+    /* margin-left: 4%; */
+    display: flex;
+    padding-left: 2%;
 }
 
 .prod-sec-3-top {
     margin: 2vh 5vh 5vh 6vh;
     /* background-color: yellow; */
+}
+
+.last-cat-main {
+    display: flex;
+    justify-content: center;
+    /* justify-self: center; */
+    align-items: center;
+    flex-direction: column;
+}
+
+.last-cat-main-2 {
+
 }
 
 .prod-sec-3-list {
