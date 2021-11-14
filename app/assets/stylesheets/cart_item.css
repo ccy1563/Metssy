@@ -285,6 +285,7 @@
     letter-spacing: 0.35px;
     color: #222222;
     -webkit-font-smoothing: antialiased;
+    padding-top: 1%;
 }
 
 .cart-item-empty-top {
