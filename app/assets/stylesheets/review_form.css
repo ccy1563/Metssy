@@ -4,6 +4,9 @@
 }
 
 .review-form {
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
     /* padding: 5vh; */
 }
 
@@ -12,7 +15,7 @@
 } */
 
 .review-submit-bttn {
-    margin: 10px 0 0 15vh;
+    /* margin: 10px 0 0 15vh; */
     font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
 
     max-height: 48px;
@@ -40,6 +43,12 @@
 .review-submit-bttn:hover {
     transition: all .1s ease-in-out;
     transform: scale(1.02);
+}
+
+.review-submit-bttn-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .submitted-reviews-top {
