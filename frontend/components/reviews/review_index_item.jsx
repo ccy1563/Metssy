@@ -36,6 +36,7 @@ class ReviewIndexItem extends React.Component {
 
     handleClose(e) {
         e.preventDefault();
+        // debugger
         this.setState({
             flag: false,
         })
@@ -116,32 +117,44 @@ class ReviewIndexItem extends React.Component {
                         {/* <button className="review-edit-modal-button" onClick={() => this.props.openModal('editReview')}>Edit</button> */}
                     </div>
                     <div className='modal'>
-                        <div className="review-edit-form-top-top">
-                            <div className="review-edit-form-top">
-                                <div>
-                                    <form onSubmit={(e) => this.handleSubmit(e)}>
-                                        <Box component="fieldset" mb={3} borderColor="transparent">
-                                            <Rating
-                                                style={{ color: "black" }}
-                                                name="Rating Label Modal"
-                                                value={this.state.rating}
-                                                precision={0.5}
-                                                // type="number"
-                                                onChange={this.update("rating")}
-                                            />
-                                        </Box>
-                                        <textarea
-                                            className="create-review-textarea"
-                                            id="review-submit-button"
-                                            cols="65"
-                                            rows="4"
-                                            value={this.state.body}
-                                            onChange={this.update("body")}
-                                        />
-                                        <input type="submit" className="review-submit-bttn" />
-                                    </form>
-                                </div>
+                        <div className='modal-box-2'>
+                            {/* <div className='modal-edit-review-title'>
+                                Edit your review
+                            </div> */}
+                            <div className='modal-edit-review-title-2'>
+                                Edit your review
                             </div>
+                            {/* <div className='modal-form-line-2'></div> */}
+                            <div 
+                                className='modal-x-edit'
+                                onClick={(e)=>this.handleClose(e)}>
+                                    X
+                            </div>
+                            <form onSubmit={(e) => this.handleSubmit(e)}>
+                                <div className='modal-edit-review-star'>
+                                    <Box component="fieldset" mb={3} borderColor="transparent">
+                                        <Rating
+                                            style={{ color: "black" }}
+                                            name="Rating Label Modal"
+                                            value={this.state.rating}
+                                            precision={0.5}
+                                            // type="number"
+                                            onChange={this.update("rating")}
+                                        />
+                                    </Box>
+                                </div>
+                                <textarea
+                                    className="modal-edit-review-text"
+                                    id="review-submit-button"
+                                    cols="65"
+                                    rows="4"
+                                    value={this.state.body}
+                                    onChange={this.update("body")}
+                                />
+                                <input 
+                                    type="submit" 
+                                    className="review-submit-bttn-modal"/>
+                            </form>
                         </div>
                     </div>
                 </div>

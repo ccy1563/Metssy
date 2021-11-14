@@ -71,7 +71,7 @@ class ReviewIndex extends React.Component {
 
         // debugger
         return (
-            <div>
+            <div className='all-reviews-main'>
                 <div className='total-reviews-top'>
                     <div className='total-num-reviews'>
                         {allReviews.length}
@@ -85,7 +85,9 @@ class ReviewIndex extends React.Component {
                 </div>
                 <div className='total-reviews-line'></div>
 
-                {allReviews}
+                <div className='all-reviews-box'>
+                    {allReviews}
+                </div>
             </div>
         )
     }
