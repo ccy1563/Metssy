@@ -221,38 +221,43 @@ class ProductIndex extends React.Component {
                     </div>
                 </div>
 
-                <p className="small-square-category-text">Shop Editors' Picks</p>
-                <p className="smaller-category-text">Curated collections hand-picked by Etsy editors</p>
-                
-                <div className="square-cat-outer">
-                    <div className="square-cat-item-big">
-                        {bigImage[0]}
-                    </div>
-                    <div className="square-cat-item-small">
-                        <div className="square-cat-item-small-1">
-                            <div className="square-cat-item-small-1-item">
-                                {productSection2[0]}
-                            </div>
-                            <div className="square-cat-item-small-1-item">
-                                {productSection2[1]}
-                            </div>
-                            <div className="square-cat-item-small-1-item">
-                                {productSection2[2]}
-                            </div>
-                        </div>
-                        <div className="square-cat-item-small-2">
-                            <div className="square-cat-item-small-2-item">
-                                {productSection2[3]}
-                            </div>
-                            <div className="square-cat-item-small-2-item">
-                                {productSection2[4]}
-                            </div>
-                            <div className="square-cat-item-small-2-item">
-                                {productSection2[5]}
-                            </div>
-                        </div>
-                    </div>
 
+                <div className='small-square-cat-main'>
+                    <div className='small-square-cat-main-2'>
+                        <p className="small-square-category-text">Shop Editors' Picks</p>
+                        <p className="smaller-category-text">Curated collections hand-picked by Etsy editors</p>
+
+                        <div className="square-cat-outer">
+                            <div className="square-cat-item-big">
+                                {bigImage[0]}
+                            </div>
+                            <div className="square-cat-item-small">
+                                <div className="square-cat-item-small-1">
+                                    <div className="square-cat-item-small-1-item">
+                                        {productSection2[0]}
+                                    </div>
+                                    <div className="square-cat-item-small-1-item">
+                                        {productSection2[1]}
+                                    </div>
+                                    <div className="square-cat-item-small-1-item">
+                                        {productSection2[2]}
+                                    </div>
+                                </div>
+                                <div className="square-cat-item-small-2">
+                                    <div className="square-cat-item-small-2-item">
+                                        {productSection2[3]}
+                                    </div>
+                                    <div className="square-cat-item-small-2-item">
+                                        {productSection2[4]}
+                                    </div>
+                                    <div className="square-cat-item-small-2-item">
+                                        {productSection2[5]}
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
 
 

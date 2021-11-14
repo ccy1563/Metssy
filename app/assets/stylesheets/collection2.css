@@ -103,8 +103,19 @@
     font-weight: 700;
     font-size: 28px;
     line-height: 36px;
-    margin: 6% 0 0 12%;
+    margin: 6% 0 0 0;
     cursor: pointer;
+
+    display: flex;
+    /* padding-right: 30%; */
+}
+
+.small-square-cat-main {
+    display: flex;
+    justify-content: center;
+    /* justify-self: center; */
+    align-items: center;
+    flex-direction: column;
 }
 
 .smaller-category-text {
@@ -113,22 +124,17 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 28px;
-    margin-left: 12%;
+    /* margin-left: 12%; */
     margin-bottom: 2%;
+    display: flex;
 }
-
-
-
-
-
-
-
-
 
 .square-cat-outer {
     display: flex;
     /* margin-left: 100p; */
-    padding: 1vh 10vh 5vh 13vh;
+    /* padding: 1vh 10vh 5vh 13vh; */
+    justify-content: center;
+    align-items: center;
 }
 
 .square-cat-item-big {
