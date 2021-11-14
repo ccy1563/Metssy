@@ -15,12 +15,20 @@
 }
 
 .all-cards-list {
-    /* display: flex; */
-    padding: 20px 20px 20px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10%;
+    flex-direction: column;
+    /* padding-left: 10%; */
+    margin-left: 50%;
+    /* padding: 20px 20px 20px 20px; */
+    /* padding: 10% 10% 10% 10%; */
 }
 
 .cc-img-list {
-    display: flex;
+    /* display: flex; */
+    /* max-width: 30%; */
 }
 
 .cc-img {
@@ -52,9 +60,19 @@
   position: relative;
   vertical-align: middle;
   z-index: 10;
-  width: 400px;
+  width: 370px;
   height:50px;
-  margin: 2% 0 2% 5%;
+  margin: 2% 0 2% 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkout-bttn-box {
+      display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .checkout-button:hover {
@@ -87,16 +105,28 @@
 }
 
 .all-cards-list-top {
-    background-color: white;
+    /* background-color: white;
     margin-left: 15vh;
     outline: none;
     border-color: #b8b8b8;
     box-shadow: 0 0 30px #cacaca;
-    border-radius: 15px;
+    border-radius: 15px; */
 }
 
 .radio-cc-top {
     display: flex;
+}
+
+.cc-main {
+    background-color: white;
+    /* margin-left: 15vh; */
+    outline: none;
+    border-color: #b8b8b8;
+    box-shadow: 0 0 30px #cacaca;
+    border-radius: 15px;
+    /* margin: 5%; */
+    padding: 5%;
+    width: 370px;
 }
 
 .radio-pp-top {
@@ -217,7 +247,7 @@
 
 
 .shop-line-divide {
-    width: 400px;
+    display: flex;
     border-bottom: 1px solid rgb(204, 204, 204);
 }
 
@@ -273,6 +303,13 @@
     -o-transition: opacity .5s ease-out;
 }
 
+.very-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .cart-item-counter-top {
     margin: 0 0 50px 10px;
     padding-left: 50px;
@@ -286,6 +323,7 @@
     color: #222222;
     -webkit-font-smoothing: antialiased;
     padding-top: 1%;
+    display: flex;
 }
 
 .cart-item-empty-top {
@@ -327,8 +365,11 @@
 }
 
 .uplift-fund {
+    padding-top: 5%;
     display: flex;
-    padding: 30px 30px 0 110px ;
+    /* max-width: inherit; */
+    width: 370px;
+    /* padding: 30px 30px 0 110px ; */
 }
 .toptoptop {
     margin: 0 50px 0 0;
@@ -340,6 +381,8 @@
     font-weight: 200;
     font-size: 12px;
     line-height: 28px;
+    display: flex;
+    max-width: auto;
 }
 
 .bottom-left-cart-radio {
