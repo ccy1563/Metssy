@@ -18,7 +18,7 @@ class ReviewIndexItem extends React.Component {
         };
     }
 
-    
+
     handleDelete(e) {
         e.preventDefault();
         this.props.deleteReview(this.props.review, this.props.productId);
@@ -40,14 +40,14 @@ class ReviewIndexItem extends React.Component {
 
     update(property) {
         // debugger
-        return e => this.setState({ [property]: e.currentTarget });
+        return e => this.setState({ [property]: e.currentTarget.value });
     }
 
     handleSubmit(e) {
         e.preventDefault();
 
         // debugger
-        const review = {
+        const newReview = {
             author_id: this.props.currentUserId,
             body: this.state.body,
             email: this.props.review.email,
@@ -56,57 +56,88 @@ class ReviewIndexItem extends React.Component {
             rating: this.state.rating,
         }
         // debugger
-        this.props.updateReview(review, this.props.review.product_id);
+        this.props.updateReview(newReview, this.props.review.product_id);
         // debugger
         document.getElementById("review-submit-button").value = "";
         this.setState({
             flag: false,
         })
     }
-    
-    
-    render() {        
+
+
+    render() {
         const { review, productId } = this.props;
         // debugger    
         let stars = [];
         for (let i = 0; i < 5; i++) {
-            if (i < review.rating) {
-                stars.push(<StarIcon key={i}/>);
+            if (i < this.state.rating) {
+                stars.push(<StarIcon key={i} />);
             } else {
-                stars.push(<StarBorderIcon key={i}/>);
+                stars.push(<StarBorderIcon key={i} />);
             }
         }
 
-        console.log("rating: " + this.state.rating + " " + (typeof this.state.rating === 'string'))
+        // console.log("rating: " + this.state.rating + " " + (typeof this.state.rating === 'string'))
 
         if (this.state.flag) {
             // debugger
             return (
-                <div className='modal'>
-                    <div className="review-edit-form-top-top">
-                        <div className="review-edit-form-top">
+                <div>
+                    <div className="submitted-reviews-top">
+                        <div className="review-email">
+                            {/* <p>{this.props.fetchUser(this.props.authorId).email}</p> */}
+                            <p>{this.props.review.email}</p>
+                        </div>
+                        <div className="review-rating">
+                            <p>{stars}</p>
+                        </div>
+                        <div className="review-body">
+                            <p>{review.body}</p>
+                        </div>
+
+                        <div className="show-page-buttons">
                             <div>
-                                <form onSubmit={(e) => this.handleSubmit(e)}>
-                                    <Box component="fieldset" mb={3} borderColor="transparent">
-                                        <Rating
-                                            style={{ color: "black" }}
-                                            name="Rating Label"
-                                            value={this.state.rating}
-                                            precision={0.5}
-                                            // type="number"
-                                            onChange={this.update("rating")}
+                                {/* {this.props.authorId === this.props.currentUserId ? <Link to={`/products/${this.props.productId}/reviews/${review.id}`}><button className="show-page-edit-button">Edit</button></Link> : null} */}
+
+                                <button
+                                    onClick={(e) => this.handleOpen(e)}
+                                    className='show-page-edit-button'>
+                                    Edit
+                                </button>
+                            </div>
+
+                            <div>
+                                {this.props.authorId === this.props.currentUserId ? <button className="show-page-delete-button" onClick={(e) => this.handleDelete(e)}>Delete</button> : null}
+                            </div>
+                        </div>
+                        {/* <button className="review-edit-modal-button" onClick={() => this.props.openModal('editReview')}>Edit</button> */}
+                    </div>
+                    <div className='modal'>
+                        <div className="review-edit-form-top-top">
+                            <div className="review-edit-form-top">
+                                <div>
+                                    <form onSubmit={(e) => this.handleSubmit(e)}>
+                                        <Box component="fieldset" mb={3} borderColor="transparent">
+                                            <Rating
+                                                style={{ color: "black" }}
+                                                name="Rating Label Modal"
+                                                value={this.state.rating}
+                                                precision={0.5}
+                                                // type="number"
+                                                onChange={this.update("rating")}
+                                            />
+                                        </Box>
+                                        <textarea
+                                            className="create-review-textarea"
+                                            id="review-submit-button"
+                                            cols="65"
+                                            rows="4"
+                                            value={this.state.body}
+                                            onChange={this.update("body")}
                                         />
-                                    </Box>
-                                    <textarea
-                                        className="create-review-textarea"
-                                        id="review-submit-button"
-                                        cols="65"
-                                        rows="4"
-                                        value={this.state.body}
-                                        onChange={this.update("body")}
-                                    />
-                                    <input type="submit" className="review-submit-bttn" />
-                                </form>
+                                        <input type="submit" className="review-submit-bttn" />
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -127,7 +158,7 @@ class ReviewIndexItem extends React.Component {
                 <div className="review-body">
                     <p>{review.body}</p>
                 </div>
-                
+
                 <div className="show-page-buttons">
                     <div>
                         {/* {this.props.authorId === this.props.currentUserId ? <Link to={`/products/${this.props.productId}/reviews/${review.id}`}><button className="show-page-edit-button">Edit</button></Link> : null} */}
