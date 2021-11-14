@@ -89,7 +89,7 @@ class CartItemIndex extends React.Component {
                     </div>
                     <div className='carbon-message2'>
                         <img className="leaf-img" src={window.leaf} />
-                        <div className='carbon-message-text'>Etsy offsets carbon emissions from every delivery</div>
+                        <div className='carbon-message-text'>Yeetsy offsets carbon emissions from every delivery</div>
                     </div>
                 </div>
             )
