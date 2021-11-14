@@ -12,7 +12,7 @@ import ReviewIndex from './review_index';
 
 import { fetchUser } from '../../actions/user_actions'
 
-import { openModal } from '../../actions/modal_actions';
+import { openModal, closeModal } from '../../actions/modal_actions';
 
 const mSTP = state => {
     // debugger
@@ -20,6 +20,7 @@ const mSTP = state => {
         reviews: Object.values(state.entities.reviews),
         user: state.session.id,
         currentUser: state.entities.users[state.session.id],
+        formType: 'editReview',
     }
 };
 
@@ -28,9 +29,10 @@ const mDTP = dispatch => ({
     createReview: (review, productId) => dispatch(createReview(review, productId)),
 
     fetchUser: userId => dispatch(fetchUser(userId)),
-    openModal: modal => dispatch(openModal(modal)),
     deleteReview: (review, productId) => dispatch(deleteReview(review, productId)),
     // updateReview: review => dispatch(updateReview(review)),
+    closeModal: () => dispatch(closeModal()),
+    openModal: modal => dispatch(openModal(modal)),
 });
 
 export default withRouter(connect(mSTP, mDTP)(ReviewIndex));

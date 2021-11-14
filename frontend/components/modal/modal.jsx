@@ -2,7 +2,7 @@ import React from 'react';
 import { openModal, closeModal } from '../../actions/modal_actions';
 import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
-import ReviewEditContainer from '../reviews/review_edit_container'
+import ReviewModalContainer from '../review_modal/review_modal_container'
 
 class Modal extends React.Component {
     render() {
@@ -20,7 +20,7 @@ class Modal extends React.Component {
                 component = <SignupFormContainer />;
                 break;
             case 'editReview':
-                component = <ReviewEditContainer />;
+                component = <ReviewModalContainer />;
             default:
                 return null;
         }

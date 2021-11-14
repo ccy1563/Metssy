@@ -52,6 +52,8 @@ class ReviewIndex extends React.Component {
                     fetchReviews={this.props.fetchReviews}
                     reviews={this.props.reviews}
                     state={this.state}
+                    openModal={this.props.openModal}
+                    closeModal={this.props.closeModal}
                     // email={this.props.fetchUser(this.props.user)}
                 />
             )

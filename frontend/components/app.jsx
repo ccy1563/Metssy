@@ -58,11 +58,11 @@ const App = () => (
             </Route>
 
             {/* <Route exact path="/products" component={ProductIndexContainer} /> */}
-            <Route exact path="/products/:productId/reviews/:reviewId">
+            {/* <Route exact path="/products/:productId/reviews/:reviewId">
                 <ReviewEditContainer />
                 <Announcement />
                 <Footer />
-            </Route>
+            </Route> */}
 
             <Route exact path="/cart_items">
                 <CartItemIndexContainer />

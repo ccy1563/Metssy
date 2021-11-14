@@ -5,6 +5,8 @@ import { withRouter } from 'react-router';
 
 import { fetchProduct } from '../../actions/product_actions'
 
+import { openModal, closeModal } from '../../actions/modal_actions';
+
 import {
     fetchReviews,
     fetchReview,
@@ -46,6 +48,7 @@ const mSTP = (state, ownProps) => {
         user: state.session.id,
         currentUser: state.entities.users[state.session.id],
         product: state.entities.products[ownProps.match.params.productId],
+        formType: 'editReview',
     }
 };
 
@@ -54,6 +57,8 @@ const mDTP = dispatch => ({
     updateReview: (review, productId) => dispatch(updateReview(review, productId)),
     fetchProduct: productId => dispatch(fetchProduct(productId)),
     // deleteReview: reviewId => dispatch(deleteReview(reviewId)),
+    closeModal: () => dispatch(closeModal()),
+    openModal: modal => dispatch(openModal(modal)),
 });
 
 export default withRouter(connect(mSTP, mDTP)(ReviewEditContainer));

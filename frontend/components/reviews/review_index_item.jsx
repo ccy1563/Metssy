@@ -29,7 +29,6 @@ class ReviewIndexItem extends React.Component {
         // debugger
     }
     
-    
     render() {        
         const { review, productId } = this.props;
         // debugger    
@@ -57,8 +56,15 @@ class ReviewIndexItem extends React.Component {
                 </div>
                 
                 <div className="show-page-buttons">
-                    <div>
+                    {/* <div>
                         {this.props.authorId === this.props.currentUserId ? <Link to={`/products/${this.props.productId}/reviews/${review.id}`}><button className="show-page-edit-button">Edit</button></Link> : null}
+                    </div> */}
+                    <div>
+                        <button 
+                            className="show-page-edit-button"
+                            onClick={() => this.props.openModal('editReview')}>
+                                Edit
+                        </button>
                     </div>
 
                     <div>
