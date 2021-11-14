@@ -160,11 +160,52 @@
     -webkit-font-smoothing: antialiased;
 }
 
+.cart-footer-merchant-donate-left-2 {
+    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    padding-right: 5px;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+}
+
+.special-thanks {
+    line-height: -5%;
+    text-decoration: none !important;
+    color: black;
+}
+
+.special-thanks-list {
+    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    padding-right: 5px;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+}
+
+.special-thanks-name {
+    padding-right: 20px;
+    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+    font-weight: 200;
+    font-size: 13px;
+    text-decoration: underline dotted;
+    -webkit-font-smoothing: antialiased;
+}
+
+.special-thanks-name:hover {
+    opacity: .5;    
+    transition: opacity .5s ease-out;
+    -moz-transition: opacity .5s ease-out;
+    -webkit-transition: opacity .5s ease-out;
+    -o-transition: opacity .5s ease-out;
+}
+
 .cart-footer-merchant-donate-right {
     font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
     font-weight: 200;
     font-size: 13px;
-    text-decoration: underline;
+    text-decoration-style: dotted;
     -webkit-font-smoothing: antialiased;
 }
 

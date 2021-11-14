@@ -61,15 +61,43 @@ class CartFooter extends React.Component {
                 <div>
                     <div className='cart-footer-merchant-top'>
                         <div className='cart-footer-merchant-left'>
-                            Merchant is Yeetsy, Inc. (USA) or Yeetsy Ireland UC (Ireland), depending on the currency in which the Seller transacts. See
+                            {/* Merchant is Yeetsy, Inc. (USA) or Yeetsy Ireland UC (Ireland), depending on the currency in which the Seller transacts. See */}
+                            Don't like my work? Check out some of my friend's work instead!
                         </div>
                         {/* <div className='cart-footer-merchant-right'>
                             Yeetsy Payments Terms of Use.
                         </div> */}
                     </div>
                     <div className='cart-footer-merchant-donate'>
-                        <div className='cart-footer-merchant-donate-left'>
-                            If you donate to the Uplift Fund, your Merchant for the donation amount will be Brooklyn Community Fund.
+                        <div className='special-thanks-list'>
+                            {/* If you donate to the Uplift Fund, your Merchant for the donation amount will be Brooklyn Community Fund. */}
+                            <a className='special-thanks' href="https://github.com/alexsaintlam" target="_blank">
+                                <div className='special-thanks-name'>Alex Lam</div>
+                            </a>
+                            <a className='special-thanks' href="https://github.com/anthill499" target="_blank">
+                                <div className='special-thanks-name'>Anthony Huang</div>
+                            </a>
+                            <a className='special-thanks' href="https://github.com/rzleu" target="_blank">
+                                <div className='special-thanks-name'>Richard Leung</div>
+                            </a>
+                            <a className='special-thanks' href="https://github.com/cindyj301" target="_blank">
+                                <div className='special-thanks-name'>Cindy Jiang</div>
+                            </a>
+                            <a className='special-thanks' href="https://github.com/Dustin-Adler" target="_blank">
+                                <div className='special-thanks-name'>Dustin Adler</div>
+                            </a>
+                            <a className='special-thanks' href="https://github.com/dmechenko" target="_blank">
+                                <div className='special-thanks-name'>Daniel Mechenko</div>
+                            </a>
+                            <a className='special-thanks' href="https://github.com/WinnieNg3210" target="_blank">
+                                <div className='special-thanks-name'>Winnie Ng</div>
+                            </a>
+                            <a className='special-thanks' href="https://github.com/sunmeiappprep" target="_blank">
+                                <div className='special-thanks-name'>Sunny Mei</div>
+                            </a>
+                            <a className='special-thanks' href="https://github.com/KevLin2358" target="_blank">
+                                <div className='special-thanks-name'>Kevin Lin</div>
+                            </a>
                         </div>
                         {/* <div className='cart-footer-merchant-donate-right'>
                             See Round Up Feature Terms and Conditions.
