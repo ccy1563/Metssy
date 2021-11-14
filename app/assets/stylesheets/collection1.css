@@ -16,7 +16,10 @@
     list-style-type: none;
     background-image: linear-gradient(top, #fcebd2, #fcebd2 40%, transparent 40%, transparent 40%);
     background-image: -webkit-linear-gradient(top, #fcebd2, #fcebd2 40%, transparent 40%, transparent 40%);
-    padding-left: 9%;
+    /* padding-left: 9%; */
+    justify-content: center;
+    align-items: center;;
+    /* background-color: red; */
 }
 
 .sub-cat-list {
@@ -24,7 +27,13 @@
     margin-right: auto; */
     /* position: relative; */
     /* top: -28vh; */
-    padding-left: 5%;
+    /* padding-left: 5%; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* justify-content: space-around;
+    align-items: center; */
+    padding: 0 2% 0 2%
 }
 
 .category-text {
