@@ -158,7 +158,7 @@ class ProductShow extends React.Component {
                         <div className="installments-text">Pay as low as</div>
                         <div className="installments-link1">{`$${Math.ceil(this.getInstallments(product.price, 12))}/mo`}.</div>
                         <div className="installments-bold">Klarna.</div>
-                        <div className="installments-link2">See if you're prequalified</div>
+                        {/* <div className="installments-link2">See if you're prequalified</div> */}
                     </div>
 
                     <button 
