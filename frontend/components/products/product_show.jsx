@@ -74,6 +74,28 @@ class ProductShow extends React.Component {
         return month[mm] + ' ' + (parseInt(dd) + 4) + '-' + yyyy;
     }
 
+    getShippingDate2(num) {
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = today.getMonth();
+        var yyyy = today.getFullYear();
+        var month = new Array();
+        month[0] = "Jan";
+        month[1] = "Feb";
+        month[2] = "Mar";
+        month[3] = "Apr";
+        month[4] = "May";
+        month[5] = "Jun";
+        month[6] = "Jul";
+        month[7] = "Aug";
+        month[8] = "Sep";
+        month[9] = "Oct";
+        month[10] = "Nov";
+        month[11] = "Dec";
+
+        return month[mm] + ' ' + (parseInt(dd) + num) + '-' + yyyy;
+    }
+
     showDescription() {
         // debugger
         var element = document.getElementById("show-description");
@@ -150,7 +172,7 @@ class ProductShow extends React.Component {
                             <div>
                                 <div className="van-sen-div">
                                     <div className='cart-and-van-desc'>Arrives by</div>
-                                    <div className='cart-and-van-desc'>Sep 16-21</div>
+                                    <div className='cart-and-van-desc'>{this.getShippingDate()}</div>
                                     <div className='cart-and-van-desc'>if you order today.</div>
                                     <div className='cart-and-van-desc'>Nice choice!</div>
                                     <div className='cart-and-van-desc'>Enjoy free shipping to the US when you spend $35+ at this shop.</div>
@@ -195,13 +217,13 @@ class ProductShow extends React.Component {
                             </div>
                             <div className='running-out-of-names-1'>
                                 <div>
-                                    <div>Sept 16</div>
+                                    <div>{this.getShippingDate2(1)}</div>
                                 </div>
                                 <div className='jank-css'>
-                                    <div>Sept 17-20</div>
+                                    <div>{this.getShippingDate2(2)}</div>
                                 </div>
                                 <div>
-                                    <div>Sept 18-25</div>
+                                    <div>{this.getShippingDate()}</div>
                                 </div>
                             </div>
 
