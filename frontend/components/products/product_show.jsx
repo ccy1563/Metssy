@@ -96,6 +96,14 @@ class ProductShow extends React.Component {
         return month[mm] + ' ' + (parseInt(dd) + num) + '-' + yyyy;
     }
 
+    getRandomNum(limit) {
+        return Math.floor(Math.random() * limit);
+    }
+
+    getInstallments(total, divisor) {
+        return total/divisor
+    }
+
     showDescription() {
         // debugger
         var element = document.getElementById("show-description");
@@ -148,7 +156,7 @@ class ProductShow extends React.Component {
                     <p className="show-page-price">${product.price}</p>
                     <div className="installments-top">
                         <div className="installments-text">Pay as low as</div>
-                        <div className="installments-link1">$52/mo.</div>
+                        <div className="installments-link1">{`$${Math.ceil(this.getInstallments(product.price, 12))}/mo`}.</div>
                         <div className="installments-bold">Klarna.</div>
                         <div className="installments-link2">See if you're prequalified</div>
                     </div>
@@ -164,7 +172,7 @@ class ProductShow extends React.Component {
                             <div><ShoppingCartTwoToneIcon /></div>
                             <div className="van-sen-div">
                                 <div className='cart-and-van-desc'>Other people want this.</div>
-                                <div className='cart-and-van-desc'>18 people have this in their carts right now.</div>
+                                <div className='cart-and-van-desc'>{`${this.getRandomNum(100)} people have this in their carts right now.`}</div>
                             </div>
                         </div>
                         <div className="cart-and-van-list-item">
