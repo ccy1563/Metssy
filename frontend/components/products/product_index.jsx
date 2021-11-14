@@ -209,13 +209,15 @@ class ProductIndex extends React.Component {
 
 
                 <div className="square-category-top">
-                    <p className="square-category-text">Popular gifts right now</p>
-                    <div className="square-category-list">
-                        {productSection1[0]}
-                        {productSection1[1]}
-                        {productSection1[2]}
-                        {productSection1[3]}
-                        {productSection1[4]}
+                    <div className='square-cat-main'>
+                        <p className="square-category-text">Popular gifts right now</p>
+                        <div className="square-category-list">
+                            {productSection1[0]}
+                            {productSection1[1]}
+                            {productSection1[2]}
+                            {productSection1[3]}
+                            {productSection1[4]}
+                        </div>
                     </div>
                 </div>
 
