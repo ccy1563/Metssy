@@ -18,6 +18,9 @@ class ReviewIndexItem extends React.Component {
         };
     }
 
+    handleEdit(e) {
+        this.handleOpen(e);
+    }
 
     handleDelete(e) {
         e.preventDefault();
@@ -162,12 +165,7 @@ class ReviewIndexItem extends React.Component {
                 <div className="show-page-buttons">
                     <div>
                         {/* {this.props.authorId === this.props.currentUserId ? <Link to={`/products/${this.props.productId}/reviews/${review.id}`}><button className="show-page-edit-button">Edit</button></Link> : null} */}
-
-                        <button
-                            onClick={(e) => this.handleOpen(e)}
-                            className='show-page-edit-button'>
-                            Edit
-                        </button>
+                        {this.props.authorId === this.props.currentUserId ? <button className="show-page-edit-button" onClick={(e) => this.handleEdit(e)}>Edit</button> : null}
                     </div>
 
                     <div>

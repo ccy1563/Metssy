@@ -225,7 +225,7 @@ class ProductShow extends React.Component {
                             </div>
                             <div className='running-out-of-names-1'>
                                 <div>
-                                    <div>{this.getShippingDate2(1)}</div>
+                                    <div>{this.getShippingDate2(0)}</div>
                                 </div>
                                 <div className='jank-css'>
                                     <div>{this.getShippingDate2(2)}</div>
