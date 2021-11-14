@@ -48,9 +48,7 @@ class CategoryIndex extends React.Component {
         if (filteredProductsComponents.length > 0) {
             return (
                 <div className='search-index-top'>
-                    <div>
-                        {filteredProductsComponents}
-                    </div>
+                    {filteredProductsComponents}
                 </div>
             )
         } else {
