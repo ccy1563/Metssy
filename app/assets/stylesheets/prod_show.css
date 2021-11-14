@@ -314,7 +314,20 @@
 }
 
 .total-reviews-line {
-    width: 550px;
+    /* width: 550px; */
     margin-bottom: 12px;
     border-bottom: 2px solid rgb(209, 209, 209);
+}
+
+.all-reviews-box {
+    box-shadow: 0 0 10px #dbdbdb;
+    max-height: 500px;
+    overflow: scroll;
+    padding-left: 2%;
+}
+
+.all-reviews-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
 }
