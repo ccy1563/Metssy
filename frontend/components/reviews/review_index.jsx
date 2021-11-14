@@ -52,6 +52,7 @@ class ReviewIndex extends React.Component {
                     fetchReviews={this.props.fetchReviews}
                     reviews={this.props.reviews}
                     state={this.state}
+                    updateReview={this.props.updateReview}
                     // email={this.props.fetchUser(this.props.user)}
                 />
             )

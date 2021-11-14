@@ -30,7 +30,7 @@ const mDTP = dispatch => ({
     fetchUser: userId => dispatch(fetchUser(userId)),
     openModal: modal => dispatch(openModal(modal)),
     deleteReview: (review, productId) => dispatch(deleteReview(review, productId)),
-    // updateReview: review => dispatch(updateReview(review)),
+    updateReview: (review, productId) => dispatch(updateReview(review, productId)),
 });
 
 export default withRouter(connect(mSTP, mDTP)(ReviewIndex));
