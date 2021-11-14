@@ -20,6 +20,29 @@
     padding-top: 3%;
 }
 
+.search-index-top-empty {
+    padding: 5% 10% 2% 3%;
+    /* background-color: red; */
+}
+
+.search-not-found-1 {
+    font-size: 44px;
+    line-height: 48px;
+    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+    font-weight: 150;
+    -webkit-font-smoothing: antialiased;
+}
+
+.search-not-found-2 {
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+    font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+    padding-top: 3%;
+    padding-bottom: 10%;
+}
+
+
 .search-item {
 
 }

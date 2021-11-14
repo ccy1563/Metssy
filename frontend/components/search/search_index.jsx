@@ -30,7 +30,7 @@ class SearchIndex extends React.Component {
             )
         })
 
-        if (query !== "") {
+        if (query !== "" && filteredProductsComponents.length > 0) {
             return (
                 <div >
                     <div className='search-index-top'>
@@ -42,8 +42,13 @@ class SearchIndex extends React.Component {
         } else {
             return (
                 <div >
-                    <div className='search-index-top'>
-
+                    <div className='search-index-top-empty'>
+                        <div className='search-not-found-1'>
+                            {`We couldn't find any results for ${query}`}
+                        </div>
+                        <div className='search-not-found-2'>
+                            Try searching for something else instead?
+                        </div>
                     </div>
                     <div className='footer-stopper'></div>
                 </div>

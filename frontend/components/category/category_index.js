@@ -45,11 +45,29 @@ class CategoryIndex extends React.Component {
             )
         })
 
-        return (
-            <div className='search-index-top'>
-                {filteredProductsComponents}
-            </div>
-        )
+        if (filteredProductsComponents.length > 0) {
+            return (
+                <div className='search-index-top'>
+                    <div>
+                        {filteredProductsComponents}
+                    </div>
+                </div>
+            )
+        } else {
+            return (
+                <div >
+                    <div className='search-index-top-empty'>
+                        <div className='search-not-found-1'>
+                            {`We couldn't find any results`}
+                        </div>
+                        <div className='search-not-found-2'>
+                            Try a different category instead?
+                        </div>
+                    </div>
+                    <div className='footer-stopper'></div>
+                </div>
+            )
+        }
     }
 }
 
