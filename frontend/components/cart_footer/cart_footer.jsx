@@ -62,7 +62,7 @@ class CartFooter extends React.Component {
                     <div className='cart-footer-merchant-top'>
                         <div className='cart-footer-merchant-left'>
                             {/* Merchant is Yeetsy, Inc. (USA) or Yeetsy Ireland UC (Ireland), depending on the currency in which the Seller transacts. See */}
-                            Don't like my work? Check out some of my friend's work instead!
+                            Don't like my work? Check out some of my friends' work instead!
                         </div>
                         {/* <div className='cart-footer-merchant-right'>
                             Yeetsy Payments Terms of Use.
