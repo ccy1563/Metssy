@@ -83,37 +83,40 @@ class ReviewIndexItem extends React.Component {
 
         // console.log("rating: " + this.state.rating + " " + (typeof this.state.rating === 'string'))
 
+        let staticStars = undefined;
+        if (!staticStars) staticStars = stars;
+        
         if (this.state.flag) {
             // debugger
             return (
                 <div>
                     <div className="submitted-reviews-top">
-                        <div className="review-email">
+                        {/* <div className="review-email"> */}
                             {/* <p>{this.props.fetchUser(this.props.authorId).email}</p> */}
-                            <p>{this.props.review.email}</p>
-                        </div>
-                        <div className="review-rating">
-                            <p>{stars}</p>
-                        </div>
-                        <div className="review-body">
-                            <p>{review.body}</p>
-                        </div>
+                            {/* <p>{this.props.review.email}</p> */}
+                        {/* </div> */}
+                        {/* <div className="review-rating"> */}
+                            {/* <p>{staticStars}</p> */}
+                        {/* </div> */}
+                        {/* <div className="review-body"> */}
+                            {/* <p>{review.body}</p> */}
+                        {/* </div> */}
 
-                        <div className="show-page-buttons">
-                            <div>
+                        {/* <div className="show-page-buttons"> */}
+                            {/* <div> */}
                                 {/* {this.props.authorId === this.props.currentUserId ? <Link to={`/products/${this.props.productId}/reviews/${review.id}`}><button className="show-page-edit-button">Edit</button></Link> : null} */}
 
-                                <button
-                                    onClick={(e) => this.handleOpen(e)}
-                                    className='show-page-edit-button'>
-                                    Edit
-                                </button>
-                            </div>
+                                {/* <button */}
+                                    {/* // onClick={(e) => this.handleOpen(e)} */}
+                                    {/* className='show-page-edit-button'> */}
+                                    {/* Edit */}
+                                {/* </button> */}
+                            {/* </div> */}
 
-                            <div>
-                                {this.props.authorId === this.props.currentUserId ? <button className="show-page-delete-button" onClick={(e) => this.handleDelete(e)}>Delete</button> : null}
-                            </div>
-                        </div>
+                            {/* <div> */}
+                                {/* {this.props.authorId === this.props.currentUserId ? <button className="show-page-delete-button" onClick={(e) => this.handleDelete(e)}>Delete</button> : null} */}
+                            {/* </div> */}
+                        {/* </div> */}
                         {/* <button className="review-edit-modal-button" onClick={() => this.props.openModal('editReview')}>Edit</button> */}
                     </div>
                     <div className='modal'>
