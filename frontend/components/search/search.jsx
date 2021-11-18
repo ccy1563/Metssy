@@ -10,7 +10,6 @@ class Search extends React.Component {
             query: "",
             search: false,
         }
-        // this.handleSubmit = this.handleSubmit(this);
     }
 
     componentDidMount() {
@@ -18,27 +17,24 @@ class Search extends React.Component {
     }
 
     update(property) {
-        // console.log(this.state.query)
         return e => this.setState({ [property]: e.currentTarget.value });
     }
 
     handleSubmit(e) {
         e.preventDefault();
-        // debugger
         this.setState({ "search": true });
-        // console.log(`${this.state.query} working?}`)
     }
 
-    handleKeypress = e => {
-        // console.log(e.key);
-        if (e.key === "Enter") {
-            // console.log("pressing enter")
-            this.handleSubmit(e);
-        }
+    handleKeypress(e) {
+        if (e.key === "Enter") this.handleSubmit(e);
     };
 
+    // Makes it so that component only re-renders on "Enter" keypress or button click.
+    componentDidUpdate() {
+        if (this.state.search) this.setState({search: false})
+    }
+
     render() {
-        // debugger
         return (
             <div className="search-bar">
                 <label className="search-label" htmlFor="search-input">
@@ -48,7 +44,7 @@ class Search extends React.Component {
                     type="search"
                     placeholder="Search for anything"
                     onChange={this.update("query")}
-                    onKeyPress={this.handleKeypress}
+                    onKeyPress={(e) => this.handleKeypress(e)}
                 />
                 <button 
                     className="search-icon-button" 
@@ -56,6 +52,7 @@ class Search extends React.Component {
                 >
                     <SearchIcon />
                 </button>
+
                 {this.state.search ? 
                  <Redirect to={{
                     pathname: '/search',
