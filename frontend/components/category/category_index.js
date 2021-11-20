@@ -53,7 +53,7 @@ class CategoryIndex extends React.Component {
             )
         } else {
             return (
-                <div >
+                <div    >
                     <div className='search-index-top-empty'>
                         <div className='search-not-found-1'>
                             {`We couldn't find any results`}

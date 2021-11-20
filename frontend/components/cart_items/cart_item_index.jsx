@@ -114,7 +114,17 @@ class CartItemIndex extends React.Component {
                                     <div className='bottom-left-cart-radio'>
                                         <div>
                                             <div className='this-order-gift'>
-                                                <input className='bottom-left-cart-radio-thing' type="radio" id="credit-card" />
+{/*                                
+                                                <label class='container'>
+                                                    <input type="checkbox"/>
+                                                    <span class ="checkmark"></span>
+                                                </label> */}
+
+                                                <label class='container'>
+                                                    <input type="checkbox"/>
+                                                    <span class ="checkmark"></span>
+                                                </label>
+
                                                 <div className='bottom-left-cart-radio-thing-desc'>This order is a gift</div>
                                             </div>
                                             <div className='price-not-shown'>Prices will not be shown on packing slip</div>
