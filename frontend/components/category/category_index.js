@@ -10,6 +10,7 @@ class CategoryIndex extends React.Component {
 
     componentDidMount() {
         this.props.fetchProducts();
+        window.scrollTo(0, 0);
     }
 
     arrayFilter(array1,array2) {

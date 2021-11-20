@@ -50,6 +50,7 @@ class ProductShow extends React.Component {
     componentDidMount() {
         this.props.fetchProduct(this.props.match.params.productId)
             .then(this.props.fetchReviews(this.props.match.params.productId));
+        window.scrollTo(0, 0);
     }
 
     getShippingDate() {

@@ -18,7 +18,8 @@ class ProductIndex extends React.Component {
     componentDidMount() {
         this.props.fetchProducts();
         // this.props.fetchReviews();
-        this.handleRedirect()
+        this.handleRedirect();
+        window.scrollTo(0, 0);
     }
 
     // shuffle(array) {
